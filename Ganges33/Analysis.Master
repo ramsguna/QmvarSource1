@@ -96,11 +96,11 @@
 	font-weight: bold;
 }
 
-	.ui-widget-header a {
+/*	.ui-widget-header a {
 		color: #eaf5f7;
-	}
+	}*/
 
-	/* Interaction states
+	/* Interaction states   Ram
 ----------------------------------*/
 	.ui-state-default,
 	.ui-widget-content .ui-state-default,
