@@ -1,0 +1,183 @@
+ .div-background-image {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 622px;
+            width: 1255px;
+            background-size: contain;
+            }
+            .div-Entirepage {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+               
+            }
+            .table-EntirePage {
+                width: 100%;
+                height: 481px;
+            }
+            .td-Blank18 {
+                width: 101px;
+            }
+            .td-Blank1 {
+                width: 101px;
+                height: 99px;
+            }
+            .td-Blank4 {
+                height: 99px;
+            }
+            .td-btnAnalysis {
+                height: 99px;
+                width: 107px;
+            }
+            .td-Blank19 {
+                width: 107px;
+                font-family: "Meiryo UI";
+            }
+            .td-AnalysisFileUpload {
+                height: 99px;
+                width: 363px;
+            }
+            .td-Blank23 {
+                width: 101px;
+                height: 51px;
+            }
+            .td-Blank24-DropDownList {
+                width: 107px;
+                height: 51px;
+            }
+            .td-Blank13 {
+                height: 51px;
+            }
+            .td-Blank14 {
+                width: 101px;
+                height: 40px;
+            }
+            .td-btnUpload {
+                height: 40px;
+            }
+            .td-Blank16 {
+                width: 101px;
+                height: 145px;
+            }
+            .td-lbl5-listmsg {
+                width: 107px;
+                height: 145px;
+            }
+            .td-Blank17 {
+                height: 145px;
+            }
+            .td-Blank12 {
+                height: 51px;
+                width: 470px;
+            }
+            .td-Blank20 {
+                width: 363px;
+                font-family: "Meiryo UI";
+            }
+            .td-Blank3 {
+                height: 99px;
+                width: 470px;
+            }
+            .td-lbl6-ListHistory {
+                width: 470px;
+                height: 145px;
+            }
+            .td-Blank2 {
+                height: 99px;
+                width: 102px;
+            }
+            .td-Blank11 {
+                width: 102px;
+                height: 51px;
+            }
+            .td-Blank15 {
+                width: 102px;
+                height: 40px;
+            }
+            .td-Blank21 {
+                width: 102px;
+                font-family: "Meiryo UI";
+            }
+            .td-Blank22 {
+                width: 470px;
+            }
+            .fontFamily {
+                font-family: "Meiryo UI";
+            }
+            .lbl3-AnalysisFileUpload {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+            .td-Blank-5-6 {
+                width: 101px;
+                height: 24px;
+            }
+            .td-lbl-1-2-Currentlocation-CurrentUsername {
+                width: 107px;
+                height: 24px;
+            }
+            .td-Blank-7-8 {
+                width: 102px;
+                height: 24px;
+            }
+            .td-lbl4-droplistlocation-td-Blank9 {
+                width: 470px;
+                height: 24px;
+            }
+            .td-Blank-9-10 {
+                height: 24px;
+            }
+            .btn-Analysis{
+                Height:108px;
+                Width:108px;
+            }
+            .droplistlocation{
+                font-family: "Meiryo UI";
+                Height:33px; 
+                Width:303px;
+            }
+            .dropdownmonth{
+                font-family: "Meiryo UI";
+                Height:32px; 
+                Width:100px;
+            }
+            .dropdownyear{
+                font-family: "Meiryo UI";
+                Height:32px; 
+                Width:60px;
+            }
+            .FileUploadAnalysis{
+                Height:33px;
+                Width:447px; 
+                font-family: "Meiryo UI";
+            }
+            .TextPartsInvoiceNo{
+                font-family: "Meiryo UI";
+                Height:23px; 
+                Width:160px;
+            }
+            .TextLaborInvoiceNo{
+                font-family: "Meiryo UI";
+                Height:23px;
+                Width:160px;
+            }
+            .btnUpload{
+                Height:29px;
+                font-family: "Meiryo UI"; 
+                Width:81px;
+            }
+            .listbox{
+                Height:130px;
+                Width:555px;
+                font-family: "Meiryo UI"; 
+            }
+            .ListHistory{
+                Height:130px;
+                Width:560px; 
+                font-family: "Meiryo UI";
+            }
+            .DropDownList{
+                Height:32px; 
+                Width:280px;
+            }

@@ -1,0 +1,399 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="AnalysisSub.Master.vb" Inherits="Ganges33.AnalysisSub" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+ <style type="text/css">
+        .auto-style1 {
+            height: 53px;
+            background-color: #D8D8D8;
+            width: 1330px;
+            margin-left: 0px;
+        }
+        .auto-style2 {
+            width: 1330px;
+            height: 51px;
+        }
+        .auto-style3 {
+            text-align: center;
+        }
+        .auto-style311 {
+            text-align: center;
+              height: 551px;
+        }
+        .auto-style129 {
+            width: 190px;
+            padding-left:0px;
+            padding-right:0px;
+        }
+        .auto-style131 {
+            width: 291px;
+            height: 39px;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+            .auto-style132 {
+                width: 179px;
+            }
+            .auto-style133 {
+                width: 455px;
+            }
+            .auto-style134 {
+                width: 341px;
+            }
+        </style>
+</head>
+<body  style="width: 1330px">
+    <form id="form1" runat="server">
+        <asp:Button ID="HiddenDummyButton" runat="server" onClientClick="return false;" style="display:none;" />
+        <div class="auto-style1" style="visibility:hidden">
+            <table border ="0" style="visibility:hidden" class="auto-style2">
+                <tr>
+                    <td class="auto-style132"><asp:ImageButton ID="BtnHome" runat="server" Height="36px" ImageUrl="~/icon/home.png" Width="36px" />Home </td>
+                    <td class="auto-style134">
+                        <asp:Image ID="Image1" runat="server" Height="36px" ImageUrl="~/icon2/placeholder-2.png" Width="36px" />
+                        <asp:Label ID="LblShipName" runat="server"></asp:Label>
+                    </td>
+                    <td class="auto-style133">
+                        &nbsp;
+                        <asp:Image ID="Image2" runat="server" Height="36px" ImageUrl="~/icon2/user-3.png" Width="36px" />
+                        <asp:Label ID="lblUser" runat="server"></asp:Label>
+                    </td>
+                    <td align = "right">
+                        &nbsp;
+                        Log Off <asp:ImageButton ID="BtnLogof" runat="server" Height="36px" ImageUrl="~/icon/exit-1.png" Width="34px" />
+                    </td>
+                 </tr>
+            </table>
+            
+        </div>
+        <div class="auto-style3" style="visibility:hidden">
+            <asp:Panel ID="Panel1" runat="server" Height="47px" HorizontalAlign ="Center">
+                <table align ="center" class="auto-style131">
+                <tr>
+                    <td class="auto-style129">
+                        <asp:ImageButton ID="btnFileUpload" runat="server" ImageUrl="~/icon/menyu_analysis/ana_upload.png"/>
+                    </td>
+                    <td class="auto-style129">
+                        <asp:ImageButton ID="btnExportData" runat="server" ImageUrl="~/icon/menyu_analysis/ana_export.png" />
+                    </td>
+                    <td class="auto-style129">
+                        <asp:ImageButton ID="btnReport" runat="server" ImageUrl="~/icon/mneu_arrival/Activity_report.png" />
+                    </td>
+                    <td class="auto-style129">
+                        <asp:ImageButton ID="btnRecovery" runat="server" ImageUrl="~/icon/menyu_analysis/recovery.png" />
+                    </td>
+                    <td class="auto-style129">
+                        <%--<asp:ImageButton ID="btnBlank" runat="server" ImageUrl="~/icon/mneu_money/blank.png" DescriptionUrl="~/icon/menyu_analysis/recovery.png" />--%>
+                        <asp:ImageButton ID="btnAnalysisData" runat="server" ImageUrl="~/icon/menyu_analysis/ana_data.png" />
+                    </td>
+                    <td class="auto-style129"> 
+                       <asp:ImageButton ID="btnRPA" runat="server" ImageUrl="~/icon/menyu_analysis/rpa.png" />
+                    </td>
+                </tr>
+          
+            </table>
+          </asp:Panel>
+        </div> 
+         <div class="auto-style311" style="visibility:hidden">
+            <asp:Panel ID="Panel2" runat="server" Height="47px" HorizontalAlign ="Center">
+                <table align ="center" class="auto-style131">
+                <tr>
+                    <td class="auto-style129">
+                        <asp:ImageButton ID="btnUploadSummary" runat="server" ImageUrl="~/icon/menyu_analysis/Upload_Summary.png"/>
+                    </td>
+                    <td class="auto-style129">
+                        <asp:ImageButton ID="btnUploadVerification" runat="server" ImageUrl="~/icon/menyu_analysis/Upload_Verification.png" />
+                    </td>
+                    <td class="auto-style129">
+                        <asp:ImageButton ID="btnPartsCompare" runat="server" ImageUrl="~/icon/menyu_analysis/Parts_Compare.png" />
+                    </td>
+                    <td class="auto-style129">
+                        <asp:ImageButton ID="btnStoreManagement" runat="server" ImageUrl="~/icon/menyu_analysis/Store_Management.png" />
+                    </td>
+                    <td class="auto-style129">
+                          <asp:ImageButton ID="ImageButton11" runat="server" ImageUrl="~/icon/mneu_money/blank.png" />
+                    </td>
+                    <td class="auto-style129"> 
+                       <asp:ImageButton ID="ImageButton12" runat="server" ImageUrl="~/icon/mneu_money/blank.png" />
+                    </td>
+                </tr>
+          
+            </table>
+          </asp:Panel>
+        </div> 
+
+
+          <asp:Panel ID="Panel3" runat="server" Height="47px" HorizontalAlign ="Center"> 
+
+
+  <div class="wrapper  ">
+
+         
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="assets/img/sidebar-1.jpg">
+      
+      <div class="logo"><a  class="simple-text logo-normal">
+        <asp:ImageButton ID="ImageButton1" runat="server" src="assets/img/gss-logo.png" alt="responsive" style="height: 53px;width: 222px;" />
+        </a></div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li id="dashboard" runat="server" class="nav-item">
+            <a class="nav-link" href="./dashboard.html">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>  
+          </li>
+          <li class="nav-item " id="fileupload" runat="server">
+            <a class="nav-link" >
+              <i class="material-icons">file_upload</i>
+              <p><asp:Button ID="Button1" runat="server" class="btntransprant" Text="File Upload" /></p>
+                
+            </a>
+          </li>
+
+            
+        <%--i class="material-icons"></i>--%> 
+           
+    
+          <li class="nav-item" id="Analysis_Export" runat="server">
+            <a class="nav-link" >
+              <i class="material-icons">import_export</i>
+             <p><asp:Button ID="Button2" runat="server"  class="btntransprant" text="Export Data" /></p>
+            </a>
+          </li>
+               <li class="nav-item " id="Analysis_Refresh" runat="server">
+            <a class="nav-link"  href="#">
+              <i class="material-icons">library_books</i>
+              <p><asp:Button ID="Button3" runat="server" class="btntransprant" Text="Activity Report" /></p>
+            </a>
+          </li>
+          <li class="nav-item " id="Analysis_Recovery" runat="server">
+            <a class="nav-link"  href="#">
+              <i class="material-icons">bubble_chart</i>
+              <p><asp:Button ID="Button4" runat="server" class="btntransprant" text="Recovery" /></p>
+            </a>
+          </li>
+
+          
+<!-- Analysis data Dropdown end-->
+ <%--           <li id="dropdown" runat="server">
+						<a data-toggle="collapse" href="#dropdown-lvl1">
+              <i class="material-icons">analytics</i>
+          <p>Analysis Data</p>
+                <div class="ripple-container">
+               <i class="fa fa-caret-down" style="float: right;margin-top: 10px;"></i></div>
+            </a>
+            
+						<!-- Dropdown level 1 -->
+							<div id="dropdown-lvl1" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+									<li class="" id="summary" runat="server"><a class="dropdown-item" href="#">
+                  <asp:Button ID="btnUploadSummary" runat="server" class="btntransprant" Text=" Upload Summary" />
+              </a></li>
+									<li id="Verfication" runat="server"><a class="dropdown-item" href="#">
+                  <asp:Button ID="btnUploadVerification" class="btntransprant" runat="server" Text=" Upload verification" />
+                 </a></li>
+									<li id="compare" runat="server"><a class="dropdown-item" href="#">
+                   <asp:Button ID="btnPartsCompare" class="btntransprant" runat="server" text="Parts Compare" /></a></li>
+									<li id="storemanagement" runat="server"> <a class="dropdown-item" href="#"> 
+                  <asp:Button ID="btnStoreManagement" class="btntransprant" runat="server" text="Store Management" /></a></li>
+																	
+											</ul></div>
+										</div>
+									</li>
+--%>
+
+
+         
+
+
+
+<%--<li class="list-group" id="dropdown" runat="server">
+
+            <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-white list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex justify-content-start align-items-center">
+                     <i class="material-icons">analytics</i>
+          <p>Analysis Data</p>
+                    <span class="submenu-icon ml-auto"></span>
+                </div>
+                 <div class="ripple-container">
+               <i class="fa fa-caret-down" style="float: right;margin-top: 10px;"></i></div>
+            </a>
+            <div id='submenu1' class="collapse sidebar-submenu">
+                <a href="#" id="summary" runat="server" class="list-group-item list-group-item-action">
+                    <span class="menu-collapsed">  <asp:Button ID="btnUploadSummary" runat="server" class="nav-link btntransprant" Text=" Upload Summary" /></span>
+                </a>
+                <a href="#" id="Verfication" runat="server" class="list-group-item list-group-item-action ">
+                    <span class="menu-collapsed"> <asp:Button ID="btnUploadVerification" class=" nav-link btntransprant" runat="server" Text=" Upload verification" /></span>
+                </a>
+                <a href="#"  id="compare" runat="server" class="list-group-item list-group-item-action ">
+                    <span class="menu-collapsed"><asp:Button ID="btnPartsCompare" class="nav-link btntransprant" runat="server" text="Parts Compare" /></span>
+                </a>
+                 <a href="#" id="storemanagement" runat="server" class="list-group-item list-group-item-actio">
+                    <span class="menu-collapsed"> <asp:Button ID="btnStoreManagement" class="nav-link btntransprant" runat="server" text="Store Management" /></span>
+                </a>
+            </div>
+        </li>--%>
+
+
+
+            
+<li class="list-group" id="dropdown" runat="server" >
+
+         <a href="#submenu1" data-toggle="collapse" id="drp1" aria-expanded="false" runat="server" class="">
+                <div class="d-flex justify-content-start align-items-center">
+                    <i class="material-icons">analytics</i>
+          <p  runat="server" id="analyis">Analysis Data</p>
+                    <span class="submenu-icon ml-auto"></span>
+                </div>
+                 <div class="ripple-container">
+               <i class="fa fa-caret-down" style="float: right;margin-top: 10px;"></i></div>
+            </a>
+            <div id='submenu1' class="collapse sidebar-submenu">
+                
+                
+                <a href="#" id="summary"  class="list-group-item list-group-item-action ">
+                    <span class="menu-collapsed"> <asp:Button ID="Button5" class="btntransprant" Text="Upload Summary" runat="server" /></span>
+                </a>
+                        
+                   
+                <a href="#"  id="Verfication" runat="server" class="list-group-item list-group-item-action ">
+                    <span class="menu-collapsed">  <asp:Button ID="Button6" class="btntransprant" Text="Upload verification" runat="server"  /> </span>
+                </a>
+                <a href="#"  id="compare" runat="server" class="list-group-item list-group-item-action ">
+                    <span class="menu-collapsed"> <asp:Button ID="Button7" class="btntransprant" Text="Parts Compare" runat="server" /></span>
+                </a>
+                 <a href="#" id="storemanagement" runat="server" class="list-group-item list-group-item-action">
+                    <span class="menu-collapsed">  <asp:Button ID="Button8" class="btntransprant"  Text="Stored Management" runat="server"   /> </span>
+                </a>
+                     
+            </div>
+        </li>
+
+
+
+
+
+<!-- RPA Dropdown-->     
+           <%-- <li id="dropdown1" runat="server">
+						<a data-toggle="collapse" href="#dropdown-lvl2">
+              <i class="material-icons">psychology</i>
+          <p>RPA</p>
+                <div class="ripple-container">
+               <i class="fa fa-caret-down" style="float: right;margin-top: 10px;"></i></div>
+            </a>
+            
+						<!-- Dropdown level 1 -->
+							<div id="dropdown-lvl2" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+									<li id="scheduler" runat="server"><a class="dropdown-item" href="#">
+                 <asp:Button ID="btnscheduler" class="btntransprant" Text="Scheduler" runat="server" /></a></li>
+									<li id="Log" runat="server"><a class="dropdown-item" href="#">
+                  <asp:Button ID="btnRpaLog" class="btntransprant" Text="Rpa Log" runat="server"  /> </a></li>
+									<li id="taskapp" runat="server"><a class="dropdown-item" href="#">
+                   <asp:Button ID="btnRpaTaskApp" class="btntransprant" Text="Rpa Task App" runat="server" /> </a></li>
+									<li id="Onoff" runat="server"> <a class="dropdown-item" href="#"> 
+                 <asp:Button ID="btnRpaOnOff" class="btntransprant"  Text="Rpa On/off" runat="server"   /> </a></li>
+																		
+											</ul></div>
+										</div>
+									</li>--%>
+            
+
+<li class="list-group" id="dropdown1" runat="server" >
+
+         <a href="#submenu2" data-toggle="collapse" id="drp2" runat="server" aria-expanded="false" class="">
+                <div class="d-flex justify-content-start align-items-center">
+                     <i class="material-icons">psychology</i>
+          <p>RPA</p>
+                    <span class="submenu-icon ml-auto"></span>
+                </div>
+                 <div class="ripple-container">
+               <i class="fa fa-caret-down" style="float: right;margin-top: 10px;"></i></div>
+            </a>
+            <div id='submenu2' class="collapse sidebar-submenu">
+                
+                
+                <a href="#"  class="list-group-item list-group-item-action ">
+                    <span class="menu-collapsed"> <asp:Button ID="btnscheduler" class="btntransprant" Text="Scheduler" runat="server" /></span>
+                </a>
+                        
+                   
+                <a href="#"  id="Log" runat="server" class="list-group-item list-group-item-action ">
+                    <span class="menu-collapsed">  <asp:Button ID="btnRpaLog" class="btntransprant" Text="Rpa Log" runat="server"  /> </span>
+                </a>
+                <a href="#"  id="taskapp" runat="server" class="list-group-item list-group-item-action ">
+                    <span class="menu-collapsed"> <asp:Button ID="btnRpaTaskApp" class="btntransprant" Text="Rpa Task App" runat="server" /></span>
+                </a>
+                 <a href="#" id="Onoff" runat="server" class="list-group-item list-group-item-action">
+                    <span class="menu-collapsed">  <asp:Button ID="btnRpaOnOff" class="btntransprant"  Text="Rpa On/off" runat="server"   /> </span>
+                </a>
+                     
+            </div>
+        </li>
+
+
+          
+        </ul>
+      </div>
+             
+    </div>
+           <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div >
+            <a class="navbar-brand">QMVAR</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <div class="navbar-wrapper">
+              <a class="navbar-brand"><span class="navbar-icon"><i class="material-icons">place</i></span>
+                  <asp:Label ID="Label1" runat="server"></asp:Label>
+              </a>
+            </div>
+            <div class="navbar-wrapper">
+               <a class="navbar-brand"><span class="navbar-icon"><i class="material-icons">person</i></span>
+                 <asp:Label ID="Label2" runat="server"></asp:Label>
+              </a>
+            </div>
+            <div class="navbar-wrapper" >
+             &nbsp;&nbsp;&nbsp;&nbsp;<span class="navbar-icon"><i class="material-icons">logout</i></span> <asp:button runat="server"  ID="Button9"  text="Logout" class="navbar-brand pull-right btntransprant"></asp:button>
+            </div>
+                
+             </div>
+          </div>
+            </nav>
+        </div>
+          </div>
+     </asp:Panel>
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+
+
+
+
+
+
+    </form>
+
+    
+
+    
+
+</body>
+</html>

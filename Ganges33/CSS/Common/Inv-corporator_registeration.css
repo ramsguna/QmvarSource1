@@ -1,0 +1,33 @@
+ .pgBackGround {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 512px;
+            width: 1255px;
+            background-size: 100% auto;
+            }
+            .divTableHeader {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                /*opacity: 0.5;*/
+            }
+        .tblContent {
+            width: 98%;
+            height: 145px;
+        }
+         .rowHeader {
+            height: 69px;
+        }
+        .tblMenuT {
+            width: 98%;
+            height: 246px;
+        }
+        .title {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+       
+        .tblContent1 {
+            width: 1246px;
+        }

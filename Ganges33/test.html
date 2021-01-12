@@ -1,0 +1,1205 @@
+<html lang="en"><head>
+<title>GSPN</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="requiresActiveX=true">
+
+<link rel="stylesheet" type="text/css" href="/css/gspn.css?version=">
+
+<link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.8.18.custom.css">
+<link rel="stylesheet" type="text/css" href="/css/timePicker.css">
+<link rel="stylesheet" type="text/css" href="/css/layout.css">
+<link rel="stylesheet" type="text/css" href="/css/protoload.css">
+
+<style type="text/css">
+<!--
+.loading {
+	background-position: center center;
+	text-align: center;	
+	background-color: transparent;
+}
+
+
+-->
+</style>
+
+<script type="text/javascript" src="/js/dragtable.js"></script>
+<script type="text/javascript" src="/js/hashtable.js"></script>
+<script type="text/javascript" src="/js/json_sans_eval.js"></script>
+<script type="text/javascript" src="/js/paging.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/protoload.js"></script>
+<script type="text/javascript" src="/js/sorttable.js"></script>
+<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.18.custom.min.js"></script>
+<script type="text/javascript" src="/js/jquery.timePicker.min.js"></script>
+<script type="text/javascript" src="/js/jquery.printElement.min.js"></script>
+<script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript">
+	/**
+	 * Prototype.js 와 jQuery 와의 충돌을 방지 (jQuery를 사용하는 변수에는 $ 대신 $j 를  사용)
+	 */
+	var $j = jQuery.noConflict();
+</script>
+<script type="text/javascript">
+	var dateFormat = 'mm.dd.yy';
+	var zeroDate = '00.00.0000';
+</script>
+<script type="text/javascript" src="/js/common/date.js"></script>
+
+<script type="text/javascript">
+	var loginUserDateFormat = "MM.dd.yyyy";
+	
+	/**
+	 * 법인별 사용자 boolean변수
+	 */
+	var isAmericaRegion = false;
+	var isEuropeRegion = false;
+	var isAsiaRegion = true;
+	var isChinaRegion = false;	
+
+	var isAfUser = false;
+	var isMeaUser = false;
+	var isCisUser = false;
+	var isEuUser = false;
+
+	var isEaUser = false;
+	var isJpUser = false;
+	var isWaUser = true;
+	var isCnUser = false;
+
+	var isLaUser = false;
+	var isNaUser = false;
+
+	/*
+	 * 중국 법인통합
+	 */
+	var isNewChina = false;
+	/**
+	 * 사용자Center Type
+	 */
+	var isFscUser = false;
+
+	/**
+	 * 로그인 사용자의 법인 정보
+	 */
+	var loginUserCorpCode = "C550";
+	var loginUserCorpName = "SIEL";
+	var svcUserCorpCode = "C550";
+
+	/**
+	 * paging.js에서 사용
+	 */
+	var prevPageChar = 'Prev.';
+	var nextPageChar = 'Next';
+
+	/**
+	 * common.js에서 사용
+	 */
+	var addToCartSuccessMsg = 'successfuly added into Cart';
+	var addToCartFailMsg = 'failed';
+	var dataNotFoundMsg = 'No Data Found.';
+	
+	var Gmsg = new Array();
+	Gmsg[0] = "item should be filled up";
+	Gmsg[1] = "You can input only number.";
+	Gmsg[2] = "Incorrect E-mail Format!";
+	/**
+	 * 페이징 처리시 한 페이지당 화면에 출력할 개수
+	 */
+	var numPerPage = '100'
+
+	/**
+	 * 현재 선택된 페이지 번호
+	 */
+	var searchPageNo = 0;
+
+	/**
+	 * 현재 선택된 블럭번호
+	 */
+	var searchBlckNo = 0;
+
+	/**
+	 * 그리드 데이터의 출력 시작번호
+	 */
+	var displayBeginRow = 0;
+
+	/**
+	 * 그리드 데이터의 출력 마지막 번호
+	 */
+	var displayFinishRow = 0;
+
+	/**
+	 * 총 그리드 데이터
+	 */
+	var totRow = 0;
+
+	/**
+	 * Url Mapping Controller
+	 */
+	var urlPattern = '/gspn/operate.do';
+
+	/**
+	 * Cache Url Mapping Controller
+	 */
+	var cacheUrlPattern = '/gspn/cache.do';
+
+	/**
+	 * SAP 데이터를 그리드에 페이징 처리를
+	 * 위한 시작 데이터와 마지막 데이터의 처리함수.
+	 */
+	function setDisplayRow() {
+		if (searchPageNo == 0) {
+			displayBeginRow = 0;
+			displayFinishRow = (searchPageNo + 1) * numPerPage;
+		} else {
+			displayBeginRow = searchPageNo * numPerPage;
+			displayFinishRow = (searchPageNo + 1) * numPerPage;					
+		}
+	}
+
+	/**
+	 * 변수 데이터 초기화
+	 */
+	function initialDisplayRowVariable() {
+		searchPageNo = 0;
+		searchBlckNo = 0;
+		displayBeginRow = 0;
+		displayFinishRow = 0;
+		totRow = 0;
+	}
+
+	/**
+	 * IE and Opera
+	 */
+	if (window.attachEvent) {
+		window.attachEvent("onload", neviDir);
+		window.attachEvent("onunload", neviDir);
+	} else {
+		window.addEventListener("DOMContentLoaded", neviDir, false);
+		window.addEventListener("unload", neviDir, false);
+	}
+
+	
+	function neviDir() {
+		try{
+			if (eval("parent.rightContents") == undefined) {
+				return;
+			}
+	
+			if (parent.$('leftMenuForm') != null) {
+				var navigation = "";
+				var title = "";
+				var menuUrl = "";
+				if (parent.$('leftMenuForm').naviDir != null) {
+					navigation = parent.$('leftMenuForm').naviDir.value;
+				}
+				if (parent.$('leftMenuForm').titleDir != null) {
+					title = parent.$('leftMenuForm').titleDir.value;
+				}
+				var naviDir = "<img src='/img/locater_arrow.gif' width='9' height='9' align='absmiddle'> " + navigation;
+				if (parent.$('leftMenuForm').menuUrl != null) {
+					menuUrl = parent.$('leftMenuForm').menuUrl.value;
+				}
+	
+				if (document.getElementById('naviDiv') != null) {
+					document.getElementById('naviDiv').innerHTML = naviDir;
+				}
+				if (document.getElementById('titleDiv') != null) {
+					document.getElementById('titleDiv').innerHTML = title;
+				}
+				
+	            /*
+	             * 미주 통합
+	             - RH-002
+	             - 화면상단 Support Link 제공                                 
+	             - 2015-10-26
+	          */  
+		          
+				
+	
+				if (menuUrl != "") {
+					authButton(menuUrl);
+				}
+			}
+		}catch(e){
+			
+		}
+	}
+
+	/**
+	 * Display command-registred buttons.
+	 */
+	function authButton(menuUrl) {
+		$('authForm').action = urlPattern;
+		$('authForm').cmd.value = 'AuthCommandListCmd';
+		$('authForm').menuUrl.value = menuUrl;
+		AjaxRequest(urlPattern, "authForm", setJsonObject);
+	}
+
+	function setJsonObject(response) {
+		var jsonObjBtn = eval('(' + response.responseText + ')');
+
+		if (jsonObjBtn.success) {
+			var length = jsonObjBtn.cmdLists.length;
+			for ( var i = 0; i < length; i++) {
+				if (document.getElementById(jsonObjBtn.cmdLists[i].commandId) != null) {
+					document.getElementById(jsonObjBtn.cmdLists[i].commandId).style.display = "block";
+				}
+			}
+		}
+	}
+
+	/**
+	 * Timezone 날짜 함수
+	 */
+	function calcTzDate(offset) {
+		// create Date object for current location
+		var d = new Date();
+
+		// convert to msec
+		// add local time zone offset 
+		// get UTC time in msec
+		var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+
+		// create new Date object for different city
+		// using supplied offset
+		var nd = new Date(utc + (3600000 * offset));
+
+		var tmpyy = nd.getFullYear();
+		var ls_yy = (tmpyy > 99) ? tmpyy : 1900 + tmpyy;
+
+		var tmpmon = nd.getMonth();
+		var ls_mon = (tmpmon < 9) ? "0" + (tmpmon + 1) : tmpmon + 1;
+
+		var tmpday = nd.getDate();
+		var ls_day = (tmpday < 10) ? "0" + tmpday : tmpday;
+
+		var tmphh = nd.getHours();
+		var ls_hh = (tmphh < 10) ? "0" + tmphh : tmphh;
+
+		var tmpmm = nd.getMinutes();
+		var ls_mm = (tmpmm < 10) ? "0" + tmpmm : tmpmm;
+
+		// return time as a string
+		return ls_yy.toString() + ls_mon.toString() + ls_day.toString();
+	}
+
+	/**
+	 * Timezone 시간 함수
+	 */
+	function calcTzTime(offset) {
+		// create Date object for current location
+		var d = new Date();
+
+		// convert to msec
+		// add local time zone offset 
+		// get UTC time in msec
+		var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+
+		// create new Date object for different city
+		// using supplied offset
+		var nd = new Date(utc + (3600000 * offset));
+
+		var tmphh = nd.getHours();
+		var ls_hh = (tmphh < 10) ? "0" + tmphh : tmphh;
+
+		var tmpmm = nd.getMinutes();
+		var ls_mm = (tmpmm < 10) ? "0" + tmpmm : tmpmm;
+
+		// return time as a string
+		return ls_hh.toString() + ls_mm.toString();
+	}
+
+	/**
+	 * 새로고침(F5), Ctrl+R, Ctrl+N 방지
+	 */
+	function preventRefreshEvent() {
+		if (event.keyCode == 116) {
+			event.keyCode = 2;
+			return false;
+		} else if (event.ctrlKey
+				&& (event.keyCode == 78 || event.keyCode == 82)) {
+			return false;
+		}
+	}
+
+	document.onkeydown = preventRefreshEvent;
+</script>
+<style>
+
+</style>
+</head>
+
+<body style="background-color: transparent; height:100%;">
+<form id="formHelp" method="post" action="/gspn/operate.do">
+<input type="hidden" name="cmd" value="">
+<input type="hidden" name="MENUID" value="">
+</form>
+
+<form id="authForm" name="authForm" method="post" style="display: inline;">
+	<input type="hidden" name="cmd" value="">
+	<input type="hidden" name="menuUrl" value="">
+	<input type="hidden" name="subRegionCd" value="WA">
+	<input type="hidden" name="aclId" value="SUPVOR">
+</form>
+<div id="progressloading" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; text-align: center; background: rgb(255, 255, 255); opacity: 0.75; z-index: 1; display: none;">
+    <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+            <td class="loading"><img src="/img/loading.gif" width="32" height="32"></td>
+        </tr>
+    </tbody></table>
+</div>
+
+
+
+
+<script type="text/javascript" src="/js/check.js"></script>
+<script type="text/javascript">
+	var selectedJobType = "R";
+
+	$j(function(){
+		initCertiInfo();
+	});
+
+	/**
+	 * Service Pack의 Certi 정보를 가져온다.
+	 * ZcsbB2bCertiInfoCmd를 실행하여 결과를 처리
+	 */
+	function initCertiInfo(){
+		$('progressloading').startWaiting();
+		
+		clearForm("frm");
+		insertValue("frm", "PI_BUKRS", "C550");
+		insertValue("frm", "PI_KUNNR", "1907621");
+		insertValue("frm", "PI_ACTIVE", "");
+		insertValue("frm", "PI_CERTI_NO", "INNB985571H");
+		insertValue("frm", "PI_SERIAL_NO", "");
+		insertValue("frm", "PI_PACK_CODE", "");
+		insertValue("frm", "PI_FROM_DATE", "");
+		insertValue("frm", "PI_TO_DATE", "");
+		insertValue("frm", "PI_SO_NO", "");
+		
+		insertValue("frm", "cmd", "ZcsbB2bCertiInfoCmd");
+		AjaxRequest(urlPattern,'frm', resultInitCertiInfo);
+	}
+
+	/**
+	 * Certi 정로를 저장한다.
+	 * ZcsbB2bCertiInfoCmd 결과값을 hidden 값에 셋팅
+	 */
+	function resultInitCertiInfo(response){
+		try {
+			$('progressloading').stopWaiting();
+
+			var jsonObj = response.responseText.evalJSON();
+
+			if (jsonObj.success) {
+				var obj = jsonObj.pT_CERTI_INFO[0];
+								
+				$j("#job_no").val(emptyToSpace(obj.REF_NO));
+				$j("#customer_code").val(emptyToSpace(obj.CIC_CUSTOMER));
+				
+				$j("#ASC_CODE").val(obj.ASC_NO);
+				$j("#ascCode").html(obj.ASC_NO);
+				$j("#SO_NO").val(obj.SO_NO);
+				$j("#PACK_NUMBER").val(obj.PACK_CODE);
+				$j("#CONSUMER").val(obj.CIC_CUSTOMER);
+				$j("#CERTI_NO").val(obj.CERTI_NO);
+				$j("#PUR_DT").val(obj.PUR_DT);
+				$j("#REG_DT").val(obj.REG_DT);
+				$j("#MODEL").val(obj.MODEL);
+				$j("#IMEI").val(obj.IMEI);
+				$j("#PDGRP").val(obj.PDGRP);
+				$j("#PDCTG").val(obj.PDCTG);
+				$j("#SERIAL_NO").val(obj.SERIAL_NO);
+				$j("#PO_NO").val(obj.PO_NO);
+				$j("#SVCLV").val(obj.SVCLV);
+				$j("#SVCST").val(obj.SVCST);
+				$j("#WTYTY").val(obj.WTYTY);
+				$j("#SVCTY").val(obj.SVCTY);
+				$j("#EXTERM").val(obj.EXTERM);
+				$j("#EXT_S_DT").val(obj.EXT_S_DT);
+				$j("#EXT_E_DT").val(obj.EXT_E_DT);
+				
+				customerSearch();
+			} else {
+				if (jsonObj.error) {
+					$('progressloading').stopWaiting();
+					cfExceptionPop(jsonObj);
+				}
+			}
+		} catch (e) {}
+	}
+
+	/**
+	 * 빈값을 html코드로 인코딩
+	 * 빈값일때 &nbsp;로 바꿈
+	 */
+	function emptyToSpace(str){
+		return (str == "")?"&nbsp;":str;
+	}
+
+	/**
+	 * 고객 정보를 호출
+	 * SVCPopCustomerDetailCmd 호출
+	 */
+	function customerSearch(){
+		$('progressloading').startWaiting();
+
+		clearForm("frm");
+		insertValue("frm", "BP_NO", $j("#customer_code").val());
+		insertValue("frm", "bpno", $j("#customer_code").val());
+		
+		insertValue("frm", "cmd", "SVCPopCustomerDetailCmd");
+		AjaxRequest(urlPattern,'frm', resultCustomer);
+	}
+	
+	/**
+	 * 고객 정보를 화면에 셋팅
+	 * SVCPopCustomerDetailCmd 호출 결과값을 셋팅
+	 */
+	function resultCustomer(response){
+		try {
+			$('progressloading').stopWaiting();
+
+			var jsonObj = response.responseText.evalJSON();
+
+			if (jsonObj.success && jsonObj.retcode == 0) {
+				$j.each(jsonObj.dataLists , function(key , obj){
+					$j("#customerName").html(" "+ obj.NAME_FIRST + " " + obj.NAME_LAST);
+					var address1 = $j.trim(obj.STREET1 + " " + obj.STREET2 + " " +obj.STREET3 + " " + obj.DISTRICT);
+					$j("#address1").html(address1);
+					$j("#address2").html(obj.CITY + " " + obj.POST_CODE);
+					$j("#phone").html("Mobile:" + obj.MOBILE_PHONE + " / Home:"+ obj.HOME_PHONE + " / Office:"+ obj.OFFICE_PHONE);
+
+					$j("#customerRegion").html(obj.REGION);
+					$j("#placeOfSupply").html(obj.REGION);
+					
+					$j("#gstinBuyer").html(obj.UNIQUE_ID);
+					initInvoicePrint();
+				});
+			}else{
+				alert(jsonObj.retmsg);
+			}
+		} catch (e) {}
+	}
+	
+	function initInvoicePrint(){
+		$('progressloading').startWaiting();
+
+		clearForm("frm");
+		insertValue("frm", "IV_ASC_CODE", $j("#ASC_CODE").val());
+		insertValue("frm", "IV_COMPANY", "C550");
+		insertValue("frm", "IV_FLAG", "");
+		insertValue("frm", "IV_SO_NO", $j("#SO_NO").val());
+		
+		insertValue("frm", "cmd", "ZifCspSalesInvocePrintCmd");
+		AjaxRequest(urlPattern,'frm', resultInitInvoicePrint);
+	}
+	
+	function resultInitInvoicePrint(response){
+		try {
+			$('progressloading').stopWaiting();
+			
+			var jsonObj = response.responseText.evalJSON();
+
+			if (jsonObj.success && jsonObj.EV_RET_CODE == "S") {
+				
+				//원본인지 카피본인지 따로 분리
+				/*
+				if(jsonObj.eS_INVOICE_INFO.print_cnt > 0){
+					$j("#oriAndDu").html("Duplicate for supplier");
+				}else{
+					$j("#oriAndDu").html("Original for recipient");
+				}
+				*/
+
+				//공급자 ASC 정보를 셋팅
+				$j("#ascName").html(jsonObj.eS_ASC_INFO.asc_lname + " " + jsonObj.eS_ASC_INFO.asc_fname);
+				$j("#forAscName").html(jsonObj.eS_ASC_INFO.asc_lname);
+				$j("#ascAddress1").html(emptyToSpace(jsonObj.eS_ASC_INFO.asc_address));
+				$j("#ascAddress2").html(emptyToSpace(jsonObj.eS_ASC_INFO.asc_city) + " " + emptyToSpace(jsonObj.eS_ASC_INFO.asc_zipcode));
+
+				//인보이스 번호와 날짜를 따로 관리
+				/*
+				var date = toDisplayScreenDate(jsonObj.eS_INVOICE_INFO.invoice_dt, ".", 'MM.dd.yyyy');
+				$j("#invoiceDate").html(emptyToSpace(date));
+				$j("#invoiceNo").html(emptyToSpace(jsonObj.eS_INVOICE_INFO.invoice_no));
+				*/
+				
+				$j("#contractNo").html(emptyToSpace(jsonObj.eS_ASC_INFO.asc_workphone));
+				$j("#stateName").html(jsonObj.eS_ASC_INFO.asc_state_nm);
+// 				$j("#stateCode").html(jsonObj.eS_ASC_INFO.asc_state);
+	
+				//term 부분에 코드 빼기
+				var termStatus = jsonObj.eS_ASC_INFO.asc_state_nm;
+				termStatus = termStatus.substring(3);
+				$j("#termStatus").html(termStatus);
+
+				//제품 정보 셋팅
+				$j("#packNumber").html(emptyToSpace(jsonObj.eS_INVOICE_INFO.pack_number));
+				$j("#packDesc").html(emptyToSpace(jsonObj.eS_INVOICE_INFO.pack_desc));
+				$j("#sacCode").html(emptyToSpace(jsonObj.eS_PRICE_CALC.evSacCode));
+				$j("#salesQty").html(emptyToSpace(in_comma(jsonObj.eS_INVOICE_INFO.sales_qty)));
+				$j("#unitPrice").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.ev_retail_price)));
+				$j("#taxable").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.ev_retail_price)));
+				$j("#sgstRate").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.evSgstRate)));
+				$j("#sgst").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.evSgst)));
+				$j("#cgstRate").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.evCgstRate)));
+				$j("#cgst").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.evCgst)));
+				$j("#igstRate").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.evIgstRate)));
+				$j("#igst").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.evIgst)));
+				$j("#cessRate").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.evCessRate)));
+				$j("#cess").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.evCess)));
+				$j("#totalTax").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.ev_gst_tax_amt)));
+				$j("#total").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.ev_eu_price)));
+
+				//합계금액 표시
+				$j("#sumTaxable").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.ev_retail_price)));
+				$j("#sumSgst").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.evSgst)));
+				$j("#sumCgst").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.evCgst)));
+				$j("#sumIgst").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.evIgst)));
+				$j("#sumCess").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.evCess)));
+				$j("#sumTax").html(emptyToSpace(in_comma(jsonObj.eS_PRICE_CALC.ev_gst_tax_amt)));
+				$j("#sumTotal").html(emptyToSpace(in_comma( Math.round(jsonObj.eS_PRICE_CALC.ev_eu_price) )));
+
+				//토탈 금액 넣기
+				$j("#totalAmountWord").html("Rupees " + priceToWord(jsonObj.eS_PRICE_CALC.ev_eu_price) + " only (rounded off)");
+				
+				setGstin();
+			}else{
+				alert(jsonObj.errorMessage);
+			}
+		} catch (e) {}
+	}
+
+	function setGstin(){
+		
+		$('progressloading').startWaiting();
+		
+		clearForm("frm");
+ 		insertValue("frm", "cmd", "ZcsbAaAccountInfoCmd");
+ 		insertValue("frm", "CorpCode", "C550");
+ 		insertValue("frm", "B2bId", $j("#ASC_CODE").val());
+ 		insertValue("frm", "Language", "EN");
+		
+		AjaxRequest('/gspn/operate.do', "frm", setGstinCallback);
+	}
+	
+	function setGstinCallback(response){
+		$('progressloading').stopWaiting();	
+		var gstinObj = eval('('+response.responseText+')');
+			
+		$j("#gstin").html(gstinObj.gstIn);
+		$j("#pan").html(gstinObj.panNo);
+
+		invoiceNoMgmt("R");
+	}
+
+	/**
+	 * 인보이스 번호를 저장하거나 가지고옴.
+	 * ZifGstInvoiceSaveCmd 호출하여 invoice를 저장 또는 select
+	 */
+	function invoiceNoMgmt(jobType){
+		selectedJobType = jobType;
+		
+		$('progressloading').startWaiting();
+		
+		clearForm("frm");
+ 		insertValue("frm", "cmd", "ZifGstInvoiceSaveCmd");
+ 		insertValue("frm", "ivAscCode", $j("#ASC_CODE").val());
+		insertValue("frm", "ivCompany", "C550");
+		insertValue("frm", "ivIfUserid", "SSC1J");
+		insertValue("frm", "ivJobType", jobType);
+		insertValue("frm", "ivTrType", "CAREINV");
+		insertValue("frm", "ivTrNo", $j("#certiNo").html());
+
+		if(jobType == "S"){
+			var invoiceNo = $j("#invoiceNo").find("input").val();
+			invoiceNo = $j.trim(invoiceNo);
+			
+			if(invoiceNo == ""){
+				alert("Please, insert invoice no.");
+				return;
+			}
+			
+			insertValue("frm", "ivInvoiceNo", invoiceNo);
+		}
+		else{ //type == "R"
+			insertValue("frm", "ivInvoiceNo", "");
+		}
+
+		AjaxRequest('/gspn/operate.do', "frm", invoiceNoMgmtCallback);
+	}
+	
+	function invoiceNoMgmtCallback(response){
+		$('progressloading').stopWaiting();	
+		var inObj = eval('('+response.responseText+')');
+
+		if(inObj.success){
+			if(inObj.evRetCode == "0"){
+				$j("#invoiceNo").html(inObj.evInvoiceNo);
+
+				var date = toDisplayScreenDate(inObj.evErdat, ".", 'MM.dd.yyyy');
+				$j("#invoiceDate").html(emptyToSpace(date));
+				
+				if(inObj.evPrintCt == "0"){
+					$j("#oriAndDu").html("Original for recipient");
+				}
+				else{
+					$j("#oriAndDu").html("Duplicate for supplier");
+				}
+				
+				//프린트 버튼 누를시 인보이스 저장하고 해당 인보이스 바로 프린트
+				if(selectedJobType == "S" || selectedJobType == "P"){
+					printPage();
+				}
+			}
+			else{
+				$j("#invoiceNo").html("<input type='text' class='input c_numalpha c_upper' maxlength='16' id='inputInvoiceNo' onkeyup='javascript:checkValue(this.value, this.id);' onchange='javascript:checkValue(this.value, this.id);' />");
+				
+				if(selectedJobType == "S"){
+					alert(inObj.evRetMsg);
+				}
+			}
+		}
+		else{
+			alert("No invoice data not found.");
+		}
+	}
+	
+	/**
+	 * 앞자리 0 제외
+	 */
+	 function checkValue(str, id) {
+		var re = /(^0+)/;
+		var txt = /[~!@\#$%^&*\()\-=+_']/gi; 
+
+		if(txt.test(str)){
+			str = str.replace(txt,"");
+		}
+		
+		if(re.test(str)){
+			str = str.replace(re,"");
+		}
+		
+		$j("#"+id).val(str.toUpperCase().trim());
+	}
+
+	/**
+	 * 인보이스 번호가 있으면 저장하고 출력 아니면 그냥 출력
+	 * Invoice 저장을 위해 invoiceNoMgmt 펑션을 호출
+	 */
+	function printCheck(){
+		var input = $j("#invoiceNo").find("input");
+
+		//Invoice No 저장
+		if(input.length > 0){
+			if(input.val() != ""){
+				invoiceNoMgmt("S");
+			}
+			else{
+				alert("Please, input the invoice no.");
+			}
+		}
+		//그냥 출력
+		else{
+			invoiceNoMgmt("P");
+		}
+	}
+
+	/**
+	 * 원본인지 복사본인지 확인하기 위해 카운터 증가
+	 * ZifCspSalesInvocePrintCmd 호출
+	 */
+	function printPage(){
+		window.print();
+	}
+
+	/**
+	 * 금액을 글씨로 바꾸기
+	 * 금액을 알파벳으로 변경
+	 */
+	function priceToWord(totalSum){
+	    var bigNumArry = new Array('', ' Thousand', ' Million', ' Billion', ' Trillion', ' Quadrillion', ' Quintillion');
+	    
+	    //var splitTotalSum = totalSum.split(".");
+	    
+	    var output = '';
+	    
+	    var numString = Math.round(totalSum) + "";  //String으로 변환해야 숫자가 영문으로 찍힌다. 삭제하면 안됨!!!
+	    
+	    var finlOutPut = new Array();
+
+	    /*
+	    if (numString == '0' || numString == 0) {
+	        document.getElementById('divNumberString').innerHTML = 'Total value in words: Rupees Zero Only';
+	        return;
+	    }
+	    */
+
+	    var i = numString.length;
+	    i = i - 1;
+
+	    //cut the number to grups of three digits and add them to the Arry
+	    while (numString.length > 3) {
+	        var triDig = new Array(3);
+	        triDig[2] = numString.charAt(numString.length - 1);
+	        triDig[1] = numString.charAt(numString.length - 2);
+	        triDig[0] = numString.charAt(numString.length - 3);
+
+	        var varToAdd = triDig[0] + triDig[1] + triDig[2];
+	        finlOutPut.push(varToAdd);
+	        i--;
+	        numString = numString.substring(0, numString.length - 3);
+	    }
+	    finlOutPut.push(numString);
+	    finlOutPut.reverse();
+
+	    //conver each grup of three digits to english word
+	    //if all digits are zero the triConvert
+	    //function return the string "dontAddBigSufix"
+	    for (j = 0; j < finlOutPut.length; j++) {
+	        // 10진수 처리 2016.05.11 jiw
+	        finlOutPut[j] = triConvert(parseInt(finlOutPut[j],10));
+	    }
+	    
+	    var bigScalCntr = 0; //this int mark the million billion trillion... Arry
+
+	    for (b = finlOutPut.length - 1; b >= 0; b--) {
+	        if (finlOutPut[b] != "dontAddBigSufix") {
+	            finlOutPut[b] = finlOutPut[b] + bigNumArry[bigScalCntr] + ' ';
+	            bigScalCntr++;
+	        }
+	        else {
+	            //replace the string at finlOP[b] from "dontAddBigSufix" to empty String.
+	            finlOutPut[b] = ' ';
+	            bigScalCntr++; //advance the counter  
+	        }
+	    }
+
+	        //convert The output Arry to , more printable string 
+	        for(n = 0; n<finlOutPut.length; n++){
+	            output +=finlOutPut[n];
+	        }
+	    
+	    
+	    /*
+	    var pointNumber = splitTotalSum[1];
+	    
+	    output += " Point ";
+	    
+	    for (var i=0;i<pointNumber.length;i++) {
+	        if (pointNumber.substr(i,1)== '1')  output += " One ";
+	        else if (pointNumber.substr(i,1)== '2') output += " Two ";
+	        else if (pointNumber.substr(i,1)== '3') output += " Three ";
+	        else if (pointNumber.substr(i,1)== '4') output += " Four ";
+	        else if (pointNumber.substr(i,1)== '5') output += " Five ";
+	        else if (pointNumber.substr(i,1)== '6') output += " Six ";
+	        else if (pointNumber.substr(i,1)== '7') output += " Seven ";
+	        else if (pointNumber.substr(i,1)== '8') output += " Eight ";
+	        else if (pointNumber.substr(i,1)== '9') output += " Nine ";
+	        else if (pointNumber.substr(i,1)== '0') output += " Zero ";
+	    }
+	    */
+	    
+	    //
+	    
+	    return output;
+	}
+
+	//simple function to convert from numbers to words from 1 to 999
+	function triConvert(num){
+	    var ones = new Array('', ' One', ' Two', ' Three', ' Four', ' Five', ' Six', ' Seven', ' Eight', ' Nine', ' Ten', ' Eleven', ' Twelve', ' Thirteen', ' Fourteen', ' Fifteen', ' Sixteen', ' Seventeen', ' Eighteen', ' Nineteen');
+	    var tens = new Array('', '', ' Twenty', ' Thirty', ' Forty', ' Fifty', ' Sixty', ' Seventy', ' Eighty', ' Ninety');
+	    var hundred = ' hundred';
+	    var output = '';
+	    var numString = num.toString();
+
+	    if (num == 0) {
+	        return 'dontAddBigSufix';
+	    }
+	    //the case of 10, 11, 12 ,13, .... 19 
+	    if (num < 20) {
+	        output = ones[num];
+	        return output;
+	    }
+
+	    //100 and more
+	    if (numString.length == 3) {
+	        output = ones[parseInt(numString.charAt(0))] + hundred;
+	        if (numString.charAt(1) == "1") {
+	            output += ones[parseInt(numString.charAt(1) + numString.charAt(2))];
+	        } else {
+	            output += tens[parseInt(numString.charAt(1))];
+	            output += ones[parseInt(numString.charAt(2))];
+	        }
+	        return output;
+	    }
+
+	    output += tens[parseInt(numString.charAt(0))];
+	    output += ones[parseInt(numString.charAt(1))];
+
+	    return output;
+	}  
+
+	/**
+	 * 날짜 포맷 형식을 유저에 맞게 변경
+	 * 사용자 정보를 가지고 Date format을 변경
+	 */
+	function toDisplayScreenDate(dbdate, gubun, scrFormat) {
+		
+		var RetDay = "";
+		var userFormat = removeChar(scrFormat.toUpperCase(),".");
+		userFormat = removeChar(userFormat.toUpperCase(),"/");
+		userFormat = removeChar(userFormat.toUpperCase(),"-");
+	  
+	   if( removeChar(dbdate, gubun).length != 8) return;
+	  
+		Year = removeChar(dbdate,gubun).substring(0,4);
+		MM = removeChar(dbdate,gubun).substring(4,6);
+		DD  = removeChar(dbdate,gubun).substring(6,8);
+	  	
+		if( userFormat == "YYYYMMDD" ){
+			RetDay = Year+gubun+MM+gubun+DD ;
+		}else if( userFormat == "MMDDYYYY" ){
+			RetDay = MM+gubun+DD+gubun+Year ;
+		}else if( userFormat == "DDMMYYYY" ){
+			RetDay = DD+gubun+MM+gubun+Year ;
+		}
+
+		return RetDay ;
+	}
+
+	/**
+	 * 동적 폼에 값 넣기
+	 * input hidden 값을 지정된 form에 넣어준다.
+	 */
+	function insertValue(form, name, value){
+		var html = "<input type='hidden' id='"+name+"' name='"+name+"' value='"+value+"'/>";
+		$j("#"+form).append(html);
+	}
+
+	/**
+	 * 동적폼 초기화
+	 * 지정된 form안의 html을 삭제한다.
+	 */
+	function clearForm(form){
+		$j("#"+form).html("");
+	}
+</script>
+<style media="print">
+	.noprint { display: none }
+</style>
+
+<style>
+	td{
+		line-height: 14px;
+	}
+	.bt {
+		border-top: 1px solid #CCC;
+	}
+	.bb {
+		border-bottom: 1px solid #CCC;
+	}
+	.bl {
+		border-left: 1px solid #CCC;
+	}
+	.br {
+		border-right: 1px solid #CCC;
+	}
+	.bold{
+		font-weight: bold;
+	}
+	.center{
+		text-align: center;
+	}
+	.left{
+		text-align: left;
+	}
+	.right{
+		text-align: right;
+	}
+	.cellBg{
+		background-color: #e0e0e0;
+	}
+</style>
+
+<!-- <body onContextmenu="return false"> -->
+
+<table width="100%" height="50" border="0" cellpadding="0" cellspacing="0" class="noprint" style="border-bottom: 1 solid #CCCCCC;">
+	<tbody><tr>
+		<td class="lay_padR">&nbsp;</td>
+		<td valign="middle" style="padding: 15 15 15 15">
+			<font color="#FF6600" style="font-size:12px; font-wieght:bold;">
+			Dear Partner<br>
+			Please use print button in invoice format to take printout of invoices.<br>
+			Invoice number should allow only alphabet and numerical maximum length to 16 digits
+			</font>
+		</td>
+		<td class="lay_padL">&nbsp;</td>
+	</tr>
+</tbody></table>
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+	<tbody><tr>
+		<td rowspan="2" class="lay_padR">&nbsp;</td>
+		<td height="100%" align="right" class="tbR_pad">
+        	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+        		<colgroup>
+        			<col width="200">
+        			<col width="*">
+        			<col width="200">
+        		</colgroup>
+            	<tbody><tr> 
+              		<td>
+              			<img src="/img/en/SamsungLogo.png" height="50">
+              		</td> 
+              		<td align="center">
+              			<span style="font-size: 18px; font-weight: bold; line-height: 20px">Tax Invoice</span><br>
+              			<span style="font-size: 12px; font-weight: bold;">(Valid for Input Tax)</span>
+              		</td>
+              		<td align="right" id="oriAndDu">Duplicate for supplier</td>
+           		</tr>
+          	</tbody></table>
+          	<table width="100%" border="0" cellspacing="0" cellpadding="1" style="border: 1px solid #CCC;">
+				<tbody><tr>
+					<td colspan="17" class="cellBg bold">Name &amp; Address of the Supplier</td>
+				</tr>
+				<tr>
+					<td colspan="13" id="ascName">GSS Quick Garage India Pvt Ltd </td>
+					<td colspan="2">Invoice No</td>
+					<td colspan="2" id="invoiceNo">INNB985571H</td>
+				</tr>
+				<tr>
+					<td colspan="13" id="ascAddress1">Door No. 113, Kummalamman Koil</td>
+					<td colspan="2">Invoice Date</td>
+					<td colspan="2" id="invoiceDate">11.14.2019</td>
+				</tr>
+				<tr>
+					<td colspan="13" id="ascAddress2">Chennai 600081</td>
+					<td colspan="2">Certificate No</td>
+					<td colspan="2" id="certiNo">INNB985571H</td>
+				</tr>
+				<tr>
+					<td colspan="15">&nbsp;</td>
+					<td colspan="2">&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="2">Contact No</td>
+					<td colspan="5" id="contractNo">&nbsp;</td>
+					<td colspan="3">Nature of Transaction</td>
+					<td colspan="3">Supply of Services</td>
+					<td colspan="3">&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="2">GSTIN</td>
+					<td colspan="5" id="gstin">33AAGCG5356G1ZO</td>
+					<td colspan="3">State Code &amp; Name</td>
+					<td colspan="3" id="stateName">33-Tamil Nadu</td>
+					<td colspan="3">&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="2">PAN</td>
+					<td colspan="5" id="pan">AAGCG5356G</td>
+					<td colspan="3">ASC Code</td>
+					<td colspan="3" id="ascCode">1907621</td>
+					<td colspan="3">&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="15" class="bb">&nbsp;</td>
+					<td colspan="2" class="bb">&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="17" class="cellBg bold">Name &amp; Address of the Buyer</td>
+				</tr>
+				<tr>
+					<td colspan="15" id="customerName"> JAFFARLULLA M</td>
+					<td colspan="2">&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="15" id="address1">NO:9/5, KHADBADA AMIN ROAD, OLD WASHERMANPET  Tamil Nadu</td>
+					<td colspan="2">&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="15" id="address2">CHENNAI 600021</td>
+					<td colspan="2">&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="17">&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="2">Contact No</td>
+					<td colspan="5" id="phone">Mobile:9840164434 / Home:9840164434 / Office:</td>
+					<td colspan="3">Place of Supply</td>
+					<td colspan="3" id="placeOfSupply">33-Tamil Nadu</td>
+					<td colspan="3">&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="2">GSTIN</td>
+					<td colspan="5" id="gstinBuyer"></td>
+					<td colspan="3">State Code &amp; Name</td>
+					<td colspan="3" id="customerRegion">33-Tamil Nadu</td>
+					<td colspan="3">&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="2">PAN</td>
+					<td colspan="5">&nbsp;</td>
+					<td colspan="9">&nbsp;</td>
+				</tr>
+				<tr>
+					
+					<td colspan="17">&nbsp;</td>
+				</tr>
+				<tr>
+					<td rowspan="2" class="cellBg center bt bb bold">SI.No.</td>
+					<td rowspan="2" class="cellBg center bl bt bb bold">Care Pack Code</td>
+					<td rowspan="2" class="cellBg center bl bt bb bold">Description</td>
+					<td rowspan="2" class="cellBg center bl bt bb bold">SAC Code</td>
+					<td rowspan="2" class="cellBg center bl bt bb bold">Qty</td>
+					<td rowspan="2" class="cellBg center bl bt bb bold">Rate</td>
+					<td rowspan="2" class="cellBg center bl bt bb bold">Taxable Value<br>(A)</td>
+
+					<td colspan="2" class="bl bt center bold cellBg">SGST/UTGST</td>
+					<td colspan="2" class="bl bt center bold cellBg">CGST</td>
+					<td colspan="2" class="bl bt center bold cellBg">IGST</td>
+					<td colspan="2" class="bl bt center bold cellBg">Cess</td>
+					
+					<td rowspan="2" class="cellBg center bl bt bb bold">TotalTax Amount<br>(B)</td>
+					<td rowspan="2" class="cellBg center bl bt bb bold">Total Amount (Rs.)<br>(A+B)</td>
+
+				</tr>
+				<tr>
+					<td class="cellBg center bl bt bb bold">Rate %</td>
+					<td class="cellBg center bl bt bb bold">Amount</td>
+					<td class="cellBg center bl bt bb bold">Rate %</td>
+					<td class="cellBg center bl bt bb bold">Amount</td>
+					<td class="cellBg center bl bt bb bold">Rate %</td>
+					<td class="cellBg center bl bt bb bold">Amount</td>
+					<td class="cellBg center bl bt bb bold">Rate %</td>
+					<td class="cellBg center bl bt bb bold">Amount</td>
+				</tr>
+				<tr>
+					<td class="center bb">1</td>
+					<td class="center bl bb" id="packNumber">P-GT-1CXXS0M</td>
+					<td class="center bl bb" id="packDesc">Basic w'ty + 1yr Extended</td>
+					<td class="center bl bb" id="sacCode">998716</td>
+					<td class="right bl bb" id="salesQty">1</td>
+					<td class="right bl bb" id="unitPrice">940.00</td>
+					<td class="right bl bb" id="taxable">940.00</td>
+					<td class="right bl bb" id="sgstRate">9.00</td>
+					<td class="right bl bb" id="sgst">84.60</td>
+					<td class="right bl bb" id="cgstRate">9.00</td>
+					<td class="right bl bb" id="cgst">84.60</td>
+					<td class="right bl bb" id="igstRate">0.00</td>
+					<td class="right bl bb" id="igst">0.00</td>
+					<td class="right bl bb" id="cessRate">0.00</td>
+					<td class="right bl bb" id="cess">0.00</td>
+					<td class="right bl bb" id="totalTax">169.20</td>
+					<td class="right bl bb" id="total">1,109.20</td>
+				</tr>
+				<tr>
+					<td colspan="6" class="bold center">Total Amount (Rs.)</td>
+					<td class="right bold bl" id="sumTaxable">940.00</td>
+					<td class="bl">&nbsp;</td>
+					<td class="right bold bl" id="sumSgst">84.60</td>
+					<td class="bl">&nbsp;</td>
+					<td class="right bold bl" id="sumCgst">84.60</td>
+					<td class="bl">&nbsp;</td>
+					<td class="right bold bl" id="sumIgst">0.00</td>
+					<td class="bl">&nbsp;</td>
+					<td class="right bold bl" id="sumCess">0.00</td>
+					<td class="right bold bl" id="sumTax">169.20</td>
+					<td class="right bold bl" id="sumTotal">1,109</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="bt">Total Amount in words</td>
+					<td colspan="15" class="bt" id="totalAmountWord">Rupees  One Thousand  One hundred Nine  only (rounded off)</td>
+				</tr>
+				<tr>
+					<td colspan="17" class="bt">"I/We hereby certify that my/our registration certificate under the SGST/UTGST/CGST /IGST Act is in force on date on which the supply of goods/services specified in this tax invoice is made by me/us and that the transaction of supply covered by this 
+					TAX INVOICE has been affected by me/us and it shall be accounted for in the turnover of supply while filing of return and the due tax,
+					if any,payable on the supply has been paid or shall be paid"
+					</td>
+				</tr>
+				<tr>
+					<td colspan="17" class="bt">
+						Note:<br>
+						1.Unless otherwise stated, tax on the Invoice is not payable on reverse charge.<br>										
+						2.Extended Warranty once sold will not be taken back<br>			
+						3.Independence of parties:The Relationship between the company and buyer is of seller and buyer<br>
+						4.Jurisdiction of courts:All disputes are subject to jurisdiction of <span id="termStatus">Tamil Nadu</span>&nbsp;state court only										
+					</td>
+				</tr>
+				<tr>
+					<td colspan="12" class="bt center" style="vertical-align: bottom;">Page 1 of 1</td>
+					<td colspan="5" class="bt center">
+						For <span id="forAscName">GSS Quick Garage India Pvt Ltd</span><br>
+						<br>
+						Authorised Signatory<br>
+						(Sign &amp; Stamp)
+					</td>
+				</tr>
+			</tbody></table>
+			<table width="100%" border="0">
+				<tbody><tr>
+					<td colspan="17">
+						<table align="right" id="btnAll" class="noprint">
+							<tbody><tr>
+								<td class="btn_padT" align="right" width="1px">
+									<table width="10" border="0" cellspacing="0" cellpadding="0">
+										<tbody><tr>
+											<td nowrap="" class="btn_left">&nbsp;</td>
+											<td nowrap="" class="btn"><a href="#" onclick="printCheck();">Print</a></td>
+											<td nowrap="" class="btn_right">&nbsp;</td>
+										</tr>
+									</tbody></table>
+								</td>
+								<td class="btn_padT" align="right" width="1px">
+									<table width="10" border="0" cellspacing="0" cellpadding="0">
+										<tbody><tr>
+											<td nowrap="" class="btn_left">&nbsp;</td>
+											<td nowrap="" class="btn"><a href="javascript:self.close();">Close</a></td>
+											<td nowrap="" class="btn_right">&nbsp;</td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+			</tbody></table>
+    	</td>
+   		<td rowspan="2" class="lay_padR">&nbsp;</td>
+	</tr>
+</tbody></table>
+<form id="invoiceForm" name="invoiceForm">
+	<input type="hidden" id="ASC_CODE" value="1907621">
+	<input type="hidden" id="SO_NO" value="1461357780">
+	<input type="hidden" id="PACK_NUMBER" value="C550-P-GT-1CXXS0M">
+	<input type="hidden" id="CONSUMER" value="3750644080">
+	<input type="hidden" id="CERTI_NO" value="INNB985571H">
+	<input type="hidden" id="PUR_DT" value="20190106">
+	<input type="hidden" id="REG_DT" value="20191114">
+	<input type="hidden" id="MODEL" value="SM-J610FZBGINS">
+	<input type="hidden" id="IMEI" value="352682105757529">
+	<input type="hidden" id="PDGRP" value="GT">
+	<input type="hidden" id="PDCTG" value="S0M">
+	<input type="hidden" id="SERIAL_NO" value="RZ8KC00X75M">
+	<input type="hidden" id="PO_NO" value="INNB985571H">
+	<input type="hidden" id="SVCLV" value="X">
+	<input type="hidden" id="SVCST" value="1">
+	<input type="hidden" id="WTYTY" value="X">
+	<input type="hidden" id="SVCTY" value="C">
+	<input type="hidden" id="EXTERM" value="1">
+	<input type="hidden" id="EXT_S_DT" value="20200106">
+	<input type="hidden" id="EXT_E_DT" value="20210105">
+	<input type="hidden" id="customerTitle">
+	<input type="hidden" id="totalFlag">
+	<input type="hidden" id="job_no" value="&amp;nbsp;">
+	<input type="hidden" id="customer_code" value="3750644080">
+</form>
+
+<form id="frm" name="frm" style="display: none;"><input type="hidden" id="cmd" name="cmd" value="ZifGstInvoiceSaveCmd"><input type="hidden" id="ivAscCode" name="ivAscCode" value="1907621"><input type="hidden" id="ivCompany" name="ivCompany" value="C550"><input type="hidden" id="ivIfUserid" name="ivIfUserid" value="SSC1J"><input type="hidden" id="ivJobType" name="ivJobType" value="R"><input type="hidden" id="ivTrType" name="ivTrType" value="CAREINV"><input type="hidden" id="ivTrNo" name="ivTrNo" value="INNB985571H"><input type="hidden" id="ivInvoiceNo" name="ivInvoiceNo" value=""></form>
+
+</body></html>

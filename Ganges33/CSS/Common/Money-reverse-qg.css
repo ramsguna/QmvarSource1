@@ -1,0 +1,103 @@
+.div-entire-tbl {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 526px;
+            width: 1255px;
+            background-size: 100% auto;
+            }
+            .div-money-reserve-tbl {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                /*opacity: 0.5;*/
+            }
+            .tbl-money-reserve {
+                width: 100%;
+            }
+            .td-bill {
+                width: 41px;
+                height: 17px;
+            }
+            .td-blank1 {
+                width: 72px;
+                height: 17px;
+            }
+            .td-blank2 {
+                height: 17px;
+                width: 103px;
+            }
+            .td-blank3 {
+                height: 17px;
+                width: 168px;
+            }
+            .td-blank4 {
+                height: 17px;
+            }
+            .td-blank5 {
+                width: 41px;
+                height: 17px;
+            }
+            .td-rupee {
+                width: 72px;
+                height: 22px;
+            }
+            .td-txtbox-rupee {
+                height: 22px;
+                width: 103px;
+            }
+            .td-txtbox2-rupee {
+                height: 22px;
+                width: 168px;
+            }
+            .td-lbl-open-credit-checkout {
+                height: 22px;
+            }
+            .strong-lbl-open-credit-checkout {
+                width: 41px;
+                height: 24px;
+            }
+            .td-lbl-open-credit-checkout {
+                height: 22px;
+            }
+            .td-bnt-send {
+                height: 22px;
+            }
+            .lbl-status-open-credit-checkout {
+                width: 179px;
+                font-family: "Meiryo UI";
+                font-size: large;
+                font-weight: bold;
+            }
+            .drpdown-status {
+                font-family: "Meiryo UI";
+                Height: 32px;
+                Width: 307px;
+            }
+            .lbl-font-common {
+                font-family: "Meiryo UI";
+                 }
+            .lbl-large-font {
+                font-size: large;
+                font-family: "Meiryo UI";
+            }
+            .hidden-field {
+                width: 41px;
+                height: 20px;
+            }
+            .txtbox-rupee1 {
+                font-family: "Meiryo UI";
+                Height :18px;
+                Width :73px;
+            }
+            .txtbox-common{
+                Height:18px;
+            }
+            .btn-send {
+                width: 81px;
+                height: 29px;
+            }
+            .lbl-small-font {
+                font-family: "Meiryo UI";
+                font-size: small;
+            }

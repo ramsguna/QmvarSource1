@@ -1,0 +1,1440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{E4952EEC-ADDE-4C27-89A2-88EFB223F7E5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Ganges33</RootNamespace>
+    <AssemblyName>Ganges33</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Ganges33.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Ganges33.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="iText, Version=1.4.6.2, Culture=neutral, PublicKeyToken=bd3736a929f259c3, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\iText.dll</HintPath>
+    </Reference>
+    <Reference Include="iTextAsian, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bd3736a929f259c3, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\iTextAsian.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JSharpLib, Version=1.2.3.3, Culture=neutral, PublicKeyToken=bd3736a929f259c3, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\JSharpLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\Users\ReverPro\Desktop\MS Excel DLL\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Analysis_Cash_Tracking.aspx" />
+    <Content Include="Analysis_Cash_Tracking2.aspx" />
+    <Content Include="Analysis_Cash_Tracking_imp.aspx" />
+    <Content Include="Analysis_Cash_Tracking_qg.aspx" />
+    <Content Include="Analysis_Cash_Tracking_qg_1.aspx" />
+    <Content Include="Analysis_Custody.aspx" />
+    <Content Include="Analysis_Custody_qg.aspx" />
+    <Content Include="Analysis_Custody_Search.aspx" />
+    <Content Include="Analysis_Data.aspx" />
+    <Content Include="Analysis_Export.aspx" />
+    <Content Include="Analysis_Export_bak.aspx" />
+    <Content Include="Analysis_Export_New.aspx" />
+    <Content Include="Analysis_FileUpload.aspx" />
+    <Content Include="Analysis_FileUpload_qg.aspx" />
+    <Content Include="Analysis_Parts_Compare.aspx" />
+    <Content Include="Analysis_Recovery.aspx" />
+    <Content Include="Analysis_Recovery2.aspx" />
+    <Content Include="Analysis_Refresh.aspx" />
+    <Content Include="Analysis_Report.aspx" />
+    <Content Include="Analysis_Report2.aspx" />
+    <Content Include="Analysis_Store_Management.aspx" />
+    <Content Include="Analysis_Upload_Details.aspx" />
+    <Content Include="Analysis_Upload_Summary.aspx" />
+    <Content Include="assets\css\login.css" />
+    <Content Include="assets\css\material-dashboard-rtl.css" />
+    <Content Include="assets\css\material-dashboard.css" />
+    <Content Include="assets\css\material-dashboard.min.css" />
+    <Content Include="assets\demo\demo.css" />
+    <Content Include="assets\demo\demo.js" />
+    <Content Include="assets\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="assets\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="assets\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="assets\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="assets\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="assets\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="assets\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="assets\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="assets\images\ui-icons_056b93_256x240.png" />
+    <Content Include="assets\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="assets\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="assets\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="assets\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="assets\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="assets\image\gss-logo.png" />
+    <Content Include="assets\image\user.png" />
+    <Content Include="assets\image\user1.png" />
+    <Content Include="assets\image\user2.png" />
+    <Content Include="assets\image\user3.png" />
+    <Content Include="assets\img\gss-logo.png" />
+    <Content Include="assets\jquery-ui.css" />
+    <Content Include="assets\jquery-ui.min_lips.js" />
+    <Content Include="assets\jquery-ui_theme.css" />
+    <Content Include="assets\js\core\bootstrap-material-design.min.js" />
+    <Content Include="assets\js\core\jquery.min.js" />
+    <Content Include="assets\js\core\popper.min.js" />
+    <Content Include="assets\js\material-dashboard.js" />
+    <Content Include="assets\js\material-dashboard.min.js" />
+    <Content Include="assets\js\plugins\arrive.min.js" />
+    <Content Include="assets\js\plugins\bootstrap-datetimepicker.min.js" />
+    <Content Include="assets\js\plugins\bootstrap-notify.js" />
+    <Content Include="assets\js\plugins\bootstrap-selectpicker.js" />
+    <Content Include="assets\js\plugins\bootstrap-tagsinput.js" />
+    <Content Include="assets\js\plugins\chartist.min.js" />
+    <Content Include="assets\js\plugins\fullcalendar.min.js" />
+    <Content Include="assets\js\plugins\jasny-bootstrap.min.js" />
+    <Content Include="assets\js\plugins\jquery-jvectormap.js" />
+    <Content Include="assets\js\plugins\jquery.bootstrap-wizard.js" />
+    <Content Include="assets\js\plugins\jquery.dataTables.min.js" />
+    <Content Include="assets\js\plugins\jquery.tagsinput.js" />
+    <Content Include="assets\js\plugins\jquery.validate.min.js" />
+    <Content Include="assets\js\plugins\moment.min.js" />
+    <Content Include="assets\js\plugins\nouislider.min.js" />
+    <Content Include="assets\js\plugins\perfect-scrollbar.jquery.min.js" />
+    <Content Include="assets\js\plugins\sweetalert2.js" />
+    <Content Include="dashboard.html" />
+    <Content Include="icon2\placeholder-2.png" />
+    <Content Include="icon2\user-3.png" />
+    <Content Include="icon\back.png" />
+    <Content Include="icon\close.png" />
+    <Content Include="icon\create.png" />
+    <Content Include="icon\csv.png" />
+    <Content Include="icon\differnce.png" />
+    <Content Include="icon\download.png" />
+    <Content Include="icon\folder-13.png" />
+    <Content Include="icon\icon\analysis.png" />
+    <Content Include="icon\icon\back.png" />
+    <Content Include="icon\icon\close.png" />
+    <Content Include="icon\icon\create.png" />
+    <Content Include="icon\icon\daylyreport.png" />
+    <Content Include="icon\icon\differnce.png" />
+    <Content Include="icon\icon\download.png" />
+    <Content Include="icon\icon\exit-1.png" />
+    <Content Include="icon\icon\folder-13.png" />
+    <Content Include="icon\icon\home.png" />
+    <Content Include="icon\icon\import.png" />
+    <Content Include="icon\icon\inventory.png" />
+    <Content Include="icon\icon\inventory_report.png" />
+    <Content Include="icon\icon\login.png" />
+    <Content Include="icon\icon\menu_bar_stock.png" />
+    <Content Include="icon\icon\mneu_arrival\arrival.png" />
+    <Content Include="icon\icon\mneu_arrival\menu_bar_Arrival.png" />
+    <Content Include="icon\icon\mneu_arrival\report.png" />
+    <Content Include="icon\icon\mneu_arrival\return.png" />
+    <Content Include="icon\icon\mneu_arrival\search.png" />
+    <Content Include="icon\icon\mneu_arrival\used.png" />
+    <Content Include="icon\icon\mneu_money\blank.png" />
+    <Content Include="icon\icon\mneu_money\confirm.png" />
+    <Content Include="icon\icon\mneu_money\day_agg.png" />
+    <Content Include="icon\icon\mneu_money\open_close.png" />
+    <Content Include="icon\icon\mneu_money\sales.png" />
+    <Content Include="icon\icon\mneu_repair\blank.png" />
+    <Content Include="icon\icon\mneu_repair\reapir_input.png" />
+    <Content Include="icon\icon\mneu_repair\repair_search.png" />
+    <Content Include="icon\icon\money.png" />
+    <Content Include="icon\icon\M_changereserve.png" />
+    <Content Include="icon\icon\M_control.png" />
+    <Content Include="icon\icon\M_inspection.png" />
+    <Content Include="icon\icon\m_record.png" />
+    <Content Include="icon\icon\nmvar.png" />
+    <Content Include="icon\icon\OK_icon.png" />
+    <Content Include="icon\icon\open.png" />
+    <Content Include="icon\icon\person.png" />
+    <Content Include="icon\icon\placeholder-2.png" />
+    <Content Include="icon\icon\repair.png" />
+    <Content Include="icon\icon\report_send.png" />
+    <Content Include="icon\icon\samsung-logo.jpg" />
+    <Content Include="icon\icon\save_temporary.png" />
+    <Content Include="icon\icon\search.png" />
+    <Content Include="icon\icon\send.png" />
+    <Content Include="icon\icon\start.png" />
+    <Content Include="icon\icon\stock_out.png" />
+    <Content Include="icon\icon\submit.png" />
+    <Content Include="icon\icon\system.png" />
+    <Content Include="icon\icon\user-3.png" />
+    <Content Include="icon\import.png" />
+    <Content Include="icon\inventory_report.png" />
+    <Content Include="icon\menu_bar_stock.png" />
+    <Content Include="icon\menyu_analysis\ana_export.png" />
+    <Content Include="icon\menyu_analysis\ana_input.png" />
+    <Content Include="icon\menyu_analysis\ana_report.png" />
+    <Content Include="icon\menyu_analysis\ana_upload.png" />
+    <Content Include="icon\menyu_analysis\cash_Tracking.png" />
+    <Content Include="icon\menyu_analysis\custody.png" />
+    <Content Include="icon\menyu_analysis\Export_new3.png" />
+    <Content Include="icon\menyu_analysis\recovery.png" />
+    <Content Include="icon\mneu_arrival\Activity_report.png" />
+    <Content Include="icon\mneu_arrival\arrival.png" />
+    <Content Include="icon\mneu_arrival\menu_bar_Arrival.png" />
+    <Content Include="icon\mneu_arrival\report.png" />
+    <Content Include="icon\mneu_arrival\return.png" />
+    <Content Include="icon\mneu_arrival\search.png" />
+    <Content Include="icon\mneu_arrival\used.png" />
+    <Content Include="icon\mneu_money\blank.png" />
+    <Content Include="icon\mneu_money\confirm.png" />
+    <Content Include="icon\mneu_money\day_agg.png" />
+    <Content Include="icon\mneu_money\for_gspn.png" />
+    <Content Include="icon\mneu_money\menu_bar_money.png" />
+    <Content Include="icon\mneu_money\not_gspn.png" />
+    <Content Include="icon\mneu_money\open_close.png" />
+    <Content Include="icon\mneu_money\sales.png" />
+    <Content Include="icon\mneu_money\sales_report.png" />
+    <Content Include="icon\mneu_repair\blank.png" />
+    <Content Include="icon\mneu_repair\reapir_input.png" />
+    <Content Include="icon\mneu_repair\repair_input.png" />
+    <Content Include="icon\mneu_repair\repair_search.png" />
+    <Content Include="icon\mneu_repair\repair_tools.png" />
+    <Content Include="icon\open.png" />
+    <Content Include="icon\report_send.png" />
+    <Content Include="icon\save_temporary.png" />
+    <Content Include="icon\search.png" />
+    <Content Include="icon\send.png" />
+    <Content Include="icon\start.png" />
+    <Content Include="icon\stock_out.png" />
+    <Content Include="icon\takeout.png" />
+    <Content Include="inv_Arrival.aspx" />
+    <Content Include="inv_corporation_regi.aspx" />
+    <Content Include="inv_Report.aspx" />
+    <Content Include="inv_Return.aspx" />
+    <Content Include="inv_Search.aspx" />
+    <Content Include="inv_Use.aspx" />
+    <Content Include="Login_3tire.aspx" />
+    <Content Include="Login_normal.aspx" />
+    <Content Include="Maintenance.aspx" />
+    <Content Include="Menu2.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="icon\analysis.png" />
+    <Content Include="icon\daylyreport.png" />
+    <Content Include="icon\exit-1.png" />
+    <Content Include="icon\home.png" />
+    <Content Include="icon\inventory.png" />
+    <Content Include="icon\login.png" />
+    <Content Include="icon\money.png" />
+    <Content Include="icon\M_changereserve.png" />
+    <Content Include="icon\M_control.png" />
+    <Content Include="icon\M_inspection.png" />
+    <Content Include="icon\m_record.png" />
+    <Content Include="icon\nmvar.png" />
+    <Content Include="icon\OK_icon.png" />
+    <Content Include="icon\person.png" />
+    <Content Include="icon\repair.png" />
+    <Content Include="icon\samsung-logo.jpg" />
+    <Content Include="icon\submit.png" />
+    <Content Include="icon\system.png" />
+    <Content Include="image\home.png" />
+    <Content Include="image\login-gss-logo.png" />
+    <Content Include="image\login.png" />
+    <Content Include="image\repair.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="Menu.aspx" />
+    <Content Include="Money_Aggregation_qg.aspx" />
+    <Content Include="Money_Menu.aspx" />
+    <Content Include="Money_Record_1.aspx" />
+    <Content Include="Money_Record_3.aspx" />
+    <Content Include="Money_Record_4.aspx" />
+    <Content Include="Money_Report.aspx" />
+    <Content Include="Money_Report_qg.aspx" />
+    <Content Include="Money_Reserve.aspx" />
+    <Content Include="Money_Aggregation.aspx" />
+    <Content Include="Money_Reserve_qg.aspx" />
+    <Content Include="Money_Sales.aspx" />
+    <Content Include="Money_Salse.aspx" />
+    <Content Include="Money_Salse_show.aspx" />
+    <Content Include="Money_Salse_show2.aspx" />
+    <Content Include="Msg_inv_Arrival.aspx" />
+    <Content Include="Msg_inv_Return.aspx" />
+    <Content Include="My Project\Analysis_Data.aspx" />
+    <Content Include="pagewall\wall_analysis.png" />
+    <Content Include="pagewall\wall_dailyreport.png" />
+    <Content Include="pagewall\wall_inventry.png" />
+    <Content Include="pagewall\wall_menu.png" />
+    <Content Include="pagewall\wall_money.png" />
+    <Content Include="pagewall\wall_nMVAR.png" />
+    <Content Include="pagewall\wall_person.png" />
+    <Content Include="pagewall\wall_repair.png" />
+    <Content Include="pagewall\wall_stock.png" />
+    <Content Include="pagewall\wall_system.png" />
+    <Content Include="pagewall_2\wall_analysis-2.png" />
+    <Content Include="pagewall_2\wall_dailyreport-2.png" />
+    <Content Include="pagewall_2\wall_inventry-2.png" />
+    <Content Include="pagewall_2\wall_menu-2.png" />
+    <Content Include="pagewall_2\wall_money-2.png" />
+    <Content Include="pagewall_2\wall_nMVAR-2.png" />
+    <Content Include="pagewall_2\wall_person-2.png" />
+    <Content Include="pagewall_2\wall_repair-2.png" />
+    <Content Include="pagewall_2\wall_system-2.png" />
+    <Content Include="pagewall_2\__MACOSX\._wall_analysis-2.png" />
+    <Content Include="pagewall_2\__MACOSX\._wall_dailyreport-2.png" />
+    <Content Include="pagewall_2\__MACOSX\._wall_inventry-2.png" />
+    <Content Include="pagewall_2\__MACOSX\._wall_menu-2.png" />
+    <Content Include="pagewall_2\__MACOSX\._wall_money-2.png" />
+    <Content Include="pagewall_2\__MACOSX\._wall_nMVAR-2.png" />
+    <Content Include="pagewall_2\__MACOSX\._wall_person-2.png" />
+    <Content Include="pagewall_2\__MACOSX\._wall_repair-2.png" />
+    <Content Include="pagewall_2\__MACOSX\._wall_system-2.png" />
+    <Content Include="Repair_1.aspx" />
+    <Content Include="Repair_1_Detail.aspx" />
+    <Content Include="rpa.aspx" />
+    <Content Include="Rpa_Logs.aspx" />
+    <Content Include="Rpa_LogsDetails.aspx" />
+    <Content Include="Rpa_logview.aspx" />
+    <Content Include="Rpa_OnOff.aspx" />
+    <Content Include="rpa_scheduler.aspx" />
+    <Content Include="Rpa_TaskApp.aspx" />
+    <Content Include="SonyAnalysis_Export.aspx" />
+    <Content Include="SonyAnalysis_FileUpload.aspx" />
+    <Content Include="SonyMenu.aspx" />
+    <Content Include="test.aspx" />
+    <Content Include="Dashboard.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalysisSub.Master.designer.vb">
+      <DependentUpon>AnalysisSub.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AnalysisSub.Master.vb">
+      <DependentUpon>AnalysisSub.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Analysis.Master.designer.vb">
+      <DependentUpon>Analysis.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis.Master.vb">
+      <DependentUpon>Analysis.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Cash_Tracking.aspx.designer.vb">
+      <DependentUpon>Analysis_Cash_Tracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Cash_Tracking.aspx.vb">
+      <DependentUpon>Analysis_Cash_Tracking.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Cash_Tracking2.aspx.designer.vb">
+      <DependentUpon>Analysis_Cash_Tracking2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Cash_Tracking2.aspx.vb">
+      <DependentUpon>Analysis_Cash_Tracking2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Cash_Tracking_imp.aspx.designer.vb">
+      <DependentUpon>Analysis_Cash_Tracking_imp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Cash_Tracking_imp.aspx.vb">
+      <DependentUpon>Analysis_Cash_Tracking_imp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Cash_Tracking_qg.aspx.designer.vb">
+      <DependentUpon>Analysis_Cash_Tracking_qg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Cash_Tracking_qg.aspx.vb">
+      <DependentUpon>Analysis_Cash_Tracking_qg.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Cash_Tracking_qg_1.aspx.designer.vb">
+      <DependentUpon>Analysis_Cash_Tracking_qg_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Cash_Tracking_qg_1.aspx.vb">
+      <DependentUpon>Analysis_Cash_Tracking_qg_1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Custody.aspx.designer.vb">
+      <DependentUpon>Analysis_Custody.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Custody.aspx.vb">
+      <DependentUpon>Analysis_Custody.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Custody_qg.aspx.designer.vb">
+      <DependentUpon>Analysis_Custody_qg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Custody_qg.aspx.vb">
+      <DependentUpon>Analysis_Custody_qg.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Custody_Search.aspx.designer.vb">
+      <DependentUpon>Analysis_Custody_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Custody_Search.aspx.vb">
+      <DependentUpon>Analysis_Custody_Search.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Data.aspx.designer.vb">
+      <DependentUpon>Analysis_Data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Data.aspx.vb">
+      <DependentUpon>Analysis_Data.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Export.aspx.designer.vb">
+      <DependentUpon>Analysis_Export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Export.aspx.vb">
+      <DependentUpon>Analysis_Export.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Export_bak.aspx.designer.vb">
+      <DependentUpon>Analysis_Export_bak.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Export_bak.aspx.vb">
+      <DependentUpon>Analysis_Export_bak.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Export_New.aspx.designer.vb">
+      <DependentUpon>Analysis_Export_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Export_new.aspx.vb">
+      <DependentUpon>Analysis_Export_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_FileUpload.aspx.designer.vb">
+      <DependentUpon>Analysis_FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_FileUpload.aspx.vb">
+      <DependentUpon>Analysis_FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_FileUpload_qg.aspx.designer.vb">
+      <DependentUpon>Analysis_FileUpload_qg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_FileUpload_qg.aspx.vb">
+      <DependentUpon>Analysis_FileUpload_qg.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Parts_Compare.aspx.designer.vb">
+      <DependentUpon>Analysis_Parts_Compare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Parts_Compare.aspx.vb">
+      <DependentUpon>Analysis_Parts_Compare.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Recovery.aspx.designer.vb">
+      <DependentUpon>Analysis_Recovery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Recovery.aspx.vb">
+      <DependentUpon>Analysis_Recovery.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Recovery2.aspx.designer.vb">
+      <DependentUpon>Analysis_Recovery2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Recovery2.aspx.vb">
+      <DependentUpon>Analysis_Recovery2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Refresh.aspx.designer.vb">
+      <DependentUpon>Analysis_Refresh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Refresh.aspx.vb">
+      <DependentUpon>Analysis_Refresh.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Report.aspx.designer.vb">
+      <DependentUpon>Analysis_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Report.aspx.vb">
+      <DependentUpon>Analysis_Report.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Report2.aspx.designer.vb">
+      <DependentUpon>Analysis_Report2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Report2.aspx.vb">
+      <DependentUpon>Analysis_Report2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Store_Management.aspx.designer.vb">
+      <DependentUpon>Analysis_Store_Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Store_Management.aspx.vb">
+      <DependentUpon>Analysis_Store_Management.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Upload_Details.aspx.designer.vb">
+      <DependentUpon>Analysis_Upload_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Upload_Details.aspx.vb">
+      <DependentUpon>Analysis_Upload_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Upload_Summary.aspx.designer.vb">
+      <DependentUpon>Analysis_Upload_Summary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Upload_Summary.aspx.vb">
+      <DependentUpon>Analysis_Upload_Summary.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Class_analysis.vb" />
+    <Compile Include="Class_common.vb" />
+    <Compile Include="Class_inv.vb" />
+    <Compile Include="Class_money.vb" />
+    <Compile Include="Class_repair.vb" />
+    <Compile Include="dao\DBUtility.vb" />
+    <Compile Include="DBCommon.vb" />
+    <Compile Include="GrapeCity\ActiveReports.vb" />
+    <Compile Include="inv_Arrival.aspx.designer.vb">
+      <DependentUpon>inv_Arrival.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inv_Arrival.aspx.vb">
+      <DependentUpon>inv_Arrival.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="inv_corporation_regi.aspx.designer.vb">
+      <DependentUpon>inv_corporation_regi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inv_corporation_regi.aspx.vb">
+      <DependentUpon>inv_corporation_regi.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="inv_Report.aspx.designer.vb">
+      <DependentUpon>inv_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inv_Report.aspx.vb">
+      <DependentUpon>inv_Report.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="inv_Return.aspx.designer.vb">
+      <DependentUpon>inv_Return.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inv_Return.aspx.vb">
+      <DependentUpon>inv_Return.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="inv_Search.aspx.designer.vb">
+      <DependentUpon>inv_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inv_Search.aspx.vb">
+      <DependentUpon>inv_Search.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="inv_Use.aspx.designer.vb">
+      <DependentUpon>inv_Use.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inv_Use.aspx.vb">
+      <DependentUpon>inv_Use.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="logic\AccountReportControl.vb" />
+    <Compile Include="logic\ActivityReportControl.vb" />
+    <Compile Include="logic\BoiControl.vb" />
+    <Compile Include="logic\CashOnSaleControl.vb" />
+    <Compile Include="logic\CashOnSaleInvoiceControl.vb" />
+    <Compile Include="logic\CashTrackControl.vb" />
+    <Compile Include="logic\CodeMasterControl.vb" />
+    <Compile Include="logic\CollectionControl.vb" />
+    <Compile Include="logic\CommonConst.vb" />
+    <Compile Include="logic\CommonControl.vb" />
+    <Compile Include="logic\CorporateControl.vb" />
+    <Compile Include="logic\CreditControl.vb" />
+    <Compile Include="logic\CustodyControl.vb" />
+    <Compile Include="logic\DebitNoteControl.vb" />
+    <Compile Include="logic\DebitNoteRegisterControl.vb" />
+    <Compile Include="logic\Export_File_DetailsControl.vb" />
+    <Compile Include="logic\G2sPaidControl.vb" />
+    <Compile Include="logic\GRecievedControl.vb" />
+    <Compile Include="logic\HSNCodeControl.vb" />
+    <Compile Include="logic\InvoiceUpdateControl.vb" />
+    <Compile Include="logic\Log4NetControl.vb" />
+    <Compile Include="logic\MailControl.vb" />
+    <Compile Include="logic\MoneyAggregationControl.vb" />
+    <Compile Include="logic\MoneyAggregationControl1.vb" />
+    <Compile Include="logic\MoneyReserveControl.vb" />
+    <Compile Include="logic\OtherSalesExtendedWarrantyControl.vb" />
+    <Compile Include="logic\OtherUpdateControl.vb" />
+    <Compile Include="logic\PartsIoControl.vb" />
+    <Compile Include="logic\PaymentValueControl.vb" />
+    <Compile Include="logic\POConfirmationModel.vb" />
+    <Compile Include="logic\POControl.vb" />
+    <Compile Include="logic\PoDcControl.vb" />
+    <Compile Include="logic\PoStatusControl.vb" />
+    <Compile Include="logic\PrDetailControl.vb" />
+    <Compile Include="logic\PrSummaryControl.vb" />
+    <Compile Include="logic\ReturnCreditControl.vb" />
+    <Compile Include="logic\RpaEmailControl.vb" />
+    <Compile Include="logic\RpaOnOffControl.vb" />
+    <Compile Include="logic\RpaSchedulerControl.vb" />
+    <Compile Include="logic\RpaStatusControl.vb" />
+    <Compile Include="logic\RpaTaskAppControl.vb" />
+    <Compile Include="logic\RpaTaskMstControl.vb" />
+    <Compile Include="logic\SalesReportControl.vb" />
+    <Compile Include="logic\SawDiscountControl.vb" />
+    <Compile Include="logic\ScDsrControl.vb" />
+    <Compile Include="logic\ServicePartsReturnControl.vb" />
+    <Compile Include="logic\ShipBaseControl.vb" />
+    <Compile Include="logic\SLedgerControl.vb" />
+    <Compile Include="logic\SonyAcctStmtControl.vb" />
+    <Compile Include="logic\SonyAscGstTaxReportControl.vb" />
+    <Compile Include="logic\SonyAscInvoiceDataControl.vb" />
+    <Compile Include="logic\SonyAscTaxReportControl.vb" />
+    <Compile Include="logic\SonyB2bDateWiseSalesControl.vb" />
+    <Compile Include="logic\SonyB2bStockAvailableControl.vb" />
+    <Compile Include="logic\SonyDailyAbandonControl.vb" />
+    <Compile Include="logic\SonyDailyAccumulatedKPIReportControl.vb" />
+    <Compile Include="logic\SonyDailyASCPartsUsedControl.vb" />
+    <Compile Include="logic\SonyDailyClaimControl.vb" />
+    <Compile Include="logic\SonyDailyDeliveredControl.vb" />
+    <Compile Include="logic\SonyDailyOSReservationControl.vb" />
+    <Compile Include="logic\SonyDailyOsSpecialtreatmentControl.vb" />
+    <Compile Include="logic\SonyDailyReceivesetControl.vb" />
+    <Compile Include="logic\SonyDailyRepairsetSetNPControl.vb" />
+    <Compile Include="logic\SonyDailyUndeliveredSetControl.vb" />
+    <Compile Include="logic\SonyDailyUnRepairsetNPControll.vb" />
+    <Compile Include="logic\SonyInBoundControl.vb" />
+    <Compile Include="logic\SonyMonthlyAbandonControl.vb" />
+    <Compile Include="logic\SonyMonthlyRepairsetControl.vb" />
+    <Compile Include="logic\SonyMonthlyReservationvationControl.vb" />
+    <Compile Include="logic\SonyMonthlySOMCClaimControl.vb" />
+    <Compile Include="logic\SonyOutBoundControl.vb" />
+    <Compile Include="logic\SonyPartOrderControl.vb" />
+    <Compile Include="logic\SonyRmsAscTaxReport01Control.vb" />
+    <Compile Include="logic\SonyRmsClaimInvoiceDetailControl.vb" />
+    <Compile Include="logic\SonyRpsiInquiryControl.vb" />
+    <Compile Include="logic\SonyStocksControl.vb" />
+    <Compile Include="logic\StatusControl.vb" />
+    <Compile Include="logic\StockOverviewControl.vb" />
+    <Compile Include="logic\UserInfoControl.vb" />
+    <Compile Include="Login_3tire.aspx.designer.vb">
+      <DependentUpon>Login_3tire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login_3tire.aspx.vb">
+      <DependentUpon>Login_3tire.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Login_normal.aspx.designer.vb">
+      <DependentUpon>Login_normal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login_normal.aspx.vb">
+      <DependentUpon>Login_normal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance.aspx.designer.vb">
+      <DependentUpon>Maintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance.aspx.vb">
+      <DependentUpon>Maintenance.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="master.Master.designer.vb">
+      <DependentUpon>master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="master.Master.vb">
+      <DependentUpon>master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu2.aspx.designer.vb">
+      <DependentUpon>Menu2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu2.aspx.vb">
+      <DependentUpon>Menu2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Menu.aspx.designer.vb">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.aspx.vb">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Model\AccountReport.vb" />
+    <Compile Include="Model\ActivityReportModel.vb" />
+    <Compile Include="Model\BoiModel.vb" />
+    <Compile Include="Model\CashOnSaleInvoiceModel.vb" />
+    <Compile Include="Model\CashOnSaleModel.vb" />
+    <Compile Include="Model\CashOnSalesInvoiceCreateModel.vb" />
+    <Compile Include="Model\CashTrackModel.vb" />
+    <Compile Include="Model\CodeMasterModel.vb" />
+    <Compile Include="Model\CollectionModel.vb" />
+    <Compile Include="Model\CorporateModel.vb" />
+    <Compile Include="Model\CreditModel.vb" />
+    <Compile Include="Model\CustodyKeepModel.vb" />
+    <Compile Include="Model\CustodyModel.vb" />
+    <Compile Include="Model\DebitNoteModel.vb" />
+    <Compile Include="Model\DebitNoteRegisterModel.vb" />
+    <Compile Include="Model\Export_File_Details.vb" />
+    <Compile Include="Model\G2sPaidModel.vb" />
+    <Compile Include="Model\GRecievedModel.vb" />
+    <Compile Include="Model\HSNCodeModel.vb" />
+    <Compile Include="Model\InvoiceUpdateModel.vb" />
+    <Compile Include="Model\MailModel.vb" />
+    <Compile Include="Model\MoneyAggregationModel.vb" />
+    <Compile Include="Model\MoneyReserveModel.vb" />
+    <Compile Include="Model\OtherSalesExtendedWarrantyModel.vb" />
+    <Compile Include="Model\OtherUpdateModel.vb" />
+    <Compile Include="Model\PartsIoModel.vb" />
+    <Compile Include="Model\PaymentValueModel.vb" />
+    <Compile Include="Model\PoDcModel.vb" />
+    <Compile Include="Model\POModel.vb" />
+    <Compile Include="Model\PoStatusModel.vb" />
+    <Compile Include="Model\PrDetailModel.vb" />
+    <Compile Include="Model\PrSummaryModel.vb" />
+    <Compile Include="Model\ReturnCreditModel.vb" />
+    <Compile Include="Model\RpaClientUserModel.vb" />
+    <Compile Include="Model\RpaEmailModel.vb" />
+    <Compile Include="Model\RpaOnOffModel.vb" />
+    <Compile Include="Model\RpaSchedulerModel.vb" />
+    <Compile Include="Model\RpaStatusModel.vb" />
+    <Compile Include="Model\RpaTaskAppModel.vb" />
+    <Compile Include="Model\RpaTaskMstModel.vb" />
+    <Compile Include="Model\SalesReportModel.vb" />
+    <Compile Include="Model\SawDiscountModel.vb" />
+    <Compile Include="Model\ScDsrModel.vb" />
+    <Compile Include="Model\ServicePartsReturnModel.vb" />
+    <Compile Include="Model\ShipBaseModel.vb" />
+    <Compile Include="Model\SLedgerModel.vb" />
+    <Compile Include="Model\SonyAcctStmtModel.vb" />
+    <Compile Include="Model\SonyAscGstTaxReportModel.vb" />
+    <Compile Include="Model\SonyAscInvoiceDataModel.vb" />
+    <Compile Include="Model\SonyAscTaxReportModel.vb" />
+    <Compile Include="Model\SonyB2bDateWiseSalesModel.vb" />
+    <Compile Include="Model\SonyB2bStockAvailableModel.vb" />
+    <Compile Include="Model\SonyDailyAbandonModel.vb" />
+    <Compile Include="Model\SonyDailyAccumulatedKPIReportModel.vb" />
+    <Compile Include="Model\SonyDailyASCPartsUsedModel.vb" />
+    <Compile Include="Model\SonyDailyClaimModel.vb" />
+    <Compile Include="Model\SonyDailyDeliveredModel.vb" />
+    <Compile Include="Model\SonyDailyOSReservationModel.vb" />
+    <Compile Include="Model\SonyDailyOsSpecialtreatmentModel.vb" />
+    <Compile Include="Model\SonyDailyReceivesetModel.vb" />
+    <Compile Include="Model\SonyDailyRepairsetSetNPModel.vb" />
+    <Compile Include="Model\SonyDailyUndeliveredSetModel.vb" />
+    <Compile Include="Model\SonyDailyUnRepaipairsetNPModel.vb" />
+    <Compile Include="Model\SonyInBoundModel.vb" />
+    <Compile Include="Model\SonyMonthlyAbandonModel.vb" />
+    <Compile Include="Model\SonyMonthlyRepairsetModel.vb" />
+    <Compile Include="Model\SonyMonthlyReservationvationModel.vb" />
+    <Compile Include="Model\SonyMonthlySOMCClaimModel.vb" />
+    <Compile Include="Model\SonyOutBoundModel.vb" />
+    <Compile Include="Model\SonyPartOrderModel.vb" />
+    <Compile Include="Model\SonyRmsAscTaxReport01Model.vb" />
+    <Compile Include="Model\SonyRmsClaimInvoiceDetailModel.vb" />
+    <Compile Include="Model\SonyRpsiInquiryModel.vb" />
+    <Compile Include="Model\SonyStocksModel.vb" />
+    <Compile Include="Model\StatusModel.vb" />
+    <Compile Include="Model\StockOverviewModel.vb" />
+    <Compile Include="Model\UserInfoModel.vb" />
+    <Compile Include="Model\WarrantyCsvModel.vb" />
+    <Compile Include="Money_Aggregation_qg.aspx.designer.vb">
+      <DependentUpon>Money_Aggregation_qg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Money_Aggregation_qg.aspx.vb">
+      <DependentUpon>Money_Aggregation_qg.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Money_Menu.aspx.designer.vb">
+      <DependentUpon>Money_Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Money_Menu.aspx.vb">
+      <DependentUpon>Money_Menu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Money_Record_1.aspx.designer.vb">
+      <DependentUpon>Money_Record_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Money_Record_1.aspx.vb">
+      <DependentUpon>Money_Record_1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Money_Record_3.aspx.designer.vb">
+      <DependentUpon>Money_Record_3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Money_Record_3.aspx.vb">
+      <DependentUpon>Money_Record_3.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Money_Record_4.aspx.designer.vb">
+      <DependentUpon>Money_Record_4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Money_Record_4.aspx.vb">
+      <DependentUpon>Money_Record_4.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Money_Report.aspx.designer.vb">
+      <DependentUpon>Money_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Money_Report.aspx.vb">
+      <DependentUpon>Money_Report.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Money_Report_qg.aspx.designer.vb">
+      <DependentUpon>Money_Report_qg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Money_Report_qg.aspx.vb">
+      <DependentUpon>Money_Report_qg.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Money_Reserve.aspx.designer.vb">
+      <DependentUpon>Money_Reserve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Money_Reserve.aspx.vb">
+      <DependentUpon>Money_Reserve.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Money_Aggregation.aspx.designer.vb">
+      <DependentUpon>Money_Aggregation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Money_Aggregation.aspx.vb">
+      <DependentUpon>Money_Aggregation.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Money_Reserve_qg.aspx.designer.vb">
+      <DependentUpon>Money_Reserve_qg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Money_Reserve_qg.aspx.vb">
+      <DependentUpon>Money_Reserve_qg.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Money_Sales.aspx.designer.vb">
+      <DependentUpon>Money_Sales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Money_Sales.aspx.vb">
+      <DependentUpon>Money_Sales.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Money_Salse.aspx.designer.vb">
+      <DependentUpon>Money_Salse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Money_Salse.aspx.vb">
+      <DependentUpon>Money_Salse.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Money_Salse_show.aspx.designer.vb">
+      <DependentUpon>Money_Salse_show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Money_Salse_show.aspx.vb">
+      <DependentUpon>Money_Salse_show.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Money_Salse_show2.aspx.designer.vb">
+      <DependentUpon>Money_Salse_show2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Money_Salse_show2.aspx.vb">
+      <DependentUpon>Money_Salse_show2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Msg_inv_Arrival.aspx.designer.vb">
+      <DependentUpon>Msg_inv_Arrival.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Msg_inv_Arrival.aspx.vb">
+      <DependentUpon>Msg_inv_Arrival.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Msg_inv_Return.aspx.designer.vb">
+      <DependentUpon>Msg_inv_Return.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Msg_inv_Return.aspx.vb">
+      <DependentUpon>Msg_inv_Return.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\Analysis_Data.aspx.designer.vb">
+      <DependentUpon>Analysis_Data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Analysis_Data.aspx.vb">
+      <DependentUpon>Analysis_Data.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Repair_1.aspx.designer.vb">
+      <DependentUpon>Repair_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repair_1.aspx.vb">
+      <DependentUpon>Repair_1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Repair_1_Detail.aspx.designer.vb">
+      <DependentUpon>Repair_1_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repair_1_Detail.aspx.vb">
+      <DependentUpon>Repair_1_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Repair_2.aspx.designer.vb">
+      <DependentUpon>Repair_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repair_2.aspx.vb">
+      <DependentUpon>Repair_2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Repair_Parts_Registration_Create.aspx.designer.vb">
+      <DependentUpon>Repair_Parts_Registration_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repair_Parts_Registration_Create.aspx.vb">
+      <DependentUpon>Repair_Parts_Registration_Create.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Repair_Tools.aspx.designer.vb">
+      <DependentUpon>Repair_Tools.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repair_Tools.aspx.vb">
+      <DependentUpon>Repair_Tools.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="rpa.aspx.designer.vb">
+      <DependentUpon>rpa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rpa.aspx.vb">
+      <DependentUpon>rpa.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RpaSub.Master.designer.vb">
+      <DependentUpon>RpaSub.Master</DependentUpon>
+    </Compile>
+    <Compile Include="RpaSub.Master.vb">
+      <DependentUpon>RpaSub.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rpa_Logs.aspx.designer.vb">
+      <DependentUpon>Rpa_Logs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rpa_Logs.aspx.vb">
+      <DependentUpon>Rpa_Logs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Rpa_LogsDetails.aspx.designer.vb">
+      <DependentUpon>Rpa_LogsDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rpa_LogsDetails.aspx.vb">
+      <DependentUpon>Rpa_LogsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Rpa_logview.aspx.designer.vb">
+      <DependentUpon>Rpa_logview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rpa_logview.aspx.vb">
+      <DependentUpon>Rpa_logview.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Rpa_OnOff.aspx.designer.vb">
+      <DependentUpon>Rpa_OnOff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rpa_OnOff.aspx.vb">
+      <DependentUpon>Rpa_OnOff.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="rpa_scheduler.aspx.designer.vb">
+      <DependentUpon>rpa_scheduler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rpa_scheduler.aspx.vb">
+      <DependentUpon>rpa_scheduler.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Rpa_TaskApp.aspx.designer.vb">
+      <DependentUpon>Rpa_TaskApp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rpa_TaskApp.aspx.vb">
+      <DependentUpon>Rpa_TaskApp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.vb">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.vb">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site2.Master.designer.vb">
+      <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site2.Master.vb">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site3msg.Master.designer.vb">
+      <DependentUpon>Site3msg.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site3msg.Master.vb">
+      <DependentUpon>Site3msg.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site4.Master.designer.vb">
+      <DependentUpon>Site4.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site4.Master.vb">
+      <DependentUpon>Site4.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site3.Master.designer.vb">
+      <DependentUpon>Site3.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site3.Master.vb">
+      <DependentUpon>Site3.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site5.Master.designer.vb">
+      <DependentUpon>Site5.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site5.Master.vb">
+      <DependentUpon>Site5.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site6.Master.designer.vb">
+      <DependentUpon>Site6.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site6.Master.vb">
+      <DependentUpon>Site6.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SonyAnalysis.Master.designer.vb">
+      <DependentUpon>SonyAnalysis.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SonyAnalysis.Master.vb">
+      <DependentUpon>SonyAnalysis.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SonyAnalysis_Export.aspx.designer.vb">
+      <DependentUpon>SonyAnalysis_Export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SonyAnalysis_Export.aspx.vb">
+      <DependentUpon>SonyAnalysis_Export.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SonyAnalysis_FileUpload.aspx.designer.vb">
+      <DependentUpon>SonyAnalysis_FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SonyAnalysis_FileUpload.aspx.vb">
+      <DependentUpon>SonyAnalysis_FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SonyMenu.aspx.designer.vb">
+      <DependentUpon>SonyMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SonyMenu.aspx.vb">
+      <DependentUpon>SonyMenu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.vb">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.vb">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Analysis.Master" />
+    <Content Include="AnalysisSub.Master" />
+    <Content Include="assets\css\material-dashboard.css.map" />
+    <Content Include="assets\js\material-dashboard.js.map" />
+    <Content Include="assets\scss\material-dashboard.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\bootstrap.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_background-variant.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_badge.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_float.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_grid-framework.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_hover.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_nav-divider.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_navbar-align.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_screen-reader.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_size.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_table-row.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_text-emphasis.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_text-hide.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\mixins\_visibility.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\utilities\_align.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\utilities\_background.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\utilities\_borders.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\utilities\_clearfix.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\utilities\_display.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\utilities\_embed.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\utilities\_flex.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\utilities\_float.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\utilities\_position.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\utilities\_screenreaders.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\utilities\_sizing.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\utilities\_spacing.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\utilities\_text.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\utilities\_visibility.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_alert.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_badge.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_button-group.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_buttons.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_card.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_carousel.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_close.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_code.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_custom-forms.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_dropdown.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_forms.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_functions.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_grid.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_images.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_input-group.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_jumbotron.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_list-group.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_media.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_mixins.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_modal.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_nav.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_navbar.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_pagination.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_popover.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_print.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_progress.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_reboot.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_root.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_tables.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_tooltip.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_transitions.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_type.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_utilities.scss" />
+    <Content Include="assets\scss\material-dashboard\bootstrap\scss\_variables.scss" />
+    <Content Include="assets\scss\material-dashboard\cards\_card-plain.scss" />
+    <Content Include="assets\scss\material-dashboard\cards\_card-profile.scss" />
+    <Content Include="assets\scss\material-dashboard\cards\_card-stats.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_alert.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_animations.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_breakpoints.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_buttons.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_chartist.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_colored-shadows.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_drawer.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_forms.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_hover.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_layout.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_navbar-colors.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_navs.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_sidebar-color.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_transparency.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_type.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_utilities.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_variables.scss" />
+    <Content Include="assets\scss\material-dashboard\mixins\_vendor-prefixes.scss" />
+    <Content Include="assets\scss\material-dashboard\plugins\_animate.scss" />
+    <Content Include="assets\scss\material-dashboard\plugins\_chartist.scss" />
+    <Content Include="assets\scss\material-dashboard\plugins\_perfect-scrollbar.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_body.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_bootstrap-material-design-base.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_bootstrap-material-design.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_brand.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_buttons.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_card.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_code.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_colors-map.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_colors.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_custom-forms.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_drawer.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_dropdown.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_forms.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_layout.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_list-group.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_menu.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_modals.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_nav.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_pagination.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_shadow.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_snackbar.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_spacing.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_state.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_tables.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_tooltip.scss" />
+    <Content Include="assets\scss\material-dashboard\variables\_type.scss" />
+    <Content Include="assets\scss\material-dashboard\_alerts.scss" />
+    <Content Include="assets\scss\material-dashboard\_buttons.scss" />
+    <Content Include="assets\scss\material-dashboard\_cards.scss" />
+    <Content Include="assets\scss\material-dashboard\_checkboxes.scss" />
+    <Content Include="assets\scss\material-dashboard\_core-bootstrap.scss" />
+    <Content Include="assets\scss\material-dashboard\_dropdown.scss" />
+    <Content Include="assets\scss\material-dashboard\_example-pages.scss" />
+    <Content Include="assets\scss\material-dashboard\_fixed-plugin.scss" />
+    <Content Include="assets\scss\material-dashboard\_footers.scss" />
+    <Content Include="assets\scss\material-dashboard\_forms.scss" />
+    <Content Include="assets\scss\material-dashboard\_headers.scss" />
+    <Content Include="assets\scss\material-dashboard\_images.scss" />
+    <Content Include="assets\scss\material-dashboard\_info-areas.scss" />
+    <Content Include="assets\scss\material-dashboard\_input-group.scss" />
+    <Content Include="assets\scss\material-dashboard\_misc.scss" />
+    <Content Include="assets\scss\material-dashboard\_mixins.scss" />
+    <Content Include="assets\scss\material-dashboard\_navbar.scss" />
+    <Content Include="assets\scss\material-dashboard\_popover.scss" />
+    <Content Include="assets\scss\material-dashboard\_popups.scss" />
+    <Content Include="assets\scss\material-dashboard\_radios.scss" />
+    <Content Include="assets\scss\material-dashboard\_responsive.scss" />
+    <Content Include="assets\scss\material-dashboard\_ripples.scss" />
+    <Content Include="assets\scss\material-dashboard\_sidebar-and-main-panel.scss" />
+    <Content Include="assets\scss\material-dashboard\_social-buttons.scss" />
+    <Content Include="assets\scss\material-dashboard\_tables.scss" />
+    <Content Include="assets\scss\material-dashboard\_tabs.scss" />
+    <Content Include="assets\scss\material-dashboard\_togglebutton.scss" />
+    <Content Include="assets\scss\material-dashboard\_tooltip.scss" />
+    <Content Include="assets\scss\material-dashboard\_type.scss" />
+    <Content Include="assets\scss\material-dashboard\_variables.scss" />
+    <Content Include="master.Master" />
+    <Content Include="assets\images\jquery-ui-1.9.2.custom.zip" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="My Project\PublishProfiles\Ganses33_TestServerPackage.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Repair_2.aspx" />
+    <Content Include="Repair_Parts_Registration_Create.aspx" />
+    <Content Include="Repair_Tools.aspx" />
+    <Content Include="Site1.Master" />
+    <Content Include="Site2.Master" />
+    <Content Include="Site3.Master" />
+    <Content Include="Site4.Master" />
+    <Content Include="pagewall\wall_web_create.psd" />
+    <Content Include="Site3msg.Master" />
+    <Content Include="Site5.Master" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Site6.Master" />
+    <Content Include="RpaSub.Master" />
+    <Content Include="SonyAnalysis.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Test.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.TestServer.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestServer|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Ganges33.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51387</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51387/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

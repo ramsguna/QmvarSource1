@@ -1,0 +1,156 @@
+.div-backgroungimage {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 560px;
+            width: 1255px;
+            background-size: contain;
+            }
+            .div-EntirePage {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                }
+            .table-EntirePage {
+                width: 100%;
+                height: 481px;
+            }
+            .td-Blank26 {
+                width: 101px;
+            }
+            .td-Blank1 {
+                width: 101px;
+                height: 99px;
+            }
+            .td-Blank4 {
+                height: 99px;
+            }
+            .td-btnAnalysis {
+                height: 99px;
+                width: 107px;
+            }
+            .td-Blank27 {
+                width: 107px;
+                font-family: "Meiryo UI";
+            }
+            .td-lblAnalysisfileExport {
+                height: 99px;
+                width: 363px;
+            }
+            .td-Blank5-Blank6 {
+                width: 101px;
+                height: 36px;
+            }
+            .auto-style146 {
+                width: 107px;
+                height: 36px;
+            }
+            .td-Blank11-Blank12 {
+                height: 36px;
+            }
+            .td-Blank13 {
+                width: 101px;
+                height: 51px;
+            }
+            .auto-style151 {
+                width: 107px;
+                height: 51px;
+            }
+            .td-Blank16 {
+                height: 51px;
+            }
+            .td-Blank19 {
+                width: 363px;
+                height: 1px;
+            }
+            .td-Blank23 {
+                width: 101px;
+                height: 145px;
+            }
+            .td-Blank24 {
+                width: 107px;
+                height: 145px;
+            }
+            .td-Blank25 {
+                height: 145px;
+            }
+            .td-Blank15 {
+                height: 51px;
+                width: 470px;
+            }
+            .td-Blank28 {
+                width: 363px;
+                font-family: "Meiryo UI";
+            }
+            .td-Blank3 {
+                height: 99px;
+                width: 470px;
+            }
+            .td-Blank9-Blank10 {
+                width: 470px;
+                height: 36px;
+            }
+            .td-Blank2 {
+                height: 99px;
+                width: 102px;
+            }
+            .td-Blank7-Blank8 {
+                width: 102px;
+                height: 36px;
+            }
+            .td-Blank14 {
+                width: 102px;
+                height: 51px;
+            }
+            .td-Blank29 {
+                width: 102px;
+                font-family: "Meiryo UI";
+            }
+            .td-Blank30{
+                width: 470px;
+            }
+            .fontFamily {
+                font-family: "Meiryo UI";
+            }
+            .lblAnalysisFileExport {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+            .td-Blank17 {
+                width: 101px;
+                height: 1px;
+            }
+            .td-Blank18 {
+                width: 107px;
+                height: 1px;
+            }
+            .td-Blank20 {
+                width: 102px;
+                height: 1px;
+            }
+            .td-Blank21 {
+                width: 470px;
+                height: 1px;
+            }
+            .td-Blank22 {
+                height: 1px;
+            }
+            .img-btnAnalysis{
+                Height:108px; 
+                Width:108px;
+            }
+            .Doplistlocation-DropDownExportFile{
+                font-family: "Meiryo UI";
+                Height:33px; 
+                Width:303px;
+            }
+            .DropDownMonth{
+                font-family: "Meiryo UI";
+             Height:24px;
+             Width:169px;
+            }
+            .btnSend{
+                Height:29px;
+                Width:81px; 
+                font-family: "Meiryo UI";
+            } 

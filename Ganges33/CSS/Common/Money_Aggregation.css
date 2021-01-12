@@ -1,0 +1,92 @@
+
+            .div-entire-tbl {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 533px;
+            width: 1255px;
+            background-size: contain;
+            }
+            .div-money-aggregation {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                /*opacity: 0.5;*/
+            }
+            .tbl-money-aggregation {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .td-blank1 {
+                width: 303px;
+                height: 25px;
+            }
+            .td-blank2 {
+                width: 163px;
+                height: 25px;
+            }
+            .td-hidden-script {
+                height: 34px;
+            }
+            .td-btn-today-send {
+                width: 163px;
+                height: 34px;
+            }
+            .td-cash-card-number-climpamount {
+                width: 303px;
+                height: 22px;
+                border: 1px solid black;
+                background-color: #ffff99;
+            }
+            .td-cnt-sum1 {
+                width: 163px;
+                height: 24px;
+                border: 1px solid black;
+            }
+            .td-sum0-amounttaxin {
+                width: 303px;
+                height: 24px;
+                border: 1px solid black;
+                background-color: #ffcc99;
+            }
+             .td-lbl-cash{
+                width: 163px;
+                height: 43px;
+                background-color: #00CC00;
+            }
+             .td-lbl-sales{
+                width: 163px;
+                height: 43px;
+                background-color: #FFCC00;
+            }
+              .td-lbl-common {
+                width: 163px;
+                height: 43px;
+            }
+            .lbl-font-xlarge {
+                font-size: x-large;
+                font-family: "Meiryo UI";
+            }
+            .lbl-font-large {
+                font-family: "Meiryo UI";
+                font-size: large;
+            }
+            .btn-today {
+                margin-top: 0px;
+                font-family: "Meiryo UI";
+                 height: 81px;
+                 width: 29px;
+            }
+            .btn-send{                
+                font-family: "Meiryo UI";
+                 height: 81px;
+                 width: 29px;
+            }
+            .lbl-font-common {
+                font-family: "Meiryo UI";
+            }
+            .txtbox-scriptmanagement {
+                font-family: "Meiryo UI";
+                 height: 19px;
+                 width: 87px;
+            }

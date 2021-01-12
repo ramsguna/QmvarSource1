@@ -1,0 +1,47 @@
+.div-PageMenus {
+            height: 53px;
+            background-color: #D8D8D8;
+            width: 1330px;
+            margin-left: 0px;
+        }
+        .table-Pagemenus {
+            width: 1330px;
+            height: 51px;
+        }
+        .div-buttons {
+            text-align: center;
+        }
+        .td-imgButtons {
+            width: 190px;
+            padding-left:0px;
+            padding-right:0px;
+        }
+        .tabel-buttons {
+            width: 291px;
+            height: 39px;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+            .td-img-btnHome {
+                width: 179px;
+            }
+            .td-img2-lblUser {
+                width: 516px;
+            }
+            .td-img-btnHome {
+                width: 341px;
+            }
+            .body-Entirepage{
+                width: 1330px;
+            }
+            .img-btnHome-img-1-2{
+                Height:36px; 
+                Width:36px;
+            }
+            .btn-logoff{
+              Height:36px; 
+              Width:34px;
+            }
+            .Panel {
+                 Height:47px;
+            }

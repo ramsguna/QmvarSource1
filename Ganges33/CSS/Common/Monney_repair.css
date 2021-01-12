@@ -1,0 +1,84 @@
+
+.
+.div-Entrie-tbl {
+    z-index: 1;
+    left: 38px;
+    top: 122px;
+    position: absolute;
+    height: 512px;
+    width: 1255px;
+    background-size: contain;
+}
+.div-Money-tbl {
+    height: 100%;    background: rgba(255,255,255,0.8);
+}
+.tbl_Money {  
+    margin-left: 44px;
+}
+
+.lbl-common {
+    font-family: "Meiryo UI";
+}
+.lbl-Data-import {
+    font-size: x-large;
+    font-family: "Meiryo UI";
+}
+
+.txtbox1-Recept-close-Account-ASC-smg {
+    height: 20px;
+    width: 150px;
+    font-family: "Meiryo UI";
+}
+.txtbox2-Recept-close {
+    height: 20px;
+    width: 46px;
+    font-family: Meiryo UI;
+}
+
+.Btn-image-start-send-Export {
+    height: 46px;
+    width: 133px;
+}
+
+.Drpdowntxtbox-Counter-Repair-Recep {
+    height: 20px;
+    width: 222px;
+}
+
+
+.td-Start-Recept_Dt_txtbox1-Close_Dt_txtbox1-Counter-Repair {
+    width: 90px;
+    height: 45px;
+    font-family: "Meiryo UI";
+}
+.td-Recept_txtbox1_2-Close_txtbox1_2 {
+    width: 30px;  
+}
+
+.td-denomination_txtbox-Amt_txtbox-ASC_txtbox-Smg_Climp_No {
+    width: 282px;
+    height: 45px;
+}
+.td-Denomination-Amount-Asc-clim-Samsung {
+    width: 170px;
+    height: 45px;
+}
+.td-Blank1 {
+    width: 77px;
+}
+.td-Blank2 {
+    width: 205px;
+    height: 05px;
+}
+.td-dataImport {
+    width: 205px;
+    height: 100px;
+}
+.td-Imort_btn {
+    width: 116px;
+    height: 100px;
+}
+.drpdown {
+    Height :25px; 
+    Width:250px:
+}

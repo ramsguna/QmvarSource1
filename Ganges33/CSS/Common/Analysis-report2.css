@@ -1,0 +1,53 @@
+.div-entire-tbl {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 560px;
+            width: 1243px;
+            background-size: contain;
+            }
+            .div-analysis-report2 {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                /*opacity: 0.5;*/
+            }
+            .tbl-analysis-report2 {
+                width: 100%;
+            }
+            .td-blank1 {
+                width: 80px;
+                height: 36px;
+            }
+            .td-blank2 {
+                width: 92px;
+                height: 18px;
+            }
+            .td-blank3 {
+                width: 92px;
+                height: 36px;
+            }
+            .td-lbl-review {
+                height: 36px;
+                width: 365px;
+            }
+            .td-blank4 {
+                width: 219px;
+            }
+            .td-lbl-activitymonth {
+                height: 18px;
+                width: 237px;
+            }
+            .lbl-font-xx-large {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+            .lbl-font-month-now {
+                font-family: "Meiryo UI";
+                font-weight: bold;
+                font-size: xx-large;
+            }
+            .btn-img-download-back {
+                height:29px;
+                width:81px;
+            }

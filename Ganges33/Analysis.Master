@@ -1,0 +1,723 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Analysis.master.vb" Inherits="Ganges33.Analysis" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
+<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+   
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+ <link href="assets/css/material-dashboard-rtl.css" rel="stylesheet" />
+<link href="assets/css/material-dashboard.css" rel="stylesheet" />
+<link href="assets/css/material-dashboard.min.css" rel="stylesheet" />
+  
+  <link href="assets/demo/demo.css" rel="stylesheet" />
+   <link href="Styles/bootstrap.min.css"  rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <link href="Styles/bootstrap-multiselect.css" rel="stylesheet" type="text/css"/>
+    <script src="Scripts/bootstrap-multiselect.js" type="text/javascript"></script>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+          
+<script type="text/javascript">
+   
+        $(document).ready(function () {
+            if (!$.browser.webkit) {
+            $('.wrapper').html('<p>Sorry! Non webkit users. :(</p>');
+            }
+        });
+
+    $(function () {
+        $('[class*=date]').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "DD/MM/YYYY",
+            language: "tr"
+           
+        });
+    });
+</script>
+
+   <style>
+        
+       
+.nav-link[data-toggle].collapsed:before {
+    content: " ▾";
+    float:right;
+    font-size:30px;
+    margin-top:10px;
+    color:red;
+}
+.nav-link[data-toggle]:not(.collapsed):before {
+    content: " ▴";
+    float:right;
+    font-size:30px;
+    margin-top:5px;
+    color:red;
+}
+
+/* Closed submenu icon */
+#sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+  content: " \f0d7";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 10px;
+}
+/* Opened submenu icon */
+#sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+  content: " \f0da";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 10px;
+}
+
+.liactive
+{
+    background:#9c27b0;
+    color:white;
+}
+
+
+.ui-widget-header {
+	border: 2px #5e0376 solid;
+	background: #9c27b0 url(images/ui-bg_gloss-wave_75_2191c0_500x100.png) 50% 50% repeat-x;
+	color: #eaf5f7;
+	font-weight: bold;
+}
+
+	.ui-widget-header a {
+		color: #eaf5f7;
+	}
+
+	/* Interaction states
+----------------------------------*/
+	.ui-state-default,
+	.ui-widget-content .ui-state-default,
+	.ui-widget-header .ui-state-default {
+		border: 1px solid #77d5f7;
+		background: #0078ae url(images/ui-bg_glass_45_0078ae_1x400.png) 50% 50% repeat-x;
+		font-weight: normal;
+		color: #ffffff;
+	}
+
+		.ui-state-default a,
+		.ui-state-default a:link,
+		.ui-state-default a:visited {
+			color: #ffffff;
+			text-decoration: none;
+		}
+
+	.ui-state-hover,
+	.ui-widget-content .ui-state-hover,
+	.ui-widget-header .ui-state-hover,
+	.ui-state-focus,
+	.ui-widget-content .ui-state-focus,
+	.ui-widget-header .ui-state-focus {
+		border: 1px solid #448dae;
+		background: #9c27b0 url(images/ui-bg_glass_75_79c9ec_1x400.png) 50% 50% repeat-x;
+		font-weight: normal;
+		color: #fff;
+	}
+
+		.ui-state-hover a,
+		.ui-state-hover a:hover,
+		.ui-state-hover a:link,
+		.ui-state-hover a:visited,
+		.ui-state-focus a,
+		.ui-state-focus a:hover,
+		.ui-state-focus a:link,
+		.ui-state-focus a:visited {
+			color: #026890;
+			text-decoration: none;
+		}
+
+	.ui-state-active,
+	.ui-widget-content .ui-state-active,
+	.ui-widget-header .ui-state-active {
+		border: 1px solid #acdd4a;
+		background: #070222 url(images/ui-bg_gloss-wave_50_6eac2c_500x100.png) 50% 50% repeat-x;
+		font-weight: normal;
+		color: #ffffff;
+	}
+
+		.ui-state-active a,
+		.ui-state-active a:link,
+		.ui-state-active a:visited {
+			color: #ffffff;
+			text-decoration: none;
+		}
+
+	/* Interaction Cues
+----------------------------------*/
+	.ui-state-highlight,
+	.ui-widget-content .ui-state-highlight,
+	.ui-widget-header .ui-state-highlight {
+		border: 1px solid #fcd113;
+		background: #915608 url(images/ui-bg_glass_55_f8da4e_1x400.png) 50% 50% repeat-x;
+		color:#fff;
+	}
+
+		.ui-state-highlight a,
+		.ui-widget-content .ui-state-highlight a,
+		.ui-widget-header .ui-state-highlight a {
+			color: #915608;
+		}
+
+	.ui-state-error,
+	.ui-widget-content .ui-state-error,
+	.ui-widget-header .ui-state-error {
+		border: 1px solid #cd0a0a;
+		background: #e14f1c url(images/ui-bg_gloss-wave_45_e14f1c_500x100.png) 50% top repeat-x;
+		color: #ffffff;
+	}
+
+		.ui-state-error a,
+		.ui-widget-content .ui-state-error a,
+		.ui-widget-header .ui-state-error a {
+			color: #ffffff;
+		}
+
+	.ui-state-error-text,
+	.ui-widget-content .ui-state-error-text,
+	.ui-widget-header .ui-state-error-text {
+		color: #ffffff;
+	}
+
+	.ui-priority-primary,
+	.ui-widget-content .ui-priority-primary,
+	.ui-widget-header .ui-priority-primary {
+		font-weight: bold;
+	}
+
+	.ui-priority-secondary,
+	.ui-widget-content .ui-priority-secondary,
+	.ui-widget-header .ui-priority-secondary {
+		opacity: .7;
+		filter: Alpha(Opacity=70);
+		font-weight: normal;
+	}
+
+	.ui-state-disabled,
+	.ui-widget-content .ui-state-disabled,
+	.ui-widget-header .ui-state-disabled {
+		opacity: .35;
+		filter: Alpha(Opacity=35);
+		background-image: none;
+	}
+
+		.ui-state-disabled .ui-icon {
+			filter: Alpha(Opacity=35); /* For IE8 - See #6059 */
+		}
+
+    </style>
+
+</head>
+<body  >
+    <form id="form1" runat="server">
+
+                   <asp:Panel ID="Panel1" runat="server" Height="47px" HorizontalAlign ="Center">  
+
+      <div class="wrapper  ">
+
+         
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="assets/img/sidebar-1.jpg">
+      
+      <div class="logo"><a  class="simple-text logo-normal">
+        <asp:ImageButton ID="BtnHome" runat="server" src="assets/img/gss-logo.png" alt="responsive" style="height: 53px;width: 222px;" />
+        </a></div>
+      <div class="sidebar-wrapper scrollbar" id="style-10"">
+
+        <ul class="nav">
+          <li id="dashboard" runat="server"  class="nav-item">
+            <a class="nav-link" >
+              <i class="material-icons">dashboard</i>
+              <p><asp:Button ID="btnDashboard" runat="server"  class="btntransprant" text="Dashboard" /></p>
+            </a>  
+          </li>
+          <li class="nav-item " id="fileupload" runat="server">
+            <a class="nav-link" href="#">
+              <i class="material-icons">file_upload</i>
+              <p><asp:Button ID="btnFileUpload" runat="server" class="btntransprant" Text="File Upload" /></p>
+                
+            </a>
+          </li>
+
+            
+        <%--i class="material-icons"></i>--%> 
+           
+    
+          <li class="nav-item" id="Analysis_Export" runat="server">
+            <a class="nav-link" href="#">
+              <i class="material-icons">import_export</i>
+             <p><asp:Button ID="btnExportData" runat="server"  class="btntransprant" text="Export Data" /></p>
+            </a>
+          </li>
+               <li class="nav-item " id="Analysis_Refresh" runat="server">
+            <a class="nav-link"  href="#">
+              <i class="material-icons">library_books</i>
+              <p><asp:Button ID="btnReport" runat="server" class="btntransprant" Text="Activity Report" /></p>
+            </a>
+          </li>
+          <li class="nav-item " id="Analysis_Recovery" runat="server">
+            <a class="nav-link"  href="#">
+              <i class="material-icons">bubble_chart</i>
+              <p><asp:Button ID="btnRecovery" runat="server" class="btntransprant" text="Recovery" /></p>
+            </a>
+          </li>
+
+          
+<!-- Analysis data Dropdown end-->
+ <%--           <li id="dropdown" runat="server">
+						<a data-toggle="collapse" href="#dropdown-lvl1">
+              <i class="material-icons">analytics</i>
+          <p>Analysis Data</p>
+                <div class="ripple-container">
+               <i class="fa fa-caret-down" style="float: right;margin-top: 10px;"></i></div>
+            </a>
+            
+						<!-- Dropdown level 1 -->
+							<div id="dropdown-lvl1" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+									<li class="" id="summary" runat="server"><a class="dropdown-item" href="#">
+                  <asp:Button ID="btnUploadSummary" runat="server" class="btntransprant" Text=" Upload Summary" />
+              </a></li>
+									<li id="Verfication" runat="server"><a class="dropdown-item" href="#">
+                  <asp:Button ID="btnUploadVerification" class="btntransprant" runat="server" Text=" Upload verification" />
+                 </a></li>
+									<li id="compare" runat="server"><a class="dropdown-item" href="#">
+                   <asp:Button ID="btnPartsCompare" class="btntransprant" runat="server" text="Parts Compare" /></a></li>
+									<li id="storemanagement" runat="server"> <a class="dropdown-item" href="#"> 
+                  <asp:Button ID="btnStoreManagement" class="btntransprant" runat="server" text="Store Management" /></a></li>
+																	
+											</ul></div>
+										</div>
+									</li>
+--%>
+
+
+         
+
+
+
+<%--<li class="list-group" id="dropdown" runat="server">
+
+            <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-white list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex justify-content-start align-items-center">
+                     <i class="material-icons">analytics</i>
+          <p>Analysis Data</p>
+                    <span class="submenu-icon ml-auto"></span>
+                </div>
+                 <div class="ripple-container">
+               <i class="fa fa-caret-down" style="float: right;margin-top: 10px;"></i></div>
+            </a>
+            <div id='submenu1' class="collapse sidebar-submenu">
+                <a href="#" id="summary" runat="server" class="list-group-item list-group-item-action">
+                    <span class="menu-collapsed">  <asp:Button ID="btnUploadSummary" runat="server" class="nav-link btntransprant" Text=" Upload Summary" /></span>
+                </a>
+                <a href="#" id="Verfication" runat="server" class="list-group-item list-group-item-action ">
+                    <span class="menu-collapsed"> <asp:Button ID="btnUploadVerification" class=" nav-link btntransprant" runat="server" Text=" Upload verification" /></span>
+                </a>
+                <a href="#"  id="compare" runat="server" class="list-group-item list-group-item-action ">
+                    <span class="menu-collapsed"><asp:Button ID="btnPartsCompare" class="nav-link btntransprant" runat="server" text="Parts Compare" /></span>
+                </a>
+                 <a href="#" id="storemanagement" runat="server" class="list-group-item list-group-item-actio">
+                    <span class="menu-collapsed"> <asp:Button ID="btnStoreManagement" class="nav-link btntransprant" runat="server" text="Store Management" /></span>
+                </a>
+            </div>
+        </li>--%>
+
+
+
+ <%--           
+<li class="list-group" id="dropdown" runat="server" >
+
+         <a href="#submenu1" data-toggle="collapse" id="drp1" aria-expanded="false" runat="server" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex justify-content-start align-items-center">
+                    <i class="material-icons">analytics</i>
+          <p  runat="server" id="analyis">Analysis Data</p>
+                    <span class="submenu-icon ml-auto"></span>
+                </div>
+                 <div class="ripple-container">
+               <i class="fa fa-caret-down" style="float: right;margin-top: 10px;"></i></div>
+            </a>
+            <div id='submenu1' class="collapse sidebar-submenu">
+                
+                
+                <a href="#" id="summary"  class="list-group-item list-group-item-action ">
+                    <span class="menu-collapsed"> <asp:Button ID="btnUploadSummary" class="btntransprant" Text="Upload Summary" runat="server" /></span>
+                </a>
+                        
+                   
+                <a href="#"  id="Verfication" runat="server" class="list-group-item list-group-item-action ">
+                    <span class="menu-collapsed">  <asp:Button ID="btnUploadVerification" class="btntransprant" Text="Upload verification" runat="server"  /> </span>
+                </a>
+                <a href="#"  id="compare" runat="server" class="list-group-item list-group-item-action ">
+                    <span class="menu-collapsed"> <asp:Button ID="btnPartsCompare" class="btntransprant" Text="Parts Compare" runat="server" /></span>
+                </a>
+                 <a href="#" id="storemanagement" runat="server" class="list-group-item list-group-item-action">
+                    <span class="menu-collapsed">  <asp:Button ID="btnStoreManagement" class="btntransprant"  Text="Stored Management" runat="server"   /> </span>
+                </a>
+                     
+            </div>
+        </li>--%>
+
+           
+
+
+
+
+
+<!-- RPA Dropdown-->     
+           <%-- <li id="dropdown1" runat="server">
+						<a data-toggle="collapse" href="#dropdown-lvl2">
+              <i class="material-icons">psychology</i>
+          <p>RPA</p>
+                <div class="ripple-container">
+               <i class="fa fa-caret-down" style="float: right;margin-top: 10px;"></i></div>
+            </a>
+            
+						<!-- Dropdown level 1 -->
+							<div id="dropdown-lvl2" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="nav navbar-nav">
+									<li id="scheduler" runat="server"><a class="dropdown-item" href="#">
+                 <asp:Button ID="btnscheduler" class="btntransprant" Text="Scheduler" runat="server" /></a></li>
+									<li id="Log" runat="server"><a class="dropdown-item" href="#">
+                  <asp:Button ID="btnRpaLog" class="btntransprant" Text="Rpa Log" runat="server"  /> </a></li>
+									<li id="taskapp" runat="server"><a class="dropdown-item" href="#">
+                   <asp:Button ID="btnRpaTaskApp" class="btntransprant" Text="Rpa Task App" runat="server" /> </a></li>
+									<li id="Onoff" runat="server"> <a class="dropdown-item" href="#"> 
+                 <asp:Button ID="btnRpaOnOff" class="btntransprant"  Text="Rpa On/off" runat="server"   /> </a></li>
+																		
+											</ul></div>
+										</div>
+									</li>--%>
+            
+
+<%--<li class="list-group" id="dropdown1" runat="server" >
+
+         <a href="#submenu2" data-toggle="collapse" id="drp2" runat="server" aria-expanded="false" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex justify-content-start align-items-center">
+                     <i class="material-icons">psychology</i>
+          <p>RPA</p>
+                    <span class="submenu-icon ml-auto"></span>
+                </div>
+                 <div class="ripple-container">
+               <i class="fa fa-caret-down" style="float: right;margin-top: 10px;"></i></div>
+            </a>
+            <div id='submenu2' class="collapse sidebar-submenu">
+                
+                
+ 
+                        
+                <a href="#"  id="Scheduler" runat="server" class="list-group-item list-group-item-action">
+                    <span class="menu-collapsed">  <asp:Button ID="btnscheduler" class="btntransprant" Text="Scheduler" runat="server"  /> </span>
+                </a>    
+                   
+                <a href="#"  id="Log" runat="server" class="list-group-item list-group-item-action ">
+                    <span class="menu-collapsed">  <asp:Button ID="btnRpaLog" class="btntransprant" Text="Rpa Log" runat="server"  /> </span>
+                </a>
+                <a href="#"  id="taskapp" runat="server" class="list-group-item list-group-item-action ">
+                    <span class="menu-collapsed"> <asp:Button ID="btnRpaTaskApp" class="btntransprant" Text="Rpa Task App" runat="server" /></span>
+                </a>
+                 <a href="#" id="Onoff" runat="server" class="list-group-item list-group-item-action">
+                    <span class="menu-collapsed">  <asp:Button ID="btnRpaOnOff" class="btntransprant"  Text="Rpa On/off" runat="server"   /> </span>
+                </a>
+                     
+            </div>
+        </li>--%>
+
+            
+
+
+            <li class="nav-item">
+                    <a class="nav-link collapsed text-truncate" href="#submenu3" id="drp1" runat="server" data-toggle="collapse" data-target="#submenu3">
+                        <i class="material-icons">analytics</i>
+          <p runat="server" id="analyis">Analysis Data</p></a>
+                    <div class="collapse" id="submenu3" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+                            <li class="nav-item"><a class="nav-link py-0"  id="summary" runat="server" href="#"><span><asp:Button ID="btnUploadSummary" runat="server" class="nav-link btntransprant" Text=" Upload Summary" /></span></a></li>
+                            <li class="nav-item"><a class="nav-link py-0" id="Verfication" runat="server" href="#"><span><asp:Button ID="btnUploadVerification" class=" nav-link btntransprant" runat="server" Text=" Upload verification" /></span></a></li>
+                            <li class="nav-item"><a class="nav-link py-0" id="compare" runat="server"  href="#"><span><asp:Button ID="btnPartsCompare" class="nav-link btntransprant" runat="server" text="Parts Compare" /></span></a></li>
+                            <li class="nav-item"><a class="nav-link py-0" id="storemanagement" runat="server" href="#"><span><asp:Button ID="btnStoreManagement" class="nav-link btntransprant" runat="server" text="Store Management" /></span></a></li>
+                           
+                        </ul>
+                    </div>
+                </li>
+
+
+              <li class="nav-item">
+                    <a class="nav-link collapsed text-truncate" href="#submenu4" id="drp2" runat="server" data-toggle="collapse" data-target="#submenu4">
+           <i class="material-icons">psychology</i>
+          <p runat="server" id="rpa">RPA</p></a>
+                    <div class="collapse" id="submenu4" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+                            <li class="nav-item"><a class="nav-link py-0" href="#"><asp:Button ID="btnscheduler" class="nav-link btntransprant" Text=" Scheduler" runat="server" /></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" id="Log" runat="server" href="#"><asp:Button ID="btnRpaLog" class="nav-link btntransprant" Text="Rpa Log" runat="server"  /></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" id="taskapp" runat="server" href="#"> <asp:Button ID="btnRpaTaskApp" class="nav-link btntransprant" Text="Rpa Task App" runat="server" /></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" id="Onoff" runat="server" href="#"><asp:Button ID="btnRpaOnOff" class="nav-link btntransprant"  Text="Rpa On/off" runat="server"   /></a></li>
+                           
+                        </ul>
+                    </div>
+                </li>
+
+
+          
+        </ul>
+      </div>
+             
+    </div>
+           <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div >
+            <a class="navbar-brand">QMVAR</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <div class="navbar-wrapper">
+              <a class="navbar-brand"><span class="navbar-icon"><i class="material-icons">place</i></span>
+                  <asp:Label ID="LblShipName" runat="server"></asp:Label>
+              </a>
+            </div>
+            <div class="navbar-wrapper">
+               <a class="navbar-brand"><span class="navbar-icon"><i class="material-icons">person</i></span>
+                 <asp:Label ID="lblUser" runat="server"></asp:Label>
+              </a>
+            </div>
+            <div class="navbar-wrapper" >
+             &nbsp;&nbsp;&nbsp;&nbsp;<span class="navbar-icon"><i class="material-icons">logout</i></span> <asp:button runat="server"  ID="BtnLogof"  text="Logout" class="navbar-brand pull-right btntransprant"></asp:button>
+            </div>
+                
+             </div>
+          </div>
+            </nav>
+        </div>
+          </div>
+     </asp:Panel>
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+    </form>
+
+    
+
+
+</body>
+  <script>
+     
+      $(document).ready(function () {
+          $().ready(function () {
+              $sidebar = $('.sidebar');
+
+              $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+              $full_page = $('.full-page');
+
+              $sidebar_responsive = $('body > .navbar-collapse');
+
+              window_width = $(window).width();
+
+              fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+              if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+                  if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+                      $('.fixed-plugin .dropdown').addClass('open');
+                  }
+
+              }
+
+              $('.fixed-plugin a').click(function (event) {
+                  // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+                  if ($(this).hasClass('switch-trigger')) {
+                      if (event.stopPropagation) {
+                          event.stopPropagation();
+                      } else if (window.event) {
+                          window.event.cancelBubble = true;
+                      }
+                  }
+              });
+
+              $('.fixed-plugin .active-color span').click(function () {
+                  $full_page_background = $('.full-page-background');
+
+                  $(this).siblings().removeClass('active');
+                  $(this).addClass('active');
+
+                  var new_color = $(this).data('color');
+
+                  if ($sidebar.length != 0) {
+                      $sidebar.attr('data-color', new_color);
+                  }
+
+                  if ($full_page.length != 0) {
+                      $full_page.attr('filter-color', new_color);
+                  }
+
+                  if ($sidebar_responsive.length != 0) {
+                      $sidebar_responsive.attr('data-color', new_color);
+                  }
+              });
+
+              $('.fixed-plugin .background-color .badge').click(function () {
+                  $(this).siblings().removeClass('active');
+                  $(this).addClass('active');
+
+                  var new_color = $(this).data('background-color');
+
+                  if ($sidebar.length != 0) {
+                      $sidebar.attr('data-background-color', new_color);
+                  }
+              });
+
+              $('.fixed-plugin .img-holder').click(function () {
+                  $full_page_background = $('.full-page-background');
+
+                  $(this).parent('li').siblings().removeClass('active');
+                  $(this).parent('li').addClass('active');
+
+
+                  var new_image = $(this).find("img").attr('src');
+
+                  if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+                      $sidebar_img_container.fadeOut('fast', function () {
+                          $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+                          $sidebar_img_container.fadeIn('fast');
+                      });
+                  }
+
+                  if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+                      var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+                      $full_page_background.fadeOut('fast', function () {
+                          $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+                          $full_page_background.fadeIn('fast');
+                      });
+                  }
+
+                  if ($('.switch-sidebar-image input:checked').length == 0) {
+                      var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+                      var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+                      $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+                      $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+                  }
+
+                  if ($sidebar_responsive.length != 0) {
+                      $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+                  }
+              });
+
+              $('.switch-sidebar-image input').change(function () {
+                  $full_page_background = $('.full-page-background');
+
+                  $input = $(this);
+
+                  if ($input.is(':checked')) {
+                      if ($sidebar_img_container.length != 0) {
+                          $sidebar_img_container.fadeIn('fast');
+                          $sidebar.attr('data-image', '#');
+                      }
+
+                      if ($full_page_background.length != 0) {
+                          $full_page_background.fadeIn('fast');
+                          $full_page.attr('data-image', '#');
+                      }
+
+                      background_image = true;
+                  } else {
+                      if ($sidebar_img_container.length != 0) {
+                          $sidebar.removeAttr('data-image');
+                          $sidebar_img_container.fadeOut('fast');
+                      }
+
+                      if ($full_page_background.length != 0) {
+                          $full_page.removeAttr('data-image', '#');
+                          $full_page_background.fadeOut('fast');
+                      }
+
+                      background_image = false;
+                  }
+              });
+
+              $('.switch-sidebar-mini input').change(function () {
+                  $body = $('body');
+
+                  $input = $(this);
+
+                  if (md.misc.sidebar_mini_active == true) {
+                      $('body').removeClass('sidebar-mini');
+                      md.misc.sidebar_mini_active = false;
+
+                      $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+                  } else {
+
+                      $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+                      setTimeout(function () {
+                          $('body').addClass('sidebar-mini');
+
+                          md.misc.sidebar_mini_active = true;
+                      }, 300);
+                  }
+
+                  // we simulate the window Resize so the charts will get updated in realtime.
+                  var simulateWindowResize = setInterval(function () {
+                      window.dispatchEvent(new Event('resize'));
+                  }, 180);
+
+                  // we stop the simulation of Window Resize after the animations are completed
+                  setTimeout(function () {
+                      clearInterval(simulateWindowResize);
+                  }, 1000);
+
+              });
+          });
+      });
+
+
+      $(document).ready(function () {
+          // Hide submenus
+          $('#body-row .collapse').collapse('hide');
+
+          // Collapse/Expand icon
+          $('#collapse-icon').addClass('fa-angle-double-left');
+
+          // Collapse click
+          $('[data-toggle=sidebar-colapse]').click(function () {
+              SidebarCollapse();
+          });
+
+          function SidebarCollapse() {
+              $('.menu-collapsed').toggleClass('d-none');
+              $('.sidebar-submenu').toggleClass('d-none');
+              $('.submenu-icon').toggleClass('d-none');
+              $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+
+              // Collapse/Expand icon
+              $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+          }
+      });
+
+
+
+  </script>  
+</html>

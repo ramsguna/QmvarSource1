@@ -1,0 +1,191 @@
+.div-bgimg-EntirePage {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 560px;
+            width: 1255px;
+            background-size: contain;
+            }
+            .div-EntirePage {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+            }
+            .tabel-EntirePage {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .td-Blank2 {
+                width: 108px;
+            }
+            .td-Blank12 {
+                width: 101px;
+                height: 20px;
+            }
+            .td-Blank13 {
+                width: 108px;
+                height: 20px;
+            }
+            .td-Blank17 {
+                height: 20px;
+                width: 121px;
+            }
+            .td-Blank1-Blank3 {
+                width: 101px;
+                height: 24px;
+            }
+            .label-ProductsMpneyKeep-lbl10-Result {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+            .td-Blank6-Blank7 {
+                height: 24px;
+                width: 121px;
+            }
+            .fontFamily {
+                font-family: "Meiryo UI";
+            }
+            .td-Blank14 {
+                width: 88px;
+                height: 20px;
+            }
+            .td-Blank15 {
+                height: 20px;
+                width: 46px;
+            }
+            .td-Blank8 {
+                width: 101px;
+                height: 23px;
+            }
+            .td-Blank9 {
+                width: 43px;
+                height: 23px;
+            }
+            .td-Blank10 {
+                height: 23px;
+                width: 121px;
+            }
+            .table-center {
+                width: 84%;
+                height: 38px;
+            }
+            .td-lbl-13-14-15-16-Blank47 {
+                width: 194px;
+            }
+            .td-lbl-SamsungClaimNo-ProductsName-lblCash-KeepNo {
+                width: 489px;
+                border-bottom: 1px solid black;
+            }
+            .td-lbl9-lbl20 {
+                width: 108px;
+                height: 29px;
+            }
+            .td-lblCustomer-lblCustomerNo {
+                width: 489px;
+                height: 24px;
+                border-bottom: 1px solid black;
+            }
+            .td-lbltotalcash-totalnumber {
+                height: 24px;
+                border-bottom: 1px solid black;
+                width: 270px;
+            }
+            .td-center-lbl10 {
+                border-bottom: 1px solid black;
+                border-bottom-style:double;
+                border-bottom-width:3px; 
+            }
+            .td-lbl17-lbl18 {
+                height: 24px;
+                width: 115px;
+            }
+            .td-Blank-53-54-55-56-57 {
+                width: 115px;
+            }
+            .td-Blank-48-49-50-51-52 {
+                width: 48px;
+            }
+            .td-Blank-58-59-60-61-62 {
+                width: 270px;
+            }
+            .td-Blank38-Blank39 {
+                height: 24px;
+                width: 194px;
+            }
+            .td-Blank40-Blank41 {
+                width: 48px;
+                height: 24px;
+            }
+            .td-Blank42-43-44-45-46 {
+                width: 65px;
+            }
+            .td-Blank36-Blank37 {
+                width: 65px;
+                height: 24px;
+            }
+            .td-Blank63 {
+                width: 489px;
+            }
+            .td-Blank24-Blank25-Blank26-Blank27-Blank28 {
+                width: 101px;
+                height: 29px;
+            }
+            .td-Blank19-td-Blank20-td-Blank21 {
+                height: 31px;
+            }
+            .td-Blank29-Blank30 {
+                width: 43px;
+                height: 29px;
+            }
+            .td-Blank31-Blank32-Blank33 {
+                height: 29px;
+                width: 121px;
+            }
+            .td-Blank18 {
+                width: 101px;
+                height: 31px;
+            }
+            .td-Blank23 {
+                height: 31px;
+                width: 121px;
+            }
+            .td-Blank34-td-Blank35 {
+                height: 29px;
+            }
+            .td-customername-telNo-SmsungClaimNo-ProductsName-textCash-KeepNo {
+                height: 31px;
+                width: 46px;
+            }
+            .td-Blank4-Blank5 {
+                width: 43px;
+                height: 24px;
+            }
+            .td-Blank16 {
+                height: 20px;
+                width: 43px;
+            }
+            .td-Blank22 {
+                height: 31px;
+                width: 43px;
+            }
+            .td-Blank11 {
+                height: 24px;
+            }
+            .img-btnMoney{
+                Height:108px; 
+                Width:108px;
+                 }
+            .txtbox-CustomerName-CustomerTelNo-SmsungClaimNo-ProductsName-TextCash-Claimno{
+                Height:16px;
+                Width:390px; 
+                font-family: "Meiryo UI";
+            }
+            .img-btnStart-btnSend{
+                Height:29px;
+                Width:81px;
+                font-family: "Meiryo UI"; 
+            }
+            .txtbox-SearchNo-SearchName-TextSearchtel{
+                Height:16px; 
+                Width:300px;
+            }

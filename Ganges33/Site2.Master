@@ -1,0 +1,66 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site2.master.vb" Inherits="Ganges33.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link type="text/css" href="CSS/Common/Site2_Master.css" rel="stylesheet" /> 
+    <style type="text/css">
+        
+        </style>
+</head>
+<body class="body-Entirepage">
+    <form id="form1" runat="server">
+        <div class="div-EntirePage">
+            <table border ="0" class="tabel-Entirepage">
+                <tr>
+                    <td align = "left" class="td-img-btnhome">
+                        <asp:ImageButton ID="BtnHome" runat="server" CssClass="btn-home-img9-10-btn-logoff" ImageUrl="~/icon/home.png" /> Home
+                    </td>
+                    <td align = "center">
+                        <asp:Image ID="Image1" runat="server" CssClass="img-1-2-3-4-5-6-7-8" />
+                    </td>
+                    <td>
+                        <asp:Image ID="Image2" runat="server" CssClass="img-1-2-3-4-5-6-7-8" />
+                    </td>
+                    <td>
+                        <asp:Image ID="Image3" runat="server" CssClass="img-1-2-3-4-5-6-7-8" />
+                    </td>
+                    <td>
+                        <asp:Image ID="Image4" runat="server" CssClass="img-1-2-3-4-5-6-7-8" />
+                    </td>
+                    <td>
+                        <asp:Image ID="Image5" runat="server" CssClass="img-1-2-3-4-5-6-7-8" />
+                    </td>
+                    <td>
+                        <asp:Image ID="Image6" runat="server" CssClass="img-1-2-3-4-5-6-7-8" />
+                    </td>
+                    <td>
+                        <asp:Image ID="Image7" runat="server" CssClass="img-1-2-3-4-5-6-7-8" />
+                    </td>
+                    <td>
+                        <asp:Image ID="Image8" runat="server" CssClass="img-1-2-3-4-5-6-7-8"/>
+                    </td>
+                    <td class="td-img-9-10-shipname-lbluser" >
+                        <asp:Image ID="Image9" runat="server" CssClass="btn-home-img9-10-btn-logoff" ImageUrl="~/icon2/placeholder-2.png" />
+                        <asp:Label ID="lblShipName" runat="server" Text=""></asp:Label>&nbsp; &nbsp; &nbsp; 
+                        <asp:Image ID="Image10" runat="server" CssClass="btn-home-img9-10-btn-logoff" ImageUrl="~/icon2/user-3.png" />
+                        <asp:Label ID="lblUser" runat="server" Text=""></asp:Label>
+                    </td>
+                    <td align = "right">
+                        &nbsp; 
+                        &nbsp;
+                        Log Off<asp:ImageButton ID="BtnLogof" runat="server" CssClass="btn-home-img9-10-btn-logoff" ImageUrl="~/icon/exit-1.png" />
+                    </td>
+                </tr>
+            </table>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">               
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

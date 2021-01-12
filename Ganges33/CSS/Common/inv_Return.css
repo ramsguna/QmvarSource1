@@ -1,0 +1,202 @@
+.div-EntirePage-background-image {
+            z-index: 1;
+            left: 39px;
+            top: 121px;
+            position: absolute;
+            height: 512px;
+            width: 1255px;
+            background-size: 100% auto;
+            }
+        .div-EntirePage {
+            height: 100%;
+            background: rgba(255,255,255,0.8);
+        }
+        .div-table-EntirePage {
+            width: 47%;
+            height: 368px;
+        }
+        .td-lbl-CSVInport {
+            width: 877px;
+            height: 20px;
+            text-align: center;
+        }
+        .td-FileUploadInv {
+            width: 159px;
+            height: 20px;
+        }
+        .td-ChkUseSerial-lblUnuseSerial {
+            height: 50px;
+            width: 374px;
+            text-align: left;
+        }
+        .td-Blank1 {
+            height: 50px;
+            width: 236px;
+        }
+        .td-textDeliveryNo-textApprovalNo {
+            height: 25px;
+            width: 374px;
+        }
+        .td-Blank2-ImageButton {
+            height: 25px;
+            width: 236px;
+        }
+        .td-Blank11 {
+            height: 22px;
+            width: 374px;
+        }
+        .td-Blank12 {
+            height: 22px;
+            width: 236px;
+        }
+        .td-labelReturnNumber {
+            height: 23px;
+            width: 374px;
+        }
+        .td-Blank8 {
+            height: 23px;
+            width: 236px;
+        }
+        .td-lbl-DeliveryNumber {
+            height: 28px;
+            width: 374px;
+        }
+        .td-Blank9 {
+            height: 28px;
+            width: 236px;
+        }
+        .td-ImageButton {
+            height: 32px;
+        }
+        .td-Blank15 {
+            height: 45px;
+        }
+        .table-ListHistory-btnClose {
+            float: left;
+            height: 454px;
+            text-align:right;
+        }
+        .table-SpecificPage {
+            float: left;
+            height: 460px;
+            width: 124px;
+        }
+        .td-btnClose {
+            height: 59px;
+        }
+        .td-Blank14 {
+            height: 45px;
+            width: 374px;
+        }
+        .td-Blank16 {
+            height: 464px;
+        }
+        .td-Checkbox-UseSerial {
+            height: 50px;
+            width: 877px;
+            text-align: center;
+        }
+        .td-Blank10 {
+            height: 22px;
+            width: 877px;
+        }
+        .td-Currentreturnnumber {
+            height: 23px;
+            width: 877px;
+        }
+        .td-lblCurrentDelivery {
+            height: 28px;
+            width: 877px;
+        }
+        .td-Blank13 {
+            height: 45px;
+            width: 877px;
+        }
+        .td-lbl-Item {
+            height: 32px;
+            width: 877px;
+            text-align: center;
+        }
+        .td-label-Qty {
+            height: 44px;
+            width: 877px;
+            text-align: center;
+        }
+        .td-lblDeleviryNo-SSReturnNo {
+            height: 25px;
+            width: 877px;
+            text-align: center;
+        }
+        .td-listbox {
+            height: 407px;
+        }    
+        .fontFamily {
+            font-family: "Meiryo UI";
+        }
+        .lbl-Current-returnnumber-DeliveryNo {
+            font-family: "Meiryo UI";
+            font-size: small;
+        }
+        .td-Blank7 {
+            height: 22px;
+            width: 374px;
+            font-family: "Meiryo UI";
+        }
+        .td-Blank5-Blank6 {
+            height: 22px;
+            width: 877px;
+            font-family: "Meiryo UI";
+        }
+        .td-Blank4 {
+            height: 25px;
+            width: 374px;
+            font-family: "Meiryo UI";
+        }
+        .td-Blank3 {
+            height: 25px;
+            width: 877px;
+            text-align: center;
+            font-family: "Meiryo UI";
+        }
+        .lbl-DeleveryNo
+        {
+            Width:134px;
+            font-family: "Meiryo UI";
+        }
+        .txt-DeleveryNo-approvalNo-Textitem{
+            Width:206px; 
+            font-family: "Meiryo UI";
+        }
+        .FileUploadInv{
+            font-family: "Meiryo UI"; 
+            Width:319px;
+        }
+        .btnCsv{
+            Height:29px;
+            font-family: "Meiryo UI"; 
+            Width:36px; 
+            }
+        .textbox-Qty
+        {
+            Width:58px; 
+            font-family: "Meiryo UI";
+        }
+        .listbox-History
+        {
+            margin-top: 0px;
+            font-family: "Meiryo UI";
+            Height:379px; 
+            Width:511px;
+        }
+        .Img-Button-Close{
+            Height:59px;
+            Width:163px;
+        }
+        .img-Button-Start{
+            Height:59px; 
+            Width:163px;
+        }
+        .btnImport{
+            Height:59px; 
+            Width:163px;
+        } 

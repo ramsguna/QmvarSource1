@@ -1,0 +1,198 @@
+.div-background-image {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 560px;
+            width: 1243px;
+            background-size: contain;
+            }
+            .div-EntirePage {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+            }
+            .table-EntirePage {
+                width: 100%;
+            }
+            .td-Blank1 {
+                width: 80px;
+                height: 36px;
+            }
+            .td-btnAnalysis {
+                width: 92px;
+                height: 36px;
+            }
+            .td-Blank2 {
+                height: 36px;
+            }
+            .td-label-AnalysisActivityReport {
+                height: 36px;
+                width: 386px;
+            }
+            .labels-2-3-4-6-8-9-10-11-12-13-14-15-16-td-Blank10 {
+                font-family: "Meiryo UI";
+            }
+            .td-Blank8 {
+                font-family: "Meiryo UI";
+                font-size: x-large;
+            }
+            .btn-Image-Analysis {
+                font-family: "Meiryo UI";
+                font-size: x-large;
+                Width:108px;
+            }
+
+            .label-AnalysisActivityReport {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+            .td-textboxs-Label {
+                width: 100%;
+                border-collapse: collapse;
+                height: 284px;
+            }
+            .td-textboxs-CustomerVisit-textCallRegistered-TextRepairCompleted-TextGoodsDelivered-TextPendingCalls-TextCancelledCalls {
+                height: 57px;
+                width: 197px;
+                border: 1px solid black;
+                text-align: center;
+            }
+            .td-listmsg {
+                width: 197px;
+            }
+            .td-lbls-CustomerVisit-CallRegister-RepairCompleted-GoodsDelivered-PendingCalls-CancelledCalls {
+                height: 28px;
+                width: 197px;
+                border: 1px solid black;
+                background-color: #6699FF;
+                text-align: center;
+            }
+            .td-lbl-note-td-Blank16-td-Blank17 {
+                width: 197px;
+                height: 30px;
+            }
+            .td-Blank12 {
+                height: 18px;
+            }
+            .textbox-textcustomervisit-textcallRegister-repaircompleted-goodsdeleviry-pendingcalls-cancelledcalls {
+                Height:48px; 
+                Width:196px;
+                margin-top: 0px;
+                font-family: "Meiryo UI";
+            }
+            .td-textNote {
+                width: 197px;
+                height: 44px;
+            }
+            .td-btnSend {
+                height: 44px;
+            }
+            .td-Blank13 {
+                width: 80px;
+                height: 20px;
+            }
+            .td-lbl8-dropdownday {
+                width: 92px;
+                height: 20px;
+            }
+            .td-Image-Button-open {
+                height: 20px;
+            }
+            .td-Blank6 {
+                width: 80px;
+                height: 18px;
+            }
+            .td-Blank7 {
+                width: 92px;
+                height: 18px;
+            }
+            .td-Blank3 {
+                width: 80px;
+                height: 35px;
+            }
+            .td-Blank18-Blank19-Blank20 {
+                height: 30px;
+            }
+            .td-lblMessage-td-Blank21-td-Blank22 {
+                width: 197px;
+                height: 26px;
+            }
+            .td-Blank23-Blank24-Blank25 {
+                height: 26px;
+            }
+            .lbl-Month {
+                font-family: "Meiryo UI";
+                font-weight: bold;
+                font-size: xx-large;
+            }
+            .td-Blank5 {
+                height: 35px;
+            }
+    
+            .DropDown-Active-Month {
+                Height:24px; 
+                Width:169px;
+                font-family: "Meiryo UI";
+                font-size: large;
+            }
+            /* Added Mon Year VJ 20100106*/
+            .DropDown-Active-Year {
+                Height: 24px;
+                Width: 60px;
+                font-family: "Meiryo UI";
+                font-size: large;
+            }
+            .td-lbl6-Review-Report {
+                height: 18px;
+                width: 140px;
+            }
+            .td-Blank15 {
+                height: 20px;
+                width: 140px;
+            }
+            .td-Blank4 {
+                width: 72px;
+                height: 35px;
+            }
+            .td-Blank9 {
+                width: 72px;
+                height: 18px;
+            }
+            .td-Blank14 {
+                width: 72px;
+                height: 20px;
+            }
+            .Drop-DownMonth{
+              font-family: Meiryo UI;
+              Height:24px; 
+              Width:110px;
+            }
+            .Drop-DownYear{
+                font-family: Meiryo UI;
+                Height:24px;
+                Width:60px;
+            }
+            .Drop-DownDay{
+                font-family: "Meiryo UI"; 
+                Height:24px; 
+                Width:169px;
+            }
+            .btn-Image-Open{
+                Height:29px; 
+                Width:81px; 
+                font-family: "Meiryo UI"; 
+            }
+            .textbox-Multiline{
+                Height:59px;
+                font-family: "Meiryo UI";
+                Width:1000px; 
+            }
+            .btn-image-Send{
+                Width:81px;
+                Height:29px; 
+                font-family: Meiryo UI;
+            }
+            .listbox-Message{
+                font-family: "Meiryo UI"; 
+                Width:1000px;
+            }

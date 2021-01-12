@@ -1,0 +1,103 @@
+ .div-backgroundimg {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 607px;
+            width: 1255px;
+            background-size: contain;
+            }
+            .div-EntirePage {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+            }
+            .table-EntirePage {
+                width: 100%;
+            }
+            .td-Blank11-12 {
+                width: 108px;
+                height: 38px;
+            }
+            .td-Blank1-btnAnalysis {
+                width: 108px;
+                height: 97px;
+            }
+            .td-Blank5-6 {
+                height: 97px;
+            }
+            .td-lbl3 {
+                height: 97px;
+                width: 376px;
+            }
+            .td-lblBranch {
+                width: 376px;
+                height: 38px;
+                text-align: center;
+            }
+            .lbl3 {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+            .td-Blank7-8 {
+                width: 108px;
+                height: 39px;
+            }
+            .td-lblUploadData {
+                width: 376px;
+                height: 39px;
+                text-align: center;
+            }
+            .td-Blank9-10 {
+                height: 39px;
+            }
+            .td-Blank15-16 {
+                height: 38px;
+            }
+            .lblFromDate-lbl5-todate {
+                font-family: "Meiryo UI";
+            }
+            .td-Blank4 {
+                width: 48px;
+                height: 97px;
+            }
+            .td-lbl5 {
+                width: 48px;
+                height: 39px;
+                text-align: center;
+            }
+            .td-Blank15 {
+                width: 48px;
+                height: 38px;
+            }
+            .td-Blank2-3 {
+                height: 97px;
+                width: 149px;
+            }
+            .td-Blank13-14 {
+                height: 38px;
+                width: 149px;
+            }
+            .td-lblFromDate-ToDate {
+                height: 39px;
+                width: 149px;
+                text-align: center;
+            }
+            .lblUploadData-lblBranch {
+                font-family: "Meiryo UI";
+                font-size: large;
+            }
+            .imgbtn-back-start {
+                Height:29px;  
+                Width:81px;
+                font-family: "Meiryo UI";
+            }
+            .btnAnalysis{
+                Height:108px; 
+                Width:108px;
+            }
+            .HeaderStyle{
+                Height:30px;
+            }
+            .RowStyle{
+                Height:25px;
+            }

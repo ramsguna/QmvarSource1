@@ -1,0 +1,68 @@
+ .div-bg-image {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 512px;
+            width: 1255px;
+            background-size: contain;
+            }
+            .td-lbl-changereserve-td-lbl-aggregation-td-lbl-control {
+                height: 88px;
+                width: 449px;
+            }
+             .div-entirepage {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                /*opacity: 0.5;*/
+            }  
+            
+            .tabl-menus {
+                width: 640px;
+                height: 507px;
+            }
+            .td-image-btn-changereverse-td-image-btn-Aggregation-td-image-btn-control {
+                text-align: right;
+                width: 175px;
+                height: 88px;
+            }
+
+            .btn-image-changereserve-btn-image-aggregation-btn-image-control {
+                font-family: "Meiryo UI";
+                Width: 118px; 
+                Height: 118px;
+            }
+            .td-lbl-changereserve-td-lbl-aggregation-td-lbl-control {
+                width: 341px;
+                font-family: "Meiryo UI";
+            }
+
+            .lbl-txt-changereserve-lbl-txt-aggregation-lbl-txt-control {
+                font-family: "Meiryo UI";
+                font-size: large;
+            }
+
+            .td-blank1{
+
+            }
+
+            .td-blank2{
+
+            }
+
+            .td-news{
+
+            }
+
+            .tabl-news{
+
+            }
+
+            .td-lbl-news{
+
+            }
+
+            .lbl-txt-news{
+                Height: 474px; 
+                Width: 531px;
+            }

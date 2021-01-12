@@ -1,0 +1,41 @@
+.Menu-Font {
+    font-family: Meiryo UI;
+    font-size: x-large;
+ }
+.btn-size {
+    Width:108px;
+    Height:108px;
+}
+.tbl-Menu-Entire-Tbl {
+    z-index: 1;
+    left: 57px;
+    top: 70px;
+    position: absolute;
+    height: 615px;
+    width: 1250px;
+}
+.tbl-Menu-tbl {
+    width: 100%;
+    height: 554px;
+}
+
+
+.td-btn-tbl{
+    width: 142px;
+    height: 79px;
+}
+.td-lbl-tbl {
+    width: 183px;
+    height: 79px;
+    font-weight: bold;
+}
+.td-information-tbl {
+    width: 142px;
+    height: 84px;
+}
+.Textbox-information {
+    margin-top: 0px;
+}
+.lbl-information-News {
+    font-family: Meiryo UI;
+}

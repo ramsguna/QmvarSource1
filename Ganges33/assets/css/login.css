@@ -1,0 +1,248 @@
+
+body
+{
+  
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+text-transform: capitalize;
+}
+.workSpace {
+    display: flex;
+    position: absolute;
+    min-width: 420px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1024px;
+    height: 600px;
+    background: linear-gradient(to right, #2080df 0%, #2080df 40%,#2080df 40%, #ffffff 40%, #ffffff 100%);
+    box-shadow: black 0px 0px 100px -35px;
+}
+@media (max-width: 1024px){
+     .workSpace {
+    width: 100%;
+    height: 620px;
+    background: linear-gradient(to bottom, #2080df 0%, #2080df 30%,#2080df 30%, #ffffff 30%, #ffffff 100%);
+    flex-direction: column;
+}
+}
+.avatar {
+    width: 120px;
+    height: 120px;
+    /*background-color: #2080df;*/
+    position: absolute;
+    left: 40%;
+    top: 36%;
+    transform: translate(-50%);
+    border: 12px #ffffff solid;
+    border-radius: 50%;
+    background: linear-gradient(60deg,  #ab47bc, #8e24aa);
+}
+.avatar #infinity {
+    position: relative;
+    top: 35px;
+    left: 7px;
+    width: 106px;
+    height: 50px;
+    box-sizing: content-box;
+}
+/*
+.avatar #infinity:before {
+    content: "";
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 10px solid #ffffff;
+    border-radius: 25px 25px 0 25px;
+    transform: rotate(-45deg);
+}
+.avatar #infinity:after {
+    left: auto;
+    right: 0;
+    border-radius: 25px 25px 25px 0;
+    transform: rotate(45deg);
+}
+.avatar #infinity:after {
+    content: "";
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 10px solid #ffffff;
+    border-radius: 25px 25px 0 25px;
+    transform: rotate(-45deg);
+}*/
+
+@media (max-width: 1024px){
+.workSpace .left {
+    flex-direction: row;
+}
+}
+.left {
+    color: #ffffff;
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: linear-gradient(60deg,  #ab47bc, #8e24aa)
+ }
+@media (max-width: 1024px){
+.workSpace .left .logo {
+    flex: 1;
+}
+}
+@media (max-width: 1024px){
+.workSpace .left p {
+    flex: 1;
+}
+}
+
+.left p {
+    padding: 0 26px;
+}
+@media (max-width: 1024px){
+.workSpace .right {
+    flex: 5;
+}
+}
+.right {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right h1, .right h3 {
+    color: black;
+}
+
+
+@media (max-width: 1024px){ 
+.workSpace .right .input {
+    width: 320px;
+    height: 40px;
+}
+}
+.right .input {
+    outline: none;
+    display: flex;
+ 
+    margin: 10px 0;
+    padding: 6px 10px;
+    width: 200px;
+    height: 15px;
+    background-color: #ffffff;
+    border: 2px #949495 solid;
+    border-radius: 4px;
+}
+ .logo{
+    font-size: 80px;
+    margin-top: -20%;
+}
+h1, h3
+{
+    color: #ffffff;
+}
+h1 .logo {
+    font-size: 35px;
+  }
+
+  @media (max-width: 1024px){
+  .workSpace .right .button {
+      width: 160px;
+      height: 40px;
+  }
+}
+.right .button {
+    width: 130px;
+    height: 36px;
+    background-color: #9c27b0;
+    border: 2px #5e0376 solid;
+    margin: 10px 0;
+    color: #ffffff;
+    font-size: 22px;
+    outline: none;
+    border-radius: 4px;
+    cursor:pointer;
+  }
+
+.container {
+display: block;
+position: relative;
+padding-left: 30px;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+h3 {
+    padding-top: 2px;
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+@media (max-width:1024px)
+{
+    .workSpace
+    {
+        width: 100%;
+        height: 620px;
+        background: linear-gradient(to bottom, #2080df 0%, #2080df 30%, #2080df 30%, #ffffff 30%, #ffffff 100%);
+        flex-direction: column;
+    }
+        .left
+        {
+            flex-direction: row;
+        }
+        .logo
+        {
+            flex: 1;
+        }
+        p
+        {
+            flex: 1;
+        }
+        
+
+        .right
+        {
+            flex: 5;
+        }
+        h1
+        {
+            font-size: 2.5em;
+          margin:0 8px 8px 0; 
+        }
+        .input
+        {
+            width:320px;
+            height: 40px;
+        }
+        .button
+        {
+            width: 160px;
+            height: 40px;
+        }
+    
+    
+    .avatar
+    {
+        top: 18%;
+    }
+}

@@ -1,0 +1,83 @@
+ .div-Entire-tbl {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 597px;
+            width: 1276px;
+            background-size: 100% auto;
+        }
+        .div-search-tbl {
+            height: 100%;
+            background: rgba(255,255,255,0.8);
+            /*opacity: 0.5;*/
+        }  
+        .tbl-search-tbl {
+            width: 100%;
+            height: 113px;
+        }
+        .tbl-parts-No_to_status {
+            width: 1264px;
+            height: 112px;
+        }
+        .td-blank1 {
+            width: 74px;
+            height: 36px;
+        }
+        .td-blank2 {
+            width: 281px;
+            height: 36px;
+        }
+        .td-blank3 {
+            width: 228px;
+            height: 36px;
+        }
+        .td-blank4 {
+            width: 228px;
+            height: 26px;
+        }
+        .td-blank5 {
+            width: 77px;
+            height: 36px;
+        }
+        .td-chk-use-serial {
+            width: 173px;
+            height: 36px;
+        }
+        .td-chk-unuseserial {
+            width: 230px;
+            height: 36px;
+        }
+        .td-lbl-delivery-date {
+            width: 173px;
+            height: 36px;
+        }
+        .td-txtbox-from {
+            width: 231px;
+            height: 26px;
+        }
+        .td-txtbox-to {
+            width: 230px;
+            height: 26px;
+        }
+        .td-btn-start {
+            height: 26px;
+        }
+        .td-lbl-parts-No_to_status {
+            width: 173px;
+            height: 36px;
+        }
+        .td-txtbox-parts-No_to_status {
+            width: 195px;
+            height: 36px;
+        }
+        .font-common {
+           font-family: "Meiryo UI";
+        }
+        .Font-hidden {
+            margin-left: 0px;
+            font-family: "Meiryo UI";
+        }
+        .btn-img {
+            margin-left: 0px;
+        }

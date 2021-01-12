@@ -1,0 +1,161 @@
+.div-entire-tbl {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 1258px;
+            width: 1271px;
+            background-size: contain;
+            }
+            .div-money-record4 {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                /*opacity: 0.5;*/
+            }
+            .tbl-money-record4 {
+                width: 100%;
+                height: 499px;
+                border-collapse: collapse; 
+            }
+            .tbl-money-record4-two {
+                width: 100%;
+                border-collapse: collapse; 
+            }
+            .td-btn-start {
+                height: 46px;
+                width: 418px;
+            }
+            .td-date-time {
+                height: 46px;
+                width: 125px;
+            }
+            .td-btn-return {
+                height: 46px;
+                width: 629px;
+            }
+            .td-lbl-po {
+                height: 46px;
+                width: 182px;
+            }
+            .td-warranty-to-command {
+                width: 418px;
+                height: 23px;
+            }
+            .td-txt-box-warranty-to-command {
+                height: 23px;
+               
+                width: 125px;
+            }
+            .td-blank-lbl-producttype-to-description {
+                width: 629px;
+                height: 23px;
+            }
+            .td-txtbox-producttype-imei-serial-marker-model {
+                width: 182px;
+                height: 23px;
+            }
+            .td-blank-labour-parts-shipment-others {
+                height: 19px;
+                width: 182px;
+            }
+            .td-lbl-parts-txtbox {
+                font-family: "Meiryo UI";
+                height: 19px;
+                width: 105px;
+            }
+            .td-lbl-qty-txtbox {
+                font-family: "Meiryo UI";
+                height: 19px;
+                width: 51px;
+            }
+            .td-lbl-partsno-partssum {
+                width: 51px;
+                height: 32px;
+                border: 2px solid black;
+            }
+            .td-price-labour-parts-shipment-others {
+                width: 110px;
+                height: 31px;
+                border: 1px solid black;
+                background-color: #F8DC85;
+            }
+            .td-gst-labour-parts-shipment-others {
+                width: 110px;
+                height: 31px;
+                border: 1px solid black;
+                background-color: #A7DBA2;
+            }
+            .td-sum-labour-parts-shipment-others {
+                width: 110px;
+                height: 34px;
+                border: 1px solid black;
+                background-color: #BCC8DB;
+            }
+            .td-lbl-command {
+                width: 105px;
+                height: 29px;
+            }
+            .td-txtbox-command {
+                width: 157px;
+                height: 61px;
+            }
+            .td-date-recuser-demonitation-recdate {
+                height: 31px;
+            }
+            .lbl-readingmode {
+                font-family: "Meiryo UI";
+                color: #FF0000;
+            }
+            .lbl-font-common {
+                font-family: "Meiryo UI";
+            }
+            .lbl-command {
+                font-family: "Nirmala UI";
+            }
+            .btn-return-start-send-back-calculation {
+                font-family: "Meiryo UI";
+                height:29px;
+                width:81px;
+            }
+            .txtbox-po {
+                height: 19px;
+                width: 205px;
+            }
+            .txtbox-warranty-recept-customer-state-email-telephone-tax {
+                font-family: "Meiryo UI";
+                height: 19px;
+                width: 530px;
+            }
+            .txtbox-customer-address-comments {
+                font-family: "Meiryo UI";
+                height: 46px;
+                width: 530px;
+            }
+            .txtbox-product-serial-marker-imei-model{
+                font-family: "Meiryo UI";
+                Height:26px; 
+                Width:362px;
+            }
+            .txtbox-postalcode{ 
+                Height:23px;
+                Width:402px;
+            }
+            .txtbox-command{
+                Height:200px;
+                Width:373px; 
+            }
+            .txtbox-parts {
+                font-family: "Meiryo UI";
+                height:29px;
+                width:213px;
+            }
+            .txtbox-qty {
+                font-family: "Meiryo UI";
+                height:29px;
+                width:53px;
+            }
+            .txtbox-command {
+                font-family: "Meiryo UI";
+                height:107px;
+                width:492px;
+            }

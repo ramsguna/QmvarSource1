@@ -1,0 +1,128 @@
+.div-bgImg {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 574px;
+            width: 1255px;
+            background-size: contain;
+            }
+            .div-EntirePage {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+            }
+            .auto-style135 {
+                width: 100%;
+            }
+            .td-Blank1 {
+                height: 99px;
+                width: 101px;
+            }
+            .td-Blank18 {
+                width: 101px;
+                height: 33px;
+            }
+            .td-btnAnalysis {
+                height: 99px;
+                width: 108px;
+            }
+            .td-Blank19 {
+                width: 108px;
+                height: 33px;
+            }
+            .td-lbl3 {
+                height: 99px;
+                width: 160px;
+            }
+            .lbl3-AnalysisRecoveryData {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+            .lbl-4-5-6 {
+                font-family: "Meiryo UI";
+            }
+            .td-Script-FromUpDate-CalenderExternal-lbl1-toUpdate-textToCalenderExternal {
+                height: 53px;
+                width: 216px;
+            }
+            .dropdownList {
+                Height:33px; 
+                Width:303px;
+                font-family: "Meiryo UI";
+            }
+            .td-Blank24 {
+                width: 502px;
+                height: 33px;
+            }
+            .td-Blank2 {
+                height: 99px;
+                width: 111px;
+            }
+            .td-Blank-11-12 {
+                width: 111px;
+                height: 53px;
+            }
+            .td-Blank22 {
+                width: 111px;
+                height: 33px;
+            }
+            .td-Blank4 {
+                width: 502px;
+                height: 99px;
+            }
+            .td-Blank3 {
+                width: 1974px;
+                height: 99px;
+            }
+            .td-Blank23 {
+                width: 1974px;
+                height: 33px;
+            }
+            .td-lbl-4-5-6-DropListUploadFile-DropListLocation {
+                height: 53px;
+                width: 319px;
+            }
+            .td-Blank20-21 {
+                width: 319px;
+                height: 33px;
+            }
+            .imgbtn-Search {
+                font-family: "Meiryo UI";
+                Width:81px;
+                Height:29px;
+            }
+            .td-Blank13 {
+                width: 1974px;
+                height: 53px;
+            }
+            .td-Blank-5-6-7 {
+                width: 101px;
+                height: 53px;
+            }
+            .td-Blank8-9-10 {
+                width: 108px;
+                height: 53px;
+            }
+            .td-Blank-14-15-16 {
+                width: 502px;
+                height: 53px;
+            }
+            .td-Blank17 {
+                height: 53px;
+            }
+            .table-EntirePage {
+                width: 100%;
+                height: 414px;
+            }
+            .img-btnAnalysis{
+                Height:108px; 
+                Width:108px;
+            }
+            .DropListUploadFile{
+                Height:33px; 
+                Width:303px;
+            }
+            txtboxUpdate-txttoUpdate{
+                Height:20px; 
+                Width:190px;
+            }

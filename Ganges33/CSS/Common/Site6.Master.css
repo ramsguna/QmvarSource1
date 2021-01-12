@@ -1,0 +1,47 @@
+.div-btn-Menus {
+            height: 53px;
+            background-color: #D8D8D8;
+            width: 1330px;
+            margin-left: 0px;
+        }
+        .tabel-btn-Menus {
+            width: 1330px;
+            height: 51px;
+        }
+        .div-img-btn-Menus {
+            text-align: center;
+        }
+        .td-img-btnMenus {
+            width: 190px;
+            padding-left:0px;
+            padding-right:0px;
+        }
+        .tbl-Menus {
+            width: 291px;
+            height: 39px;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+            .td-btnHome {
+                width: 179px;
+            }
+            .td-img2-lblUser {
+                width: 455px;
+            }
+            .td-img1-lblShipName {
+                width: 341px;
+            }
+            .body-EntirePage{
+                width: 1330px;
+            }
+            .img-btnHome-img1-img2{
+                Width:36px; 
+                Height:36px;
+            }
+            .img-logoff{
+                Width:34px;
+                Height:36px;  
+            }
+            .Panel{
+                Height:47px;
+            }

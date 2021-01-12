@@ -1,0 +1,119 @@
+            .div-entire-tbl {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 724px;
+            width: 1243px;
+            background-size: contain;
+            }
+            .div-analysis-cash-tracking {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                /*opacity: 0.5;*/
+            }
+            .tbl-analysis-cash-tracking {
+                width: 100%;
+            }
+            .tbl-analysis-cash-tracking-tbl {
+                width: 100%;
+                border-collapse: collapse;
+                height: 351px;
+            }
+            .td-btn-money {
+                vertical-align: top;
+            }
+            .td-lbl-cash-credit {
+                width: 460px;
+            }
+            .td-blank1 {
+                height: 22px;
+                width: 156px;
+            }
+            .td-lbl-currentlocation {
+                height: 10px;
+            }
+            .td-lbl-activ-month {
+                height: 121px;
+            }
+            .td-lbl-review-report {
+                height: 121px;
+                width: 156px;
+            }
+            .td-lbl-select-month-date {
+                vertical-align: top;
+            }
+            .td-drpdown-select-month-date {
+                height: 10px;
+            }
+            .td-btn-open-send {
+                text-align: right;
+                height: 10px;
+            }
+            .td-blank2 {
+                width: 79px;
+                height: 23px;
+            }
+            .td-payment-service-customers-invoice-collected-authorization-card {
+                height: 22px;
+                border: 1px solid black;
+                width: 174px;
+                text-align: center;
+            }
+            .td-chkbox-cash-card {
+                height: 15px;
+            }
+            .td-txtbox-service-customer-invoice {
+                height: 33px;
+                border: 1px solid black;
+                width: 163px;
+                text-align: center;
+            }
+            .td-lbl-climp-blank {
+                height: 23px;
+                border: 1px solid black;
+                width: 163px;
+            }
+            .txtbox-unbound {
+                Height:141px;
+                Width:1165px;
+            }
+            .txtbox-remarks {
+                Height:61px;
+                Width:326px;
+            }
+            .txtbox-service-customer-invoice {
+                height:58px;
+                width:155px;
+            }
+            .txtbox-collect-authorization-card {
+                height:25px;
+                width:155px;
+            }
+            .btn-send-open {
+                font-family: "Meiryo UI";
+                 Height:29px;
+                 Width:81px;
+            }
+            .lbl-font-xxlarge {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+            .lbl-mon-now {
+                font-family: "Meiryo UI";
+                font-weight: bold;
+                font-size: xx-large;
+            }
+            .lbl-full-cash-discount-balance {
+                font-family: "Meiryo UI";
+                 Height:21px;
+                 Width:69px;
+            }
+            .lbl-common-font {
+                font-family: "Meiryo UI";
+            }
+            .drpdown-warranty-month-day {
+                font-family: "Meiryo UI";
+                height:24px;
+                width:169px;
+            }

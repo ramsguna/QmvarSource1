@@ -1,0 +1,87 @@
+.div-entire-tbl {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 512px;
+            width: 1255px;
+            background-image: url('pagewall_2/wall_inventry-2.png');
+            background-size: 100% auto;
+        }
+         .div-use-tbl {
+            height: 100%;
+            background: rgba(255,255,255,0.8);
+            /*opacity: 0.5;*/
+        }
+         .tbl-use {
+            width: 100%;
+            height: 465px;
+        }
+         .td-blank1 {
+            width: 112px;
+            height: 19px;
+        }
+         .td-blank2 {
+            width: 291px;
+            height: 19px;
+        }
+        .td-blank3 {
+            width: 272px;
+            height: 19px;
+        }
+        .td-blank4 {
+            height: 19px;
+            width: 365px;
+        }
+        .td-blank5 {
+            height: 19px;
+        }
+        .td-blank6 {
+            width: 112px;
+            height: 40px;
+        }
+        .td-blank7 {
+            width: 272px;
+            height: 40px;
+        }
+        .td-blank8 {
+            height: 40px;
+            width: 365px;
+        }
+        .td-blank10 {
+            width: 365px;
+        }
+        .td-lbl-serial-txtbox-item {
+            width: 291px;
+            height: 40px;
+            text-align: left;
+        }
+        .td-lbl-item-Qty {
+            width: 112px;
+            height: 40px;
+        }
+        .td-chkbok-common-emty-txtbox {
+            height: 40px;
+            width: 365px;
+            text-align: left;
+        }
+        aut
+        .td-blank7 {
+            width: 272px;
+            height: 40px;
+        }
+        .td-blank8 {
+            height: 40px;
+            width: 365px;
+        }
+        .td-blank10 {
+            width: 365px;
+            font-family: "Meiryo UI";
+        }
+        .font-comman {
+            font-family: "Meiryo UI";
+        }
+        .lbl-chkbox {
+            font-size: large;
+            font-family: "Meiryo UI";
+        }

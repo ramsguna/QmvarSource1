@@ -1,0 +1,90 @@
+ .div-BackgroundImages {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 560px;
+            width: 1255px;
+            background-size: contain;
+            }
+            .div-EntirePage {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                }
+            .table-EntirePage {
+                width: 100%;
+            }
+            .td-Blank1 {
+                width: 101px;
+                height: 108px;
+            }
+            .auto-style138 {
+                height: 108px;
+            }
+            .td-imgbtnMoney {
+                height: 108px;
+                width: 108px;
+            }
+            .td-lbl1 {
+                height: 108px;
+                width: 221px;
+            }
+            .lbl1 {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+            .td-Blank4-5-6-7-8-9 {
+                width: 101px;
+                height: 24px;
+            }
+            .td-lbl-8-15-16 {
+                width: 108px;
+                height: 24px;
+            }
+            .lblTotalcash-lblTotalNumber-td-Blank10 {
+                width: 221px;
+                height: 24px;
+            }
+            .td-Blank-18-lbls-9-13-14 {
+                height: 24px;
+            }
+            .lbl-7-8-13-14-15-16-TotalCash-lblKeepNo-lblKeepNo1-TotoalNum-CustomerName-lblCustomerTelNO-lblCash {
+                font-family: "Meiryo UI";
+            }
+            .td-Blank3 {
+                height: 108px;
+                width: 157px;
+            }
+            .lbl1-7-8 {
+                width: 157px;
+                height: 24px;
+            }
+            .td-lblKeepNo-lblCustomerName-lblCustomerTelNO-lblSamsungClaimNo-lblProductName-lblCash{
+                height: 24px;
+                width: 463px;
+                border-bottom: 1px solid black;
+            }
+            .btnBack-TakeOut {
+                Height:29px; 
+                Width:81px;
+                font-family: "Meiryo UI";
+            }
+            .td-Blank2 {
+                height: 108px;
+                width: 107px;
+            }
+            .td-Blank-11-12-13-14-15-16-17 {
+                width: 107px;
+                height: 24px;
+            }
+            .td-txtbox1 {
+                height: 19px;
+            }
+            .btnMoney{
+                Height:108px; 
+            Width:108px;
+            }
+            .RowStyle{
+                Height:25px;
+                Width :150px;
+            }

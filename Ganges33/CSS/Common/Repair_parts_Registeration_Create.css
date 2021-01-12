@@ -1,0 +1,69 @@
+@import url('Repair_parts_Registeration_Create.css');
+.div-entire-tbl {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 523px;
+            width: 1255px;
+            background-size: contain;
+            }
+            .div-money-parts-registeration {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                /*opacity: 0.5;*/
+            }
+            .tbl-money-parts-registeration {
+                width: 100%;
+            }
+            .td-btn-repair {
+                height: 60px;
+                width: 111px;
+                vertical-align:top
+            }
+            .td-lbl-parts-registeration-date-time {
+                height: 60px;
+            }
+            .td-lbl-shipcode-to-partsflg {
+                width: 172px;
+            }
+            .td-lbl-shipcode-txtbox-marker-parts-locs-unit-category-commensation-commensation-tecfee-assing {
+                height: 28px;
+                width: 180px;
+            }
+            .td-txbox-partsname-productname-chkbox-units-parts {
+                height: 26px;
+            }
+            .td-blank1 {
+                width: 111px;
+                height: 26px;
+            }
+            .td-blank2 {
+                width: 212px;
+                height: 28px;
+            }
+            .td-blank3 {
+                height: 28px;
+            }
+            .lbl-font-common {
+                font-family: "Meiryo UI";
+            }
+            .btn-start {
+                font-family: "Meiryo UI";
+                height:29px;
+                width:81px;
+            }
+            .txtbox-marker-parts-locs-unit-category-commensation-commensation-tecfee-assing {
+                font-family: "Meiryo UI";
+                height:16px;
+                width:271px;
+            }
+            .txbox-partsname-productname-chkbox-units-parts {
+                font-family: "Meiryo UI";
+                height:16px;
+                width:475px;
+            }
+            .lbl-large-font {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }

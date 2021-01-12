@@ -1,0 +1,43 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site3Msg.master.vb" Inherits="Ganges33.Site3Msg" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link type="text/css" href="CSS/Common/Site3.msg.Master.css" rel="stylesheet" /> 
+        <style type="text/css">
+       
+        
+     </style>
+</head>
+<body class="body-EntirePage" >
+    <form id="form1" runat="server">
+        <div class="div-EntirePage">
+            <table border ="0" class="tabel-EntirePage">
+                <tr>
+                    <td class="auto-style132"><asp:ImageButton ID="BtnHome" runat="server" CssClass="img-btnhome-img-2-btnlogoff" ImageUrl="~/icon/home.png" /> Home</td>
+                    <td>
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/icon2/placeholder-2.png" CssClass="img-btnhome-img-2-btnlogoff"  />
+                        <asp:Label ID="lblShipName" runat="server" Text="Label"></asp:Label>
+                    </td>
+                    <td>
+                        &nbsp;
+                        <asp:Image ID="Image2" runat="server" ImageUrl="~/icon2/user-3.png" CssClass="img-btnhome-img-2-btnlogoff" />
+                        <asp:Label ID="lblUser" runat="server" Text="Label"></asp:Label>
+                    </td>
+                    <td align = "right">
+                        &nbsp;
+                        Log Off <asp:ImageButton ID="BtnLogof" runat="server" CssClass="img-btnhome-img-2-btnlogoff"  ImageUrl="~/icon/exit-1.png" />
+                    </td>
+                 </tr>
+            </table>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

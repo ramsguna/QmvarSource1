@@ -1,0 +1,70 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site4.Master.vb" Inherits="Ganges33.Site4" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link type="text/css" href="CSS/Common/Site4.Master.css" rel="stylesheet" /> 
+        <style type="text/css">
+        
+               
+        </style>
+</head>
+<body class="body-Entirepage">
+    <form id="form1" runat="server">
+        <asp:Button ID="HiddenDummyButton" runat="server" onClientClick="return false;" style="display:none;" />
+        <div class="div-PageMenus">
+            <table border ="0" class="table-Pagemenus">
+                <tr>
+                    <td class="td-img-btnHome"><asp:ImageButton ID="BtnHome" runat="server" CssClass="img-btnHome-img-1-2" ImageUrl="~/icon/home.png" />Home </td>
+                    <td class="td-img-btnHome">
+                        <asp:Image ID="Image1" runat="server" CssClass="img-btnHome-img-1-2" ImageUrl="~/icon2/placeholder-2.png" />
+                        <asp:Label ID="lblShipName" runat="server"></asp:Label>
+                    </td>
+                    <td class="td-img2-lblUser">
+                        &nbsp;
+                        <asp:Image ID="Image2" runat="server" CssClass="img-btnHome-img-1-2" ImageUrl="~/icon2/user-3.png" />
+                        <asp:Label ID="lblUser" runat="server"></asp:Label>
+                    </td>
+                    <td align = "right">
+                        &nbsp;
+                        Log Off <asp:ImageButton ID="BtnLogof" CssClass="btn-logoff" runat="server"  ImageUrl="~/icon/exit-1.png" />
+                    </td>
+                 </tr>
+            </table>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="div-buttons">
+            <asp:Panel ID="Panel1" runat="server" CssClass="Panel" HorizontalAlign ="Center">
+                <table align ="center" class="tabel-buttons">
+                <tr>
+                    <td class="td-imgButtons">
+                        <asp:ImageButton ID="btnOpenClose" runat="server" ImageUrl="~/icon/mneu_money/open_close.png"/>
+                    </td>
+                    <td class="td-imgButtons">
+                        <asp:ImageButton ID="btnCash" runat="server" ImageUrl="~/icon/menyu_analysis/cash_Tracking.png" />
+                    </td>
+                    <td class="td-imgButtons">
+                        <asp:ImageButton ID="btnCustody" runat="server" ImageUrl="~/icon/menyu_analysis/custody.png" />
+                    </td>
+                    <td class="td-imgButtons">
+                        <asp:ImageButton ID="btnAggregation" runat="server" ImageUrl="~/icon/mneu_money/day_agg.png" />
+                    </td>
+                    <td class="td-imgButtons">
+                        <asp:ImageButton ID="btnConfirm" runat="server" ImageUrl="~/icon/mneu_money/confirm.png" />
+                    </td>
+                    <td class="td-imgButtons">
+                        <asp:ImageButton ID="btnSales" runat="server" ImageUrl="~/icon/mneu_money/sales.png" />
+                    </td>
+                </tr>
+            </table>
+          </asp:Panel>
+        </div>    
+    </form>
+</body>
+</html>

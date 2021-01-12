@@ -1,0 +1,74 @@
+  .div-entire-tbl {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 512px;
+            width: 1255px;
+            background-size: 100% auto;
+         }
+        .div-report-tbl {
+             height: 100%;
+             background: rgba(255,255,255,0.8);
+             /*opacity: 0.5;*/
+         }
+        .tbl-report {
+            width: 100%;
+            height: 472px;
+            position: absolute;
+            top: 2px;
+            left: 0px;
+            z-index: 1;
+         }
+        .td-chk-use-serial {
+            width: 230px;
+        }
+        .td-chk-unuse-serial {
+            width: 230px;
+        }
+        .td-blank1 {
+            width: 167px;
+            font-family: "Meiryo UI";
+        }
+        .td-blank2 {
+            width: 161px;
+            font-family: "Meiryo UI";
+        }
+        .td-blank3 {
+            width: 161px;
+            height: 27px;
+        }
+        .td-blank4 {
+            width: 167px;
+            height: 151px;
+            font-family: "Meiryo UI";
+        }
+        .td-lbl-csv {
+            width: 230px;
+            height: 151px;
+        }
+        .td-txtbox-csv-inventory-difference-ckeck {
+            width: 399px;
+            height: 151px;
+        }
+        .td-btn-difference {
+            width: 399px;
+        }
+        .td-lbl-current-output {
+            width: 230px;
+            height: 95px;
+        }
+        .td-btn-stock-outbut {
+            width: 399px;
+            height: 95px;
+        }
+        .td-lbl-inventory-report{
+            width: 161px;
+            height: 95px;
+        }
+        .td-btn-inventary {
+            height: 95px;
+        }
+        .font-common-report {
+            font-family: "Meiryo UI";
+        }

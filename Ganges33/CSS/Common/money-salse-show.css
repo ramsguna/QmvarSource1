@@ -1,0 +1,104 @@
+   .div-entire-tbl {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 1750px;
+            width: 1273px;
+            background-size: contain;
+            }
+            .div-money-sales {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                /*opacity: 0.5;*/
+            }
+            .tbl-money-sales-show {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 0px;
+                height: 272px;
+            }
+            .tbl-tables {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .td-blank1 {
+                height: 34px;
+                width: 69px;
+            }
+            .td-blank2 {
+                height: 34px;
+                width: 303px;
+            }
+            .td-lbl-result-detail {
+                text-align: center;
+                height: 34px;
+                border-bottom: 1px solid black;
+                border-bottom-style:double;
+                border-bottom-width:3px; 
+            }
+            .td-blank3 {
+                height: 34px;
+                text-align: center;
+            }
+            .td-blank4 {
+                width: 69px;
+                height: 20px;
+            }
+            .td-blank5 {
+                width: 163px;
+                height: 20px;
+            }
+            .td-balnk6 {
+                height: 23px;
+                width: 11px;
+            }
+             .td-cash-card-number-amount-taxin-climp-amount-taxin {
+                height: 23px;
+                border: 1px solid black;
+                text-align: center;
+                background-color: #ffff99;
+                width: 145px;
+              }
+             .td-lbl-cnt-sum-climp {
+                width: 145px;
+                height: 23px;
+                border: 1px solid black;
+              }
+              .td-amount-notax-climpamount-notax {
+                height: 23px;
+                border: 1px solid black;
+                background-color: #ffcc99;
+                width: 187px;
+              }
+              .lbl-font-xxlarge {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+              .lbl-font-common {
+                font-family: "Meiryo UI";
+             }
+              .td-btn-back {
+                height: 36px;
+            }
+             .btn-back{
+                 height:29px;
+                 width:81px;
+             }
+             .td-btn-next {            
+                width: 163px;
+                height: 46px;
+            }
+              .btn-next-start {
+                font-family: "Meiryo UI";
+                height:29px;
+                width:75px;
+             } 
+              .txtbox-unbound {
+                Height: 296px;
+                Width: 296px;
+              }
+
+              .td-lbl-custody {
+                height: 31px;
+              }

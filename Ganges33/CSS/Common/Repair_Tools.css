@@ -1,0 +1,92 @@
+.div-pagewall {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 512px;
+            width: 1255px;
+            background-size: contain;
+            }
+            .div-entirepage {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                /*opacity: 0.5;*/
+            }
+            .table {
+                width: 100%;
+            }
+            .td-image-td-blank1 {
+                width: 111px;
+                height: 108px;
+            }
+            .td-blank4-header {
+                height: 108px;
+            }
+            .td-repairtools-td-blank2 {
+                height: 108px;
+                width: 238px;
+            }
+            .lbl-repairtools {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+            .td-blank1-left {
+                width: 111px;
+                height: 33px;
+            }
+            .td-reissue {
+                width: 238px;
+                height: 33px;
+            }
+            .td-blank1-right {
+                height: 33px;
+            }
+            .lbl-reissue-lbl-receptpdf-chbox1-chbox2-chbox3-td-po-no-lbl-modify-lbl-partsreg {
+                font-family: "Meiryo UI";
+            }
+            .td-blank-header-td-blank3-td-blank4-td-blank5 {
+                height: 108px;
+                width: 210px;
+            }
+            .td-receptpdf-td-estipdf-td-workrpt {
+                height: 33px;
+                width: 210px;
+            }
+            .td-blank2-left-td-blank-partsrgt {
+                width: 111px;
+                height: 27px;
+            }
+            .td-dropdown-partsrgt {
+                Height: 25px;
+                Width: 375px;
+            }            
+            .td-start1 {
+                width: 210px;
+                height: 27px;
+            }
+            .td-blank2-right {
+                height: 27px;
+            }
+            .td-blank3-left-td-blank4-left {
+                width: 111px;
+                height: 70px;
+            }
+            .td-mfycontents-td-partsreg {
+                width: 238px;
+                height: 70px;
+            }
+            .td-blank1-td-blank2-td-blank3-td-image-start2 {
+                height: 70px;
+                width: 210px;
+            }
+            .td-blank3-right  {
+                height: 70px;
+            }
+            .image-start1-image-start2 {
+                font-family: "Meiryo UI";
+                height: 29px;
+                width: 81px;
+            }
+           .td-blank2-left {
+               height: 40px;
+           }

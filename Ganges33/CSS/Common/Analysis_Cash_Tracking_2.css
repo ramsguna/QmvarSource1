@@ -1,0 +1,145 @@
+.div-backgroundImage {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 560px;
+            width: 1243px;
+            background-size: contain;
+            }
+            .div-EntirePage {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+            }
+   　　　.auto-style135 {
+                width: 100%;
+            }
+            .td-Blank-1-2 {
+                width: 80px;
+                height: 36px;
+            }
+            .td-lbl7 {
+                width: 92px;
+                height: 36px;
+            }
+            .td-lbl16-month {
+                height: 36px;
+                width: 148px;
+            }
+            .fontFamily {
+                font-family: "Meiryo UI";
+            }
+            .td-GridView {
+                height: 154px;
+            }
+            .td-lblCount-lblIW-lblOOW-lblOther-lblCash-lblCard-lblAmount-lblIWAmount-lblOOWAmount-lblOtherAmount {
+                width: 12.5%;
+                border: 1px solid black;
+                text-align: center;
+                height: 24px;
+            }
+            .lblCount0-lblIW0-lblOther0-lblCash0-lblAmount0-lblIWAmount0-lblOOWAmount0-lblOtherAmount0
+            {
+                width: 12.5%;
+                border: 1px solid black;
+                text-align: center;
+                height: 24px;
+            }
+
+            .tableEntirePage {
+                width: 997px;
+                height: 59px;
+                border-collapse: collapse;
+            }
+            .td-lbl1 {
+                text-align: center;
+                width: 12.5%;
+                border: 1px solid black;
+                background-color: #D8F6CE;
+            }
+            .lbl-9-11-12-13-14-15 {
+                background-color: #ffff00;
+                text-align: center;
+                width: 12.5%;
+                border: 1px solid black;
+                height: 24px;
+            }
+            .tabel-lbl-7-16-17-lblMonNow-lblDay {
+                height: 84px;
+                width: 1238px;
+            }
+            .lbl7-ReviewCashandCardMethod {
+                Width:456px;
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+            .td-lblday {
+                height: 36px;
+                width: 148px;
+                text-align: left;
+            }
+            .td-lbl17 {
+                width: 57px;
+                height: 36px;
+            }
+            .td-lblMonNow {
+                height: 36px;
+                width: 53px;
+                text-align: left;
+            }
+            .lblMonNow-lblDay-lblCount-lblCount0-lblCash0-lblCard0 {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+                font-weight: bold;
+            }
+            .td-lbl18-lbl29 {
+                background-color: #00cc00;
+                width: 12.5%;
+                border: 1px solid black;
+                text-align: center;
+                height: 24px;
+            }
+            .td-lbl19-lbl30 {
+                background-color: #33ccff;
+                width: 12.5%;
+                border: 1px solid black;
+                text-align: center;
+                height: 24px;
+            }
+            .td-lbl20-lbl31 {
+                background-color: #ffcc33;
+                width: 12.5%;
+                border: 1px solid black;
+                text-align: center;
+                height: 24px;
+            }
+            .lblAmount-lblAmount0 {
+                font-family: "Meiryo UI";
+                font-size: x-large;
+                font-weight: bold;
+            }
+            .td-lbl-invoicetotal {
+                text-align: center;
+                width: 12.5%;
+                border: 1px solid black;
+                background-color: #ffff00;
+            }
+            .td-lbl2-3-4-5-6-10-21 {
+                background-color: #D8F6CE;
+                text-align: center;
+                width: 12.5%;
+                border: 1px solid black;
+                height: 24px;
+            }
+            .imgbtn-Back-SendDown
+            {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+                font-weight: bold;
+                Height:29px; 
+                Width:81px;
+            }
+            .RowStyle{
+            Height:25px; 
+            Width :150px;
+            }

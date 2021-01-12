@@ -1,0 +1,65 @@
+.div-entire-tbl {
+    z-index: 1;
+    left: 38px;
+    top: 122px;
+    position: absolute;
+    height: 512px;
+    width: 1255px;
+    background-image: url('pagewall_2/wall_repair-2.png');
+    background-size: contain;
+}
+
+.div-repair {
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    /*opacity: 0.5;*/
+}
+
+.tbl-Repair {
+    width: 100%;
+    height: 221px;
+}
+
+.td-lbl-all {
+    width: 158px;
+    height: 30px;
+}
+
+.lbl-text-all {
+    font-family: Meiryo UI;
+    Height: 19px;
+    Width: 242px;
+}
+
+.td-textbox-all {
+    width: 250px;
+    height: 30px;
+}
+
+.td-blank1 {
+    width: 158px;
+    font-family: "Meiryo UI";
+}
+
+.td-blank2 {
+    width: 250px;
+    font-family: "Meiryo UI";
+}
+
+.td-btn-download {
+    width: 158px;
+}
+
+.td-btn-search {
+    width: 255px;
+}
+
+.td-grid {
+    width: 1250px;
+    height: 265px;
+    overflow-x: scroll;
+}
+
+.gird {
+    margin-top: 0px;
+}

@@ -1,0 +1,110 @@
+.div-entire-tbl {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 524px;
+            width: 1255px;
+            background-size: contain;
+            }
+            .div-money-record3 {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                /*opacity: 0.5;*/
+            }
+            .tbl-money-record3 {
+                width: 100%;
+                height: 474px;
+                border-collapse: collapse; 
+            }
+            .td-btn-money {
+                width: 200px;
+                height: 38px;
+            }
+            .td-lbl-repair-btn-start {
+                height: 38px;
+            }
+            .td-blank1 {
+                height: 38px;
+            }
+            .td-records-date-time {
+                height: 43px;
+                width: 501px;
+            }
+            .td-btn-go-exit {
+                height: 43px;
+                width: 179px;
+            }
+            .td-txtbox-po-serial-imei--model {
+                height: 43px;
+            }
+            .td-common1 {
+                width: 200px;
+                height: 30px;
+            }
+            .td-txtbox-recept-postal {
+                width: 501px;
+                height: 30px;
+            }
+            .td-txtbox-customers {
+                width: 501px;
+                height: 30px;
+            }
+            .td-drpdown {
+                margin-left: 0px;
+            }
+            .td-product {
+                width: 179px;
+                height: 30px;
+            }
+            .td-txtbox {
+                width: 200px;
+            }
+            .btn-img-start-send-today-postal-code {
+                font-family: "Meiryo UI";
+                height:29px;
+                width:81px;
+            }
+            .btn-repair{
+                height:81px;
+                width:81px;
+            }
+            .lbl-large-font {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+            .lbl-go-exit {
+                margin-left: 0px;
+                font-family: "Meiryo UI";
+                height:26px;
+                width:113px;
+            }
+             .txtbox-product-serial-imei-marker-model {
+                font-family: "Meiryo UI";
+                height:24px;
+                width:361px;
+            }
+             
+             .txtbox-command {
+                font-family: "Meiryo UI";
+                height:57px;
+                width:678px;
+            }
+              .txtbox-customer-state-address-telephone-fax {
+                font-family: "Meiryo UI";
+                height:24px;
+                width:474px;
+            }
+              .txtbox-customers-address1_2 {
+                font-family: "Meiryo UI";
+                height:57px;
+                width:474px;
+            }
+              .txtbox-recept-postal {
+                font-family: "Meiryo UI";
+                height:24px;
+                width:356px;
+            }
+              .lbl-font-common {
+                font-family: "Meiryo UI";
+            }

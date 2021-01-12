@@ -1,0 +1,192 @@
+.div-background-image-6 {
+            z-index: 1;           
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 723px;
+            width: 1255px;
+            background-size: 100% auto;
+            }
+         .div-background-image-7{
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                /*opacity: 0.5;*/
+            }
+            .lbl-openingstore-222 {
+                width: 179px;
+                font-family: "Meiryo UI";
+                font-size: large;
+                font-weight:bold;
+            }
+            .lbl-status-223{
+                width: 179px;
+                font-family: "Meiryo UI";
+                font-size: large;
+                font-weight: bold;
+            }
+            .dropdownlist-224-lbl-txt-bill-224-lbl-txt-2000-224-lbl-result-224-lbl-confirm1-224-lbl-confirm2-224 {
+                font-family: "Meiryo UI";
+                height: 32px;
+                weight: 307px;              
+            }
+            .textbox1-2000-224-textbox1-500-224-textbox1-200-224-textbox1-100-224-textbox1-50-224-lbl-txt-500-224-lbl-txt-200-224-lbl-txt-50-224-lbl-txt-20-224-lbl-txt-10-224-lbl-CIns1-224-lbl-CIns1_-224-lbl-text-coin-224-textbox1-20-224-lbl-cins2-224-lbl-cins2_-224-textbox1-10-224-lbl-cins3-224-lbl-cins3_-224-lbl-txt-10-coin-224-textbox1-10-coin-224-lbl-txt-5-224-textbox1-5-224-lbl-confrimout-224-lbl-txt-2-224-lbl-txt-confirmout-2-224-td-textbox1-1-224 {
+                height: 18px;
+                width:  73px;
+            }
+            .tabl-entire-page-225 {
+                width: 100%;
+            }
+            .imagebutton-send-228-imagebutton-send2-228-div-msg-228-lbl-txt-msg-228 {
+                width: 41px;
+                height: 20px;
+            }
+            .strong-open-deposit-231-Strong-creditreport-231-strong-checkout-231 {
+                width: 41px;
+                height: 24px;
+            }
+            .lbl-name-240-lbl-time-240-lbl-regideposi-240-lbl-mistake-240-lbl-mistakeopen-240 {
+                width: 41px;
+                height: 20px;
+                font-family: "Meiryo UI";
+            }
+            .lbl-Name-240-lbl-Time-240-lbl-Diff-240-lbl-mistake1-240-lbl-CIns1-240 {
+                width: 41px;
+                height: 20px;
+                font-family: "Meiryo UI";
+            }
+            .lbl-name1-240-lbl-time1-240-lbl-diff1-240-lbl-mistake2-240-lbl-mistakeins2-240 {
+                width: 41px;
+                height: 20px;
+                font-family: "Meiryo UI";
+            }
+            .lbl-name2-240-lbl-time2-240-lbl-diff2-240-lbl-mistake3-240-lbl-mistakeins3-240 {
+                 width: 41px;
+                height: 20px;
+                font-family: "Meiryo UI";
+            }
+            .lbl-name3-240-lbl-time3-240-lbl-diff3-240-lbl-mistake4-240-lbl-mistakeClose-240 {
+                width: 41px;
+                height: 20px;
+                font-family: "Meiryo UI";
+            }
+            .lbl-txt-depositcomplete-240-lbl-txt-total-240-lbl-txt-difference-240-lbl-txt-updateshow-240-lbl-txt-lastupdate-240-lbl-txt-ipshow-240-lbl-txt-ip1-240{
+                width: 41px;
+                height: 20px;
+                font-family: "Meiryo UI";
+            }
+            .lbl-txt-updateshow2-240-lbl-txt-lastupdate2-240-lbl-txt-ipshow2-240-lbl-txt-ip2-240{
+                width: 41px;
+                height: 20px;
+                font-family: "Meiryo UI";
+            }
+            .td-blank-2-coin-241 {
+                width: 103px;
+                font-family: "Meiryo UI";
+                height: 13px;
+            }
+            .td-blank2-248 {
+                height: 17px;
+                width: 103px;
+            }
+            .td-coin-249 {
+                width: 41px;
+                height: 13px;
+            }
+            .td-blank-1-coin-250 {
+                width: 72px;
+                height: 13px;
+            }
+            .td-blank-3-coin-251 {
+                height: 13px;
+                width: 168px;
+            }
+            .td-blank-4-coin-252 {
+                height: 13px;
+            }
+            .td-blankbefore-numers-253 { 
+                width: 41px;
+                height: 22px;
+            }
+            .td-amount-254 {
+                width: 72px;
+                height: 22px;
+            }
+            .td-blank2-beforetotal-254 {
+                width: 72px;
+                height: 22px;
+            }
+            .td-textbox1-255 {
+                height: 22px;
+                width: 103px;
+            }
+            .td-total-255-td-difference-255 {
+                height: 22px;
+                width: 103px;
+            }
+            .td-textbox2-256 {
+                height: 22px;
+                width: 168px;
+            }
+            .td-textbox-total-256-td-textbox-difference-256 {
+                height: 18px;
+                width: 148px;
+            }                
+            .td-open-deposit-257-td-right-lbls1-257-td-confrim2-257 {
+                height: 22px;
+            }
+            .td-creditreport-257-td-right-lbls2-257-td-depositcomplete-257-td-send-257-td-confirmationuserid {
+                height: 22px;
+            }
+            .td-right-lbls3-257-td-right-lbls4-257-td-right-lbls5-257-td-checkout-257-td-confirmout-2-257 {
+                height: 22px;
+            }
+            .td-blanks-lastupdate-257-td-lastupdate-257 {
+                height: 22px;
+            }
+            .td-blanks-confirmlastupdate-257-td-confirmlastupdate-257 {
+                height: 22px;
+            }
+            .lbl-ResultIns1-229-lbl-resultins2-229-lbl-resultins3-229-lbl-resultclose-229{
+                font-size: large;
+                font-family: "Meiryo UI";
+            }
+            .lbl-txt-open-deposit-258-lbl-txt-creditreport-258-lbl-txt-checkout-258 {
+                width: 179px;
+                font-family: "Meiryo UI";
+                font-size: large;
+                font-weight:bold;        
+            }
+            .td-bill-259 {
+                width: 41px;
+                height: 17px;
+            }
+            .td-blank1-260 {
+                width: 72px;
+                height: 17px;
+            }
+            .td-blank3-261 {
+                height: 17px;
+                width: 168px;
+            }
+            .td-blank4-262 {
+                height: 17px;
+            }
+            .lbl-txt-confirmationuser-263-lbl-txt-id-263-lbl-txt-pass-263 {
+                font-family: "Meiryo UI";
+                font-size: small;
+            }
+            .auto-style135 {
+                height: 23px;
+            }
+            .auto-style136 {
+                width: 72px;
+                height: 23px;
+            }
+            .auto-style137 {
+                height: 23px;
+                width: 103px;
+            }
+            .auto-style138 {
+                height: 23px;
+                width: 168px;
+            }

@@ -1,0 +1,103 @@
+.div-Entire-tbl {
+            z-index: 1;
+            left: 37px;
+            top: 122px;
+            position: absolute;
+            height: 512px;
+            width: 1255px;
+            background-image:url('pagewall_2/wall_inventry-2.png');
+            background-size: 100% auto;
+            }
+         .div-Entire_Inv-tbl {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+              
+            }
+         .tbl-Inv-arrival {
+            width: 47%;
+            height: 368px;
+        }
+         .tbl-history {
+            float: left;
+            height: 454px;
+            text-align:right;
+        }
+         .tbl-blank {
+            float: left;
+            height: 460px;
+            width: 124px;
+        }
+
+        .td-chk-useserial {
+            height: 50px;
+            width: 877px;
+            text-align: center;
+        }
+        .td-chk-UNuseserial {
+            height: 50px;
+            width: 374px;
+            text-align: left;
+        }
+        .td-blank1  {
+            height: 50px;
+            width: 236px;
+        }
+        .td-blank2 {
+            height: 25px;
+            width: 236px;
+        }
+        .td-blank3 {
+            height: 28px;
+            width: 877px;
+        }
+        .td-blank4 {
+            height: 464px;
+        }
+        .td-lbl-deliveryNo-invoiceNo-item-Qty {
+            height: 25px;
+            width: 877px;
+            text-align: center;
+        }
+        .td-txtbox-deleiveryNo-invoiceNo-item {
+            height: 25px;
+            width: 374px;
+        }
+        .td-btn-start-Import{
+            height: 25px;
+            width: 236px;
+        }
+        .td-lbl-current_arrival_No-delivery_No {
+            height: 23px;
+            width: 877px;
+        }
+        .td-lbl-Arrival_No-delivery_No {
+            height: 23px;
+            width: 374px;
+        }
+
+        .td-lbl-csv {
+            width: 877px;
+            height: 20px;
+            text-align: center;
+        }
+        .td-upload-csv {
+            width: 159px;
+            height: 20px;
+        }
+        .td-listbox-history {
+            height: 407px;
+        }
+        .td-btn-close {
+            height: 59px;
+        }
+        .lbl-common {
+            font-family: "Meiryo UI";
+        }
+        .lbl-current_arrival_No-delivery_No {
+            font-family: "Meiryo UI";
+            font-size: small;
+        }
+        .listbox-history-font {
+            margin-top: 0px;
+            font-family: "Meiryo UI";
+        }

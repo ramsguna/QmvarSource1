@@ -1,0 +1,134 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="RpaSub.master.vb" Inherits="Ganges33.RpaSub" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+ <style type="text/css">
+        .auto-style1 {
+            height: 53px;
+            background-color: #D8D8D8;
+            width: 1330px;
+            margin-left: 0px;
+        }
+        .auto-style2 {
+            width: 1330px;
+            height: 51px;
+        }
+        .auto-style3 {
+            text-align: center;
+        }
+        .auto-style311 {
+            text-align: center;
+              height: 551px;
+        }
+        .auto-style129 {
+            width: 190px;
+            padding-left:0px;
+            padding-right:0px;
+        }
+        .auto-style131 {
+            width: 291px;
+            height: 39px;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+            .auto-style132 {
+                width: 179px;
+            }
+            .auto-style133 {
+                width: 455px;
+            }
+            .auto-style134 {
+                width: 341px;
+            }
+        </style>
+</head>
+<body  style="width: 1330px">
+    <form id="form1" runat="server">
+        <asp:Button ID="HiddenDummyButton" runat="server" onClientClick="return false;" style="display:none;" />
+        <div class="auto-style1">
+            <table border ="0" class="auto-style2">
+                <tr>
+                    <td class="auto-style132"><asp:ImageButton ID="BtnHome" runat="server" Height="36px" ImageUrl="~/icon/home.png" Width="36px" />Home </td>
+                    <td class="auto-style134">
+                        <asp:Image ID="Image1" runat="server" Height="36px" ImageUrl="~/icon2/placeholder-2.png" Width="36px" />
+                        <asp:Label ID="LblShipName" runat="server"></asp:Label>
+                    </td>
+                    <td class="auto-style133">
+                        &nbsp;
+                        <asp:Image ID="Image2" runat="server" Height="36px" ImageUrl="~/icon2/user-3.png" Width="36px" />
+                        <asp:Label ID="lblUser" runat="server"></asp:Label>
+                    </td>
+                    <td align = "right">
+                        &nbsp;
+                        Log Off <asp:ImageButton ID="BtnLogof" runat="server" Height="36px" ImageUrl="~/icon/exit-1.png" Width="34px" />
+                    </td>
+                 </tr>
+            </table>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="auto-style3">
+            <asp:Panel ID="Panel1" runat="server" Height="47px" HorizontalAlign ="Center">
+                <table align ="center" class="auto-style131">
+                <tr>
+                    <td class="auto-style129">
+                        <asp:ImageButton ID="btnFileUpload" runat="server" ImageUrl="~/icon/menyu_analysis/ana_upload.png"/>
+                    </td>
+                    <td class="auto-style129">
+                        <asp:ImageButton ID="btnExportData" runat="server" ImageUrl="~/icon/menyu_analysis/ana_export.png" />
+                    </td>
+                    <td class="auto-style129">
+                        <asp:ImageButton ID="btnReport" runat="server" ImageUrl="~/icon/mneu_arrival/Activity_report.png" />
+                    </td>
+                    <td class="auto-style129">
+                        <asp:ImageButton ID="btnRecovery" runat="server" ImageUrl="~/icon/menyu_analysis/recovery.png" />
+                    </td>
+                    <td class="auto-style129">
+                        <%--<asp:ImageButton ID="btnBlank" runat="server" ImageUrl="~/icon/mneu_money/blank.png" DescriptionUrl="~/icon/menyu_analysis/recovery.png" />--%>
+                        <asp:ImageButton ID="btnAnalysisData" runat="server" ImageUrl="~/icon/menyu_analysis/ana_data.png" />
+                    </td>
+                    <td class="auto-style129"> 
+                       <asp:ImageButton ID="btnRpa" runat="server" ImageUrl="~/icon/menyu_analysis/rpa.png" />
+                    </td>
+                </tr>
+          
+            </table>
+          </asp:Panel>
+        </div> 
+         <div class="auto-style311">
+            <asp:Panel ID="Panel2" runat="server" Height="47px" HorizontalAlign ="Center">
+                <table align ="center" class="auto-style131">
+                <tr>
+                    <td class="auto-style129">
+                        <asp:ImageButton ID="btnscheduler" runat="server" ImageUrl="~/icon/menyu_analysis/rpa_scheduler.png" style="height: 45px"/>
+                    </td>
+                    <td class="auto-style129">
+                        <asp:ImageButton ID="btnRpaLog" runat="server" ImageUrl="~/icon/menyu_analysis/rpa_log.png" />
+                    </td>
+                    <td class="auto-style129">
+                        <asp:ImageButton ID="btnRpaTaskApp" runat="server" ImageUrl="~/icon/menyu_analysis/rpa_application.png" />
+                    </td>
+                    <td class="auto-style129">
+                        <asp:ImageButton ID="btnRpaOnOff" runat="server"  ImageUrl="~/icon/menyu_analysis/rpaonoff.png" />
+                    </td>
+                    <td class="auto-style129">
+                          <asp:ImageButton ID="ImageButton11" runat="server" ImageUrl="~/icon/mneu_money/blank.png" />
+                    </td>
+                    <td class="auto-style129"> 
+                       <asp:ImageButton ID="ImageButton12" runat="server" ImageUrl="~/icon/mneu_money/blank.png" />
+                    </td>
+                </tr>
+          
+            </table>
+          </asp:Panel>
+        </div> 
+    </form>
+</body>
+</html>

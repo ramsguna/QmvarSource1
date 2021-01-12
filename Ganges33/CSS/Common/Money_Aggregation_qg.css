@@ -1,0 +1,130 @@
+ .div-entire-tbl {
+                z-index: 1;
+                left: 38px;
+                top: 122px;
+                position: absolute;
+                height: 533px;
+                width: 1255px;
+                background-size: contain;
+            }
+            .div-money_aggregation-tbl {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                /*opacity: 0.5;*/
+            }
+            .tbl-money_aggregation {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .td-btn-hidden {
+                width: 189px;
+                height: 25px;
+            }
+            .td-blank1 {
+                width: 303px;
+                height: 25px;
+            }
+            .td-blank2 {
+                width: 163px;
+                height: 25px;
+            }
+            .td-blank3 {
+                height: 25px;
+            }
+            .td-blank4 {
+                height: 24px;
+                width: 303px;
+            }
+            .td-blank5 {
+                height: 24px;
+            }
+            .td-blank5 {
+                height: 24px;
+                width: 163px;
+            }
+            .td-blank6 {
+                height: 30px;
+                width: 163px;
+            }
+            .td-blank7 {
+                width: 189px;
+                height: 22px;
+            }
+            .td-blank8 {
+                width: 303px;
+                height: 22px;
+                border: 1px solid black;
+                background-color: #ffff99;
+            }
+            .td-ScriptManager {
+                height: 34px;
+            }
+            .td-btn-send {
+                width: 163px;
+                height: 34px;
+            }
+            .td-lbl-total_number {
+                height: 30px;
+                width: 303px;
+            }
+            .td-lbl-count {
+                height: 30px;
+                width: 163px;
+            }
+            .td-lbl-cash-card {
+                width: 303px;
+                height: 22px;
+                border: 1px solid black;
+                background-color: #ffff99;
+            }
+            .td-Number-claim{
+                width: 303px;
+                height: 24px;
+                border: 1px solid black;
+                background-color: #ffff99;
+            }
+            .td-lbl-cnt-claim {
+                width: 163px;
+                height: 24px;
+                border: 1px solid black;
+            }
+            .td-lbl-sum {
+                width: 303px;
+                height: 24px;
+                border: 1px solid black;
+                background-color: #ffcc99;
+            }
+            .td-lbl-opening-bank_DP-sales-customer_ad-Number-ad {
+                width: 303px;
+                height: 43px;
+            }
+            .td-lbl_sml-cash{
+                width: 163px;
+                height: 43px;
+                background-color: #00CC00;
+            }
+            .td-lbl-reverse-discount-number-deposite {
+                width: 163px;
+                height: 43px;
+            }
+            .td-cash-calculate {
+                height: 11px;
+            }
+            .td-cash-calculate2 {
+                height: 30px;
+            }
+            .lbl-font-Repair-date-total_number {
+                font-family: "Meiryo UI";
+                font-size: large;
+            }
+            .lbl-common-font {
+                font-family: "Meiryo UI";
+            }
+            .btn-today {
+                margin-top: 0px;
+                font-family: "Meiryo UI";
+            }
+            .lbl-common-xlarge-font {
+                font-family: "Meiryo UI";
+                font-size: x-large;
+            }

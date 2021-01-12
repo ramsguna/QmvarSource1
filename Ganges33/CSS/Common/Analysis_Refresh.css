@@ -1,0 +1,116 @@
+.div-background-image {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 626px;
+            width: 1255px;
+            background-size: contain;
+            }
+            .div-EntirePage {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                           }
+            .table-EntirePage {
+                width: 100%;
+                height: 615px;
+            }
+            .td-Blank1 {
+                width: 101px;
+                height: 99px;
+            }
+            .td-Blank4 {
+                height: 99px;
+            }
+            .td-btn-Analysis {
+                height: 99px;
+                width: 107px;
+            }
+            .td-Analysis-Refresh-data {
+                height: 99px;
+                width: 363px;
+            }
+            .td-Blank13 {
+                width: 101px;
+                height: 108px;
+            }
+            .td-Blank14 {
+                height: 108px;
+            }
+            .td-Blank3 {
+                height: 99px;
+                width: 470px;
+            }
+            .td-Blank2 {
+                height: 99px;
+                width: 102px;
+            }
+            .fontFamily
+            {
+                font-family: "Meiryo UI";
+            }
+            .lbl-Analysis-Refresh-data {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+            .td-Blank15-Blank16-btnSend-Blank17 {
+                height: 10px;
+            }
+            .td-Blank18-ListHistory-Blank19 {
+                height: 48px;
+            }
+            .td-Blank9 {
+                width: 101px;
+                height: 33px;
+            }
+            .td-Blank10 {
+                height: 33px;
+            }
+            .td-Blank11 {
+                width: 102px;
+                height: 33px;
+            }
+            .td-Blank12 {
+                width: 470px;
+                height: 33px;
+            }
+            .td-Blank5 {
+                width: 101px;
+                height: 36px;
+            }
+            .td-Blank6 {
+                height: 36px;
+            }
+            .td-Blank7 {
+                width: 102px;
+                height: 36px;
+            }
+            .td-Blank8 {
+                width: 470px;
+                height: 36px;
+            }
+            .btn-Analysis{
+                Height:108px; 
+                Width:108px;
+            }
+            .dropdownlist-location-TargetData{
+             Height:33px;
+             Width:303px;
+             font-family: "Meiryo UI";
+            }
+            .dropdown-month{
+                Height:24px;
+                Width:169px;
+               font-family: "Meiryo UI";
+            }
+            .btn-Send{
+                font-family: "Meiryo UI";
+                Height:29px; 
+                Width:81px;
+            }
+            .list-History
+             {
+            font-family: "Meiryo UI";
+            Height:166px;
+            Width:1050px;
+            }

@@ -1,0 +1,55 @@
+.div-entire-tbl {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 560px;
+            width: 1255px;
+            background-size: contain;
+            }
+            .div-analysis_custody-tbl {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                /*opacity: 0.5;*/
+            }
+            .tbl-cash-advance {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .tbl-customers details {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .td-blank1 {
+                width: 101px;
+                height: 24px;
+            }
+            .td-blank2 {
+                width: 101px;
+                height: 31px;
+            }
+            .td-blank3 {
+                height: 31px;
+                width: 121px;
+            }
+            .td-blank4 {
+                height: 31px;
+            }
+            .td-btn-img {
+                width: 108px;
+            }
+            .td-lbl-customers-detail {
+                height: 31px;
+            }
+            .td-txtbox-customers-datail {
+                height: 31px;
+                width: 46px;
+            }
+            .lbl-font-comman {
+                font-family: "Meiryo UI";
+            }
+            .lbl-cash-advance {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+            

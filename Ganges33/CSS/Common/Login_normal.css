@@ -1,0 +1,25 @@
+
+.lbl-QMVAR-UserID-Password-Location {
+            font-family: Meiryo UI;
+            font-weight: 700;
+            font-size: xx-large;
+        }
+        .btn-Login-Submit{
+            margin-top: 9px;
+            Height:35px;
+            Width:100px;
+        }
+        .BackgroundImage{
+            height: 677px; 
+            width: 1182px; 
+            z-index: 1; 
+            left: 10px; 
+            top: 15px; 
+            position: absolute;
+        }
+        .DropDownListLocation{
+            Height:23px; 
+            Width:148px;
+        }
+		
+		

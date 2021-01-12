@@ -1,0 +1,69 @@
+.div-entire-tbl {
+                 z-index: 1;
+                 left: 38px;
+                 top: 122px;
+                 position: absolute;
+                 height: 512px;
+                 width: 1273px;
+                 background-size: contain;
+              }
+              .div-money-sales-show2 {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                /*opacity: 0.5;*/
+              }
+              .tbl-money-sales-shows2 {
+                width: 100%;
+                border-collapse: collapse;
+              }
+              .td-blank1 {
+                width: 187px;
+                height: 26px;
+              }
+              .td-lbl-location {
+                width: 115px;
+                height: 26px;
+                border-bottom: 3px double black; 
+              }
+              .td-blank2 {
+                width: 15px;
+                height: 26px;
+              }
+              .td-img-back {
+                height: 26px;
+              }
+              .td-txtbox {
+                height: 15px;
+              }
+              .td-cash-card-number-amount-taxin-climp-amount-taxin {
+                height: 23px;
+                border: 1px solid black;
+                text-align: center;
+                background-color: #ffff99;
+                width: 145px;
+              }
+              .txtbox-unbound {
+                Height: 296px;
+                Width: 296px;
+              }
+              .td-lbl-cnt-sum0-sum1 {
+                width: 145px;
+                height: 23px;
+                border: 1px solid black;
+              }
+              .td-amount-notax-climpamount-notax {
+                height: 23px;
+                border: 1px solid black;
+                background-color: #ffcc99;
+                width: 187px;
+              }
+              .td-lbl-cash-sales-deposit {
+                width: 187px;
+                height: 31px;
+              }
+              .td-lbl-custody {
+                height: 31px;
+              }
+              .lbl-font-common {
+                font-family: "Meiryo UI";
+              }

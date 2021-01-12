@@ -1,0 +1,58 @@
+.div-entire-tbl {
+            z-index: 1;
+            left: 38px;
+            top: 122px;
+            position: absolute;
+            height: 560px;
+            width: 1255px;
+            background-size: contain;
+            }
+            .div-analysis-custody-search {
+                height: 100%;
+                background: rgba(255,255,255,0.8);
+                /*opacity: 0.5;*/
+            }
+            .tbl-analysis-custody-search {
+                width: 100%;
+            }
+            .td-blank1 {
+                width: 101px;
+                height: 108px;
+            }
+            .td-btn-img {
+                height: 108px;
+                width: 108px;
+            }
+            .td-lbl-search {
+                height: 108px;
+                width: 221px;
+            }
+            .td-blank2 {
+                width: 101px;
+                height: 24px;
+            }
+            .td-blank3 {
+                height: 19px;
+            }
+            .td-lbl-all {
+                width: 108px;
+                height: 24px;
+            }
+            .td-btn-takeout {
+                height: 24px;
+            }
+            .gridview {
+                 Height:25px;
+                 Width:150px;
+            }
+            .lbl-common-font {
+                font-family: "Meiryo UI";
+            }
+            .lbl-font-large {
+                font-family: "Meiryo UI";
+                font-size: xx-large;
+            }
+            .btn-back-out {
+                height:29px;
+                width:81px;
+            }

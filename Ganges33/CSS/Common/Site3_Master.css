@@ -1,0 +1,37 @@
+.div-Entirepage {
+            height: 53px;
+            background-color: #D8D8D8;
+            width: 1330px;
+        }
+        .table-Entirepage {
+            width: 1330px;
+            margin-top:auto;
+            height: 51px;
+        }
+        .div-btnarrival-btnUsed-btnReturn-btnSearch-btnReport {
+            text-align: center;
+        }
+        .td-btnarrival-btnUsed-btnReturn-btnSearch-btnReport {
+            width: 190px;
+            padding-left:0px;
+            padding-right:0px;
+        }
+        .tabel-centerPage {
+            width: 291px;
+            height: 39px;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+            .td-imgbutton {
+                width: 181px;
+            }
+            .body-EntirePage{
+                width: 1330px;
+            }
+            .img-btnhome-img-1-2-logoff{
+                Height:36px; 
+                Width:36px; 
+            }
+            .panel{
+                Height:47px;
+            }
